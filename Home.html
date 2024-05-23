@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample HTML5 homepage using various HTML tags.">
+    <meta name="author" content="Your Name">
+    <title>Sample HTML5 Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main header of the page -->
+    <header>
+        <h1>Welcome to My HTML5 Homepage</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Section 1</a></li>
+                <li><a href="#section2">Section 2</a></li>
+                <li><a href="#section3">Section 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+        <section id="section1">
+            <h2>Section 1: Text Elements</h2>
+            <p>This is a <strong>paragraph</strong> with some <em>emphasized text</em>.</p>
+            <blockquote cite="https://www.example.com">
+                This is a blockquote from an external source.
+            </blockquote>
+            <p>
+                Here is a list of items:
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </p>
+            <p>
+                Here is an ordered list:
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ol>
+            </p>
+            <figure>
+                <img src="image.jpg" alt="A description of the image">
+                <figcaption>Fig.1 - An example image.</figcaption>
+            </figure>
+        </section>
+
+        <section id="section2">
+            <h2>Section 2: Forms and Tables</h2>
+            <form action="/submit" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            <table>
+                <caption>Sample Table</caption>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                    <tr>
+                        <td>Data 3</td>
+                        <td>Data 4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="section3">
+            <h2>Section 3: Multimedia and Interactive Elements</h2>
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+            <script>
+                var canvas = document.getElementById('myCanvas');
+                var context = canvas.getContext('2d');
+                context.fillStyle = "#FF0000";
+                context.fillRect(0, 0, 150, 75);
+            </script>
+        </section>
+    </main>
+
+    <!-- Footer of the page -->
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
