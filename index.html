@@ -6,6 +6,7 @@
     <title>Profile Page</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
     <nav>
@@ -18,13 +19,15 @@
     </nav>
     <div class="profile-container">
         <div class="profile-picture">
-            <img src="placeholder.jpg" alt="Profile Picture">
+            <img src="pictures/ak.jpg" alt="Profile Picture">
         </div>
         <div class="info">
-            <h1>Your Name</h1>
+            <h1>Aleksey Kurdyukov</h1>
             <p>Age: <span id="age"></span></p>
             <div class="social-links">
-                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="alekseykva" data-version="v1">
+                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/alekseykva?trk=profile-badge">Aleksey K.</a>
+                </div>
                 <a href="https://www.twitter.com" target="_blank">Twitter</a>
                 <a href="https://www.facebook.com" target="_blank">Facebook</a>
             </div>
