@@ -3,6 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    scroll-behavior: smooth;
+    display: flex;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
 nav {
@@ -11,6 +19,10 @@ nav {
     background: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
@@ -39,30 +51,73 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.profile-container {
+.theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
     display: flex;
-    align-items: flex-start;
-    padding: 70px 20px 20px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #ffffff;
+}
+
+body.dark-mode .theme-toggle .circle {
+    transform: translateX(10px);
+    background-color: #333;
+}
+
+.profile-container {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    height: 100%;
+    overflow-y: auto;
+}
+
+body.dark-mode .profile-container {
+    background-color: #1e1e1e;
+    border-right: 1px solid #333;
 }
 
 .profile-picture {
-    margin-right: 30px;
+    margin-bottom: 20px;
 }
 
 .profile-picture img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
     border-radius: 50%;
     border: 3px solid #007BFF;
 }
 
 .info {
-    max-width: 400px;
+    text-align: left;
 }
 
 .info h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .social-links {
@@ -77,4 +132,56 @@ nav ul li a:hover {
 
 .social-links a:hover {
     text-decoration: underline;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 70px 20px 20px;
+    flex: 1;
+}
+
+section {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+section h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+}
+
+section p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.project img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.resume-content h3 {
+    margin-top: 20px;
+}
+
+article {
+    margin-top: 20px;
+}
+
+article h3 {
+    font-size: 1.2em;
+}
+
+article p {
+    margin-top: 5px;
 }
