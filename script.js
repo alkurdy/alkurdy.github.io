@@ -17,10 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
     ageSpan.textContent = calculateAge(birthDate);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("theme-toggle");
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-    });
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('nav ul li a');
+    const content = document.getElementById('content');
 
+    function loadPage(page) {
+        fetch(page + '.html')
+            .then(response => response.text())
+            .then(html => {
+                content.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading page:', error);
+            });
+    }
+
+    links.forEach(link => {
+        link.addEventListener('click', event => {
+            // Only load dynamically if the screen is larger than 600px
+            if (window.innerWidth > 600) {
+                event.preventDefault();
+                const page = link.getAttribute('data-page');
+                loadPage(page);
+            }
+        });
+    });
+
+    // Initially load the home page
+    if (window.innerWidth > 600) {
+        loadPage('home');
+    }
+});
