@@ -3,44 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <title>Aleksey Kurdyukov - Home</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body class="index-page">
-    <nav>
-        <ul>
-            <li><a href="home.html" data-page="home">Home Page</a></li>
-            <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
-            <li><a href="resume.html" data-page="resume">Resume/CV</a></li>
-            <li><a href="blog.html" data-page="blog">Blog/Journal</a></li>
-            <li><a href="contact.html" data-page="contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="profile-container">
-        <div class="profile-banner">
-            <img src="./pictures/sky.jpg" alt="Banner">
-            <div class="profile-picture">
-                <img src="./pictures/ak.jpg" alt="Profile Picture">
-            </div>
-        </div>
-        <div class="info">
-            <h1>Aleksey Kurdyukov</h1>
-            <p>Age: <span id="age"></span></p>
-            <div class="social-links">
-                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="alekseykva" data-version="v1">
-                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/alekseykva?trk=profile-badge">Aleksey K.</a>
-                </div>
-            </div>
+<body>
+    <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work History</a>
+        <a href="education.html">Education</a>
+        <a href="learning.html">Learning</a>
+        <a href="progress.html">Progress</a>
+        <a href="interests.html">Interests</a>
+        <a href="contacts.html">Contact</a>
+        <button id="toggle-dark-mode" class="dark-mode-btn" aria-label="Toggle Dark Mode">
+            <span id="mode-icon">🌙</span>
+        </button>        
+    </nav>    
+    <div class="profile-banner">
+        <img src="./pictures/sky.jpg" alt="Sky background" class="banner-img">
+        <div class="profile-picture">
+            <img src="./pictures/ak.jpg" alt="Aleksey Kurdyukov" class="profile-img">
         </div>
         <div class="bio">
-            <h2>Bio</h2>
-            <p>I am a web developer with extensive experience in creating dynamic and responsive websites. I love coding and continuously learning new technologies to improve my skills.</p>
+            <h1 class="name">
+                <a href="https://www.linkedin.com/in/alekseykva/" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+                    <img src="./pictures/LinkedIn_icon.jpg" alt="LinkedIn" class="linkedin-img">
+                </a>
+                Aleksey Kurdyukov
+            </h1>
+            <p>This is a short bio about me and the purpose of this site.</p>
         </div>
     </div>
-    <main id="content">
-        <!-- Content will be dynamically loaded here -->
+    
+    <main class="content">
+        <h2>Welcome to My Website</h2>
+        <p>This site showcases my work, education, and interests.</p>
+
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="./pictures/carousel-image1.jpg" alt="Description 1">
+                <p>Description for image 1.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="./pictures/carousel-image2.jpg" alt="Description 2">
+                <p>Description for image 2.</p>
+            </div>
+            <div class="carousel-item">
+                <img src="./pictures/carousel-image3.jpg" alt="Description 3">
+                <p>Description for image 3.</p>
+            </div>
+        </div>
     </main>
+
+    <footer class="footer">
+        <p>&copy; Aleksey Kurdyukov 2024. All rights reserved.</p>
+    </footer>
 </body>
 </html>
