@@ -5,22 +5,31 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-size: cover;
-    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 60px;
 }
 
 .main-content {
-    margin-top: 100px; /* Push the main content down */
+    margin-top: 100px;
 }
 
 .home-content {
-    margin-top: 200px; /* Push the main content down */
-    margin-left: 75px;
+    margin-top: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    left: 5%;
 }
 
 .nav-bar {
-    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +41,7 @@ body {
 }
 
 .nav-bar a {
+    font-weight: bold;
     text-decoration: none;
     padding: 10px 15px;
     color: #333;
@@ -40,7 +50,7 @@ body {
 }
 
 .nav-bar a:last-child {
-    border-right: none; /* Remove bar from last item */
+    border-right: none;
 }
 
 .nav-bar a:hover {
@@ -48,7 +58,7 @@ body {
 }
 
 .nav-bar a:nth-last-child(2) {
-    border-right: none; /* Remove bar from Contact link */
+    border-right: none;
 }
 
 .dark-mode-btn {
@@ -64,16 +74,9 @@ body {
 }
 
 .profile-banner {
-    position: relative;
+    position: sticky;
     text-align: center;
     height: 125px;
-}
-
-.profile-bottom-banner {
-    position: fixed; /* Use fixed to keep it at the bottom of the page */
-    bottom: 35px; /* Adjust based on footer height */
-    text-align: center;
-    color: white;
 }
 
 .banner-img {
@@ -98,7 +101,7 @@ body {
 }
 
 .bio {
-    margin-top: 70px; /* Adjust as needed */
+    margin-top: 50px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 10px;
@@ -135,23 +138,24 @@ body {
 .carousel {
     display: flex;
     overflow: auto;
-    gap: 10px;
+    gap: 20px;
+    padding-top: 25px;
 }
 
 .carousel-item {
-    flex: 0 0 10.5%; /* Set width to 22.5% of the container */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 100px; /* Adjust based on your requirement */
+    height: 100px; /* Adjust based on your requirement */
+    margin: 0 5px; /* Adjust based on your requirement */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
 }
 
 .carousel-item img {
-    width: 100%; /* Ensure image takes full width of item */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 .table {
@@ -208,13 +212,22 @@ th {
     background: #444;
 }
 
+.profile-bottom-banner {
+    position: relative; 
+    height: 125px;
+    margin-bottom: 60px;
+    z-index: 2;
+}
+
 .footer {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.1);
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    z-index: 1;
 }
 
 .copyright {
@@ -228,12 +241,39 @@ th {
     }
 
     .nav-bar a {
+        font-weight: bolder;
         width: 100%;
         text-align: center;
+        border-bottom: 1px solid #333;
+        border-right: none;
     }
 
     .dark-mode-btn {
         width: 100%;
         text-align: center;
     }
+
+    .home-content {
+        margin-top: 150px;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: left;
+        position: relative;
+        left: 5%;
+    }
+
+    .carousel-item {
+        flex: 0 0 25%;
+        padding: 5px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
 }
