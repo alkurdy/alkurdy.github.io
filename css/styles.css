@@ -14,6 +14,11 @@ body {
     margin-top: 100px; /* Push the main content down */
 }
 
+.home-content {
+    margin-top: 200px; /* Push the main content down */
+    margin-left: 75px;
+}
+
 .nav-bar {
     font-weight: bold;
     display: flex;
