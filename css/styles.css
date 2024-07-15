@@ -6,9 +6,12 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: url('./pictures/sky.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #333;
+}
+
+.main-content {
+    margin-top: 100px; /* Push the main content down */
 }
 
 .nav-bar {
@@ -83,7 +86,7 @@ body {
 }
 
 .bio {
-    margin-top: 70px;
+    margin-top: 70px; /* Adjust as needed */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 10px;
@@ -99,7 +102,7 @@ body {
 
 .name {
     font-size: 24px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .linkedin-img {
@@ -124,10 +127,60 @@ body {
 }
 
 .carousel-item {
-    flex: 0 0 auto;
+    flex: 0 0 10.5%; /* Set width to 22.5% of the container */
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%; /* Ensure image takes full width of item */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #f9f9f9;
+}
+
+.company-logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+.education-title {
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.education-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
 }
 
 .dark-mode {
