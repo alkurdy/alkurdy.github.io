@@ -66,7 +66,14 @@ body {
 .profile-banner {
     position: relative;
     text-align: center;
-    height: 200px;
+    height: 125px;
+}
+
+.profile-bottom-banner {
+    position: fixed; /* Use fixed to keep it at the bottom of the page */
+    bottom: 35px; /* Adjust based on footer height */
+    text-align: center;
+    color: white;
 }
 
 .banner-img {
@@ -208,6 +215,10 @@ th {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.copyright {
+    position: relative;
 }
 
 @media (max-width: 600px) {
