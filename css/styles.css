@@ -42,6 +42,7 @@ main {
 
 .nav-bar a {
     font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
     text-decoration: none;
     padding: 10px 15px;
     color: #333;
@@ -191,6 +192,7 @@ th {
 
 .education-title {
     margin-bottom: 20px; /* Space below the title */
+    margin-left: 10px;
 }
 
 .education-table {
@@ -260,6 +262,11 @@ th {
         text-align: left;
         position: relative;
         left: 5%;
+    }
+
+    .bio {
+        word-wrap: break-word;
+        margin-right: 25px;
     }
 
     .carousel-item {
