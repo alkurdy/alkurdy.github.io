@@ -3,10 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const modeIcon = document.getElementById("mode-icon");
     const body = document.body;
 
-    // Check localStorage for dark mode preference
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
-        modeIcon.textContent = "🌞"; // Set to sun icon for light mode
+        modeIcon.textContent = "🌞";
     }
 
     darkModeBtn.addEventListener("click", () => {
@@ -15,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // Save the user's preference
         if (body.classList.contains("dark-mode")) {
             localStorage.setItem("dark-mode", "enabled");
-            modeIcon.textContent = "🌞"; // Change to sun icon
+            modeIcon.textContent = "🌞";
         } else {
             localStorage.setItem("dark-mode", "disabled");
-            modeIcon.textContent = "🌙"; // Change to moon icon
+            modeIcon.textContent = "🌙";
         }
     });
 });
