@@ -49,28 +49,68 @@
                         <td>United States · Remote</td>
                         <td>
                             <ul>
-                                <li>Implemented Horizon VDI in Development, Staging, and Production environments.</li>
-                                <li>Utilized Ansible, RunDeck, and Packer for virtual server automation.</li>
-                                <li>Managed Active Directory Domain Environment.</li>
-                                <li>Scripted with PowerShell and managed version tracking.</li>
-                                <li>Deployed Log Insight and ControlUp for system oversight.</li>
+                                <li>Implementing Horizon VDI in Development, Staging, and Production environments.</li>
+                                <li>Utilizing Ansible, RunDeck, and Packer for virtual server automation.</li>
+                                <li>Managing Active Directory Domain Environment.</li>
+                                <li>Scripting with PowerShell and managed version tracking.</li>
+                                <li>Deploying monitoring solutions such as ControlUp for system oversight.</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td><img src="./pictures/work/ussfcu-logo.png" alt="US Senate FCU" class="company-logo"> United States Senate Federal Credit Union</td>
                         <td>Senior Systems Engineer</td>
-                        <td>Feb 2022 - Sep 2023</td>
-                        <td>Alexandria, Virginia</td>
+                        <td>Sep 2016 - Sep 2023</td>
+                        <td>Alexandria, VA, USA</td>
                         <td>
                             <ul>
-                                <li>Managed and mentored engineers and support specialists.</li>
-                                <li>Developed Kanban Agile practices via Jira.</li>
-                                <li>Collaborated with IT Director on project scope.</li>
+                                <li>Work as part of Tier 4 engineering team supporting a call center, four branches, and two Equinix colo data centers.</li>
+                                <li>Manage, train, and mentor System engineers, administrators, and specialists.</li>
+                                <li>Collaborate with engineers and SecOps to plan, design, and upgrade production systems.</li>
+                                <li>Implement Agile practices such as Kanban, Backlogs, and retrospectives to improve transparency and productivity.</li>
+                                <li>Maintain stability, integrity, and efficient operation of information systems supporting organizational functions.</li>
+                                <li>Deploy vSphere 8 and DPU-backed infrastructure for NSX SDN deployment.</li>
+                                <li>Support multi-pool Nvidia GPU-backed VDI infrastructure.</li>
+                                <li>Deployed and maintained DPU-backed all-flash Dell HCI vSAN ESA nodes.</li>
+                                <li>Deployed vSphere with Tanzu Kubernetes environment for application stacks.</li>
+                                <li>Lead migration from Skype for Business to Teams with Direct Routing via AudioCodes virtual SBC.</li>
+                                <li>Collaborated with Director of IT to define business requirements, system goals, and SLAs.</li>
+                                <li>Create system design models and specifications for system programmers and development teams.</li>
+                                <li>Maintain scripting repository using Visual Studio Code, Git, and Azure DevOps Server.</li>
+                                <li>Helped plan and migrate two on-premises data centers to remote co-located data centers.</li>
+                                <li>Mobilized user workforce for VDI implementation during COVID via VMware-backed MDM & SSO deployment.</li>
+                                <li>Worked with Dell to deploy MDM managed Windows 10/11 Autopilot & Entra ID joined laptop fleet.</li>
+                                <li>Deployed and manage Dell Wyse thin client fleet.</li>
+                                <li>Deployed and maintauined disaster recovery site with vSphere SRM.</li>
+                                <li>Deployed and administered vSphere-integrated Rubrik on-premise solutions, ensuring seamless backup, recovery, and data management across virtualized environments while optimizing operational efficiency and data protection.</li>
+                                <li>Deploy and support Hybrid Azure Active Directory environment and configure Meraki wireless access points.</li>
+                                <li>Configure and deploy VeloCloud SDWAN infrastructure and design Dell and Cisco network stacks.</li>
+                                <li>Maintain Dell Isilon Enterprise NAS Storage clusters and deploy/update applications for VDI via VMware Application Volumes.</li>
+                                <li>Configure, install, and upgrade Microsoft HA SQL database groups; complete software updates and security patches.</li>
+                                <li>Write and maintain custom scripts in PowerShell & Bash for increased efficiency.</li>
+                                <li>Provide 2nd and 3rd-level technical support to internal and external clients.</li>
                             </ul>
                         </td>
                     </tr>
-                    <!-- Add more rows as needed -->
+                    <tr>
+                        <td><img src="./pictures/work/network-management-logo.png" alt="Network Management, Inc" class="company-logo"> Network Management, Inc</td>
+                        <td>Network Engineer</td>
+                        <td>Oct 2015 - Sep 2016</td>
+                        <td>United States</td>
+                        <td>
+                            <ul>
+                                <li>Provided technical support for over 15 clients including individuals and small to medium-sized businesses.</li>
+                                <li>Resolved workstation, server, and network issues via email, phone, remote desktop, and on-site support.</li>
+                                <li>Created and updated network and system diagrams, server rack diagrams, and Wi-Fi heat maps.</li>
+                                <li>Administered Windows Server 2008 and 2012 R2 environments, Active Directory, DNS, DHCP, and Group Policy.</li>
+                                <li>Virtualized hard drives for migration to Hyper-V or ESXi hosts; managed vCenter/vSphere 5.5 clusters.</li>
+                                <li>Supported Dell SonicWALL devices for NAT/PAT rules, website allow lists, and remote VPN access.</li>
+                                <li>Administered on-premises Exchange 2007, 2010, and 2013, and Microsoft 365, SharePoint Online, and OneDrive for Business.</li>
+                                <li>Migrated on-premises Windows Servers to Azure Cloud and multiple Exchange deployments to Exchange Online.</li>
+                                <li>Designed and implemented Cat5e/Cat6 wiring for new business locations.</li>
+                            </ul>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -81,7 +121,13 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; Aleksey Kurdyukov 2024. All rights reserved.</p>
+        <p>&copy; Aleksey Kurdyukov <span id="current-year"></span>. All rights reserved.</p>
+        <p>Last modified: <span id="last-modified"></span></p>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 </body>
 </html>
