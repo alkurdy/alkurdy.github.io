@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksey Kurdyukov - Home</title>
+    <title>Aleksey Kurdyukov - Contact</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <nav class="nav-bar">
@@ -37,20 +36,21 @@
     </div>
     
     <main class="home-content">
-        <h3>Welcome to My Website</h3>
-        <p>This site showcases my work, education, and interests.</p>
+        <h3>Contact Me</h3>
+        <p>If you have any questions or want to get in touch, please use the form below:</p>
 
-        <div class="carousel">
-            <div class="carousel-item">
-                <img src="./pictures/home/azure_cert.png" alt="Azure Administrator Certified">
-            </div>
-            <div class="carousel-item">
-                <img src="./pictures/home/vmware_cert.png" alt="VMware VCP 2020 Certified">
-            </div>
-            <div class="carousel-item">
-                <img src="./pictures/home/icp_cert.png" alt="ICAgile Coaching Certified">
-            </div>
-        </div>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
     </main>
     
     <div class="profile-bottom-banner">
