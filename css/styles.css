@@ -21,12 +21,24 @@ main {
 }
 
 .home-content {
-    margin-top: 150px;
+    margin-top: 160px;
     border-radius: 10px;
     padding: 10px;
     text-align: left;
     position: relative;
     left: 5%;
+}
+
+.progress-content {
+    margin-top: 100px
+}
+
+.learning-content {
+    margin-top: 100px
+}
+
+.form-content {
+    margin-top: 100px
 }
 
 .nav-bar {
@@ -87,13 +99,13 @@ main {
 }
 
 .profile-banner .banner-img {
-    content: url('/pictures/banners/top/home-banner.png');
+    content: url('/pictures/banners/top/top-main-banner.png');
 }
 
 .profile-picture {
     position: absolute;
     bottom: -75%;
-    left: 5%;
+    left: 2.5%;
     border-radius: 100%;
     overflow: hidden;
     background-color: transparent;
@@ -108,14 +120,13 @@ main {
 }
 
 .bio {
-    margin-top: 75px;
+    margin-top: 50px;
     word-wrap: break-word;
-    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 10px;
     text-align: left;
     position: relative;
-    left: 15%;
+    left: 8.2%;
     bottom: 55%;
     max-width: 80%;
 }
@@ -230,12 +241,103 @@ body.dark-mode .footer {
     color: #f0f0f0;
 }
 
-.dark-mode .bio {
-    background: rgba(50, 50, 50, 0.8);
-}
-
 .dark-mode .content {
     background: #444;
+}
+
+body.dark-mode main.progress-content th {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode main.progress-content td {
+    border-bottom: 1px solid #444444;
+}
+
+body.dark-mode main.progress-content tr:nth-child(even) {
+    background-color: #333333;
+}
+
+body.dark-mode main.progress-content .progress-bar-container {
+    background-color: #444444;
+}
+
+body.dark-mode main.progress-content .progress-bar {
+    background-color: #76c7c0;
+}
+
+body.dark-mode main.learning-content th {
+    background-color: #444444; /* Darker background for visibility */
+    color: #ffffff;
+}
+
+body.dark-mode main.learning-content td {
+    border-bottom: 1px solid #444444;
+}
+
+body.dark-mode main.learning-content tr:nth-child(even) {
+    background-color: #333333; /* Adjusted for better readability */
+}
+
+body.dark-mode main.interests-content {
+    background-color: #333;
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode main.interests-content ul li {
+    color: #e0e0e0;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .form-content h3 {
+    color: #ddd;
+}
+
+body.dark-mode .form-content p {
+    color: #bbb;
+}
+
+body.dark-mode .contact-form {
+    border: 1px solid #666;
+    background-color: #333;
+}
+
+body.dark-mode .contact-form label {
+    color: #ddd;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    border: 1px solid #666;
+    background-color: #444;
+    color: #ddd;
+}
+
+body.dark-mode .contact-form button {
+    background-color: #0056b3;
+    color: white;
+}
+
+body.dark-mode .contact-form button:hover {
+    background-color: #004494;
+}
+
+body.dark-mode .nav-bar a {
+    color: #f0f0f0;
+}
+
+body.dark-mode .profile-banner {
+    background-color: #222;
+}
+
+body.dark-mode .footer {
+    background-color: #222;
+    color: #f0f0f0;
 }
 
 body.dark-mode .profile-banner .banner-img {
@@ -280,6 +382,112 @@ body.dark-mode .profile-bottom-banner .banner-img {
     border-collapse: collapse;
 }
 
+main.progress-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+main.progress-content th, 
+main.progress-content td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+main.progress-content th {
+    background-color: #f9f9f9;
+}
+
+main.progress-content tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+main.progress-content .progress-bar-container {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+}
+
+main.progress-content .progress-bar {
+    height: 100%;
+    background-color: #4caf50;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+main.learning-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+main.learning-content th, 
+main.learning-content td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+main.learning-content th {
+    background-color: #f9f9f9;
+}
+
+main.learning-content tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+main.interests-content {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main.interests-content h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+main.interests-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+main.interests-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.form-content {
+    padding: 20px;
+    text-align: left;
+    max-width: 100%;
+}
+
+.form-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-content p {
+    color: #666;
+}
+
+.form-container {
+    position: fixed; /* Fixed positioning to keep the form in place */
+    top: 20%; /* Adjust top margin as needed */
+    left: 20px; /* Adjust left margin as needed */
+    width: 100%; /* Ensure it takes the full width of the container */
+    max-width: 600px; /* Maximum width of the form */
+    margin: 0; /* Remove any additional margins */
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -294,6 +502,7 @@ body.dark-mode .profile-bottom-banner .banner-img {
 .contact-form label {
     margin-bottom: 8px;
     font-weight: bold;
+    color: #333;
 }
 
 .contact-form input,
@@ -304,6 +513,8 @@ body.dark-mode .profile-bottom-banner .banner-img {
     border-radius: 4px;
     width: 100%;
     box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
 }
 
 .contact-form button {
@@ -329,7 +540,7 @@ body.dark-mode .profile-bottom-banner .banner-img {
 }
 
 .profile-bottom-banner .banner-img {
-    content: url('/pictures/banners/top/home-banner.png');
+    content: url('/pictures/banners/bottom/bottom-main-banner.png');
     width: 100%; 
     height: 100%; 
 }
@@ -349,7 +560,52 @@ body.dark-mode .profile-bottom-banner .banner-img {
     position: relative;
 }
 
+
+@media (max-width: 2346px){
+
+}
+
+
+@media (max-width: 2100px) {
+
+    .profile-picture {
+        left: 2.0%;
+    }
+
+    .main-content {
+        margin-top: 175px;
+    }
+
+    .progress-content {
+        margin-top: 175px
+    }
+
+    .learning-content {
+        margin-top: 200px
+    }
+
+    main.interests-content {
+        margin-top: 200px;
+    }
+
+}
+
+
+@media (max-width: 1514px){
+    .bio {
+        left: 0%;
+        top: 10%;
+    }
+}
+
+
 @media (max-width: 600px) {
+
+    
+    .profile-picture {
+        left: 1.0%;
+    }
+
     .nav-bar {
         flex-direction: column;
         align-items: flex-start;
@@ -369,19 +625,12 @@ body.dark-mode .profile-bottom-banner .banner-img {
     }
 
     .home-content {
-        margin-top: 150px;
+        margin-top: 180px;
         border-radius: 10px;
         padding: 10px;
         text-align: left;
         position: relative;
         left: 5%;
-    }
-
-    .bio {
-        left: 5%;
-        bottom: 0%;
-        word-wrap: break-word;
-        margin-right: 25px;
     }
 
     .carousel-item {
