@@ -480,12 +480,8 @@ main.interests-content ul li {
 }
 
 .form-container {
-    position: fixed; /* Fixed positioning to keep the form in place */
-    top: 20%; /* Adjust top margin as needed */
-    left: 20px; /* Adjust left margin as needed */
-    width: 100%; /* Ensure it takes the full width of the container */
-    max-width: 600px; /* Maximum width of the form */
-    margin: 0; /* Remove any additional margins */
+    max-width: 600px;
+    margin: 0; 
 }
 
 .contact-form {
@@ -588,6 +584,10 @@ main.interests-content ul li {
         margin-top: 200px;
     }
 
+    .form-content {
+        margin-top: 150px;
+    }
+
 }
 
 
@@ -671,6 +671,15 @@ main.interests-content ul li {
         font-weight: bold;
         display: block;
         margin-bottom: 5px;
+    }
+
+    .form-content {
+        margin-top: 200px;
+    }
+
+    .form-container {
+        width: 90%;
+        margin: 0 auto;
     }
 
 }
