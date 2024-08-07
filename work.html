@@ -8,8 +8,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="nav-bar">
-        <a href="index.html">Home</a>
+    <nav class="nav-bar" aria-label="Main Navigation">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="work.html">Work History</a>
         <a href="education.html">Education</a>
         <a href="learning.html">Learning</a>
@@ -22,14 +22,14 @@
     </nav>
     
     <div class="profile-banner">
-        <img src="./pictures/banners/top/work-banner.png" alt="Top banner ink splatter" class="banner-img">
+        <img src="./pictures/banners/top/work-banner.png" alt="Top banner with ink splatter design" class="banner-img">
         <div class="profile-picture">
             <img src="./pictures/shared/ak.jpg" alt="Aleksey Kurdyukov" class="profile-img">
         </div>
         <div class="bio">
             <h1 class="name">
-                <a href="https://www.linkedin.com/in/alekseykva/" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
-                    <img src="./pictures/home/LinkedIn_icon.jpg" alt="LinkedIn" class="linkedin-img">
+                <a href="https://www.linkedin.com/in/alekseykva/" class="linkedin-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile of Aleksey Kurdyukov">
+                    <img src="./pictures/home/LinkedIn_icon.jpg" alt="LinkedIn icon" class="linkedin-img">
                 </a>
                 Aleksey Kurdyukov
             </h1>
@@ -37,23 +37,23 @@
         </div>
     </div>
 
-
     <main class="main-content">
         <h1>Work History</h1>
         <div class="table-wrapper">
             <table class="responsive-table">
+                <caption class="visually-hidden">Work History Table</caption>
                 <thead>
                     <tr>
-                        <th>Company</th>
-                        <th>Position</th>
-                        <th>Duration</th>
-                        <th>Location</th>
-                        <th>Details</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Details</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><img src="./pictures/work/breezelineLogo.png" alt="Breezeline" class="company-logo"> Breezeline</td>
+                        <td><img src="./pictures/work/breezelineLogo.png" alt="Breezeline company logo" class="company-logo"> Breezeline</td>
                         <td>VDI Systems Engineer</td>
                         <td>Sep 2023 - Present</td>
                         <td>United States · Remote</td>
@@ -68,7 +68,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="./pictures/work/ussfcu-logo.png" alt="US Senate FCU" class="company-logo"> United States Senate Federal Credit Union</td>
+                        <td><img src="./pictures/work/ussfcu-logo.png" alt="US Senate FCU company logo" class="company-logo"> United States Senate Federal Credit Union</td>
                         <td>Senior Systems Engineer</td>
                         <td>Sep 2016 - Sep 2023</td>
                         <td>Alexandria, VA, USA</td>
@@ -103,7 +103,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="/pictures/work/netmgm-logo.png" alt="Network Management, Inc" class="company-logo"> Network Management, Inc</td>
+                        <td><img src="/pictures/work/netmgm-logo.png" alt="Network Management, Inc company logo" class="company-logo"> Network Management, Inc</td>
                         <td>Network Engineer</td>
                         <td>Oct 2015 - Sep 2016</td>
                         <td>United States</td>
@@ -127,7 +127,7 @@
     </main>
 
     <div class="profile-bottom-banner">
-        <img src="./pictures/banners/bottom/work-bottom-banner.png" alt="Bottom banner ink splatter" class="banner-img">
+        <img src="./pictures/banners/bottom/work-bottom-banner.png" alt="Bottom banner with ink splatter design" class="banner-img">
     </div>
 
     <footer class="footer">

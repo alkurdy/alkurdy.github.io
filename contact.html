@@ -43,13 +43,16 @@
         
             <form action="https://formspree.io/f/xjkbwajr" method="POST" class="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required aria-describedby="nameHelp" pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$">
+                <small id="nameHelp">Enter your full name.</small>
         
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required aria-describedby="emailHelp" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <small id="emailHelp">Enter a valid email address.</small>
         
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <textarea id="message" name="message" rows="4" required aria-describedby="messageHelp"></textarea>
+                <small id="messageHelp">Type your message here.</small>
         
                 <button type="submit">Send Message</button>
             </form>
@@ -62,5 +65,14 @@
     <footer class="footer">
         <p>&copy; Aleksey Kurdyukov 2024. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript to show confirmation message on form submission -->
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your message!');
+            this.submit();  // Uncomment this line if you want the form to actually be submitted after the alert
+        });
+    </script>
 </body>
 </html>

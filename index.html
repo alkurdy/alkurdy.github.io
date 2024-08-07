@@ -8,7 +8,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="nav-bar">
+    <nav class="nav-bar" role="navigation">
         <a href="index.html">Home</a>
         <a href="work.html">Work History</a>
         <a href="education.html">Education</a>
@@ -18,45 +18,47 @@
         <a href="contact.html">Contact</a>
         <button id="toggle-dark-mode" class="dark-mode-btn" aria-label="Toggle Dark Mode">
             <span id="mode-icon">🌙</span>
-        </button>        
+        </button>
     </nav>    
-    <div class="profile-banner">
-        <img src="./pictures/banners/top/home-banner.png" alt="Top banner ink splatter" class="banner-img">
+
+    <header class="profile-banner" role="banner">
+        <img src="./pictures/banners/top/home-banner.png" alt="Top banner with ink splatter design" class="banner-img">
         <div class="profile-picture">
-            <img src="./pictures/shared/ak.jpg" alt="Aleksey Kurdyukov" class="profile-img">
+            <img src="./pictures/shared/ak.jpg" alt="Portrait of Aleksey Kurdyukov" class="profile-img">
         </div>
-        <div class="bio">
+        <section class="bio">
             <h1 class="name">
                 <a href="https://www.linkedin.com/in/alekseykva/" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
-                    <img src="./pictures/home/LinkedIn_icon.jpg" alt="LinkedIn" class="linkedin-img">
+                    <img src="./pictures/home/LinkedIn_icon.jpg" alt="LinkedIn icon linking to profile" class="linkedin-img">
                 </a>
                 Aleksey Kurdyukov
             </h1>
             <p>I'm an IT professional who focuses on designing and building value-driven IT systems that foster success for businesses and their customers.</p>
-        </div>
-    </div>
+        </section>
+    </header>
     
-    <main class="home-content">
+    <main id="main-content" class="home-content" role="main">
         <h3>Welcome to My Website</h3>
         <p>This site showcases my work, education, and interests.</p>
 
-        <div class="carousel">
+        <section class="carousel" aria-label="Certifications carousel">
             <div class="carousel-item">
-                <img src="./pictures/home/azure_cert.png" alt="Azure Administrator Certified">
+                <img src="./pictures/home/azure_cert.png" alt="Azure Administrator Certification badge">
             </div>
             <div class="carousel-item">
-                <img src="./pictures/home/vmware_cert.png" alt="VMware VCP 2020 Certified">
+                <img src="./pictures/home/vmware_cert.png" alt="VMware VCP 2020 Certification badge">
             </div>
             <div class="carousel-item">
-                <img src="./pictures/home/icp_cert.png" alt="ICAgile Coaching Certified">
+                <img src="./pictures/home/icp_cert.png" alt="ICAgile Coaching Certification badge">
             </div>
-        </div>
+        </section>
     </main>
     
-    <div class="profile-bottom-banner">
-        <img src="./pictures/banners/bottom/home-bottom-banner.png" alt="Bottom banner ink splatter" class="banner-img">
+    <div class="profile-bottom-banner" role="img" aria-label="Bottom banner with ink splatter design">
+        <img src="./pictures/banners/bottom/home-bottom-banner.png" alt="Bottom banner with ink splatter design" class="banner-img">
     </div>
-    <footer class="footer">
+    
+    <footer class="footer" role="contentinfo">
         <p>&copy; Aleksey Kurdyukov 2024. All rights reserved.</p>
     </footer>
 </body>
