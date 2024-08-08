@@ -96,6 +96,8 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    max-width: 100%;
 }
 
 .profile-banner .banner-img {
@@ -531,6 +533,7 @@ main.interests-content ul li {
 .profile-bottom-banner {
     position: relative; 
     height: 100px;
+    width: 100%;
     margin-bottom: 60px;
     z-index: 2;
 }
@@ -549,7 +552,7 @@ main.interests-content ul li {
     background-color: #333;
     color: white;
     text-align: center;
-    z-index: 1;
+    z-index: 3;
 }
 
 .copyright {
