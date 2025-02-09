@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -21,7 +25,7 @@ main {
 }
 
 .home-content {
-    margin-top: 160px;
+    margin-top: 80px;
     border-radius: 10px;
     padding: 10px;
     text-align: left;
@@ -581,6 +585,10 @@ main.interests-content ul li {
         margin-top: 175px;
     }
 
+    .home-content {
+        margin-top: 125px;
+    }
+
     .progress-content {
         margin-top: 175px
     }
@@ -601,6 +609,11 @@ main.interests-content ul li {
 
 
 @media (max-width: 1514px){
+
+    .home-content {
+        margin-top: 145px;
+    }
+
     .bio {
         left: 0%;
         top: 10%;
@@ -610,6 +623,9 @@ main.interests-content ul li {
 
 @media (max-width: 600px) {
 
+    .home-content {
+        margin-top: 160px;
+    }
     
     .profile-picture {
         left: 1.0%;
