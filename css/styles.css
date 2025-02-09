@@ -108,6 +108,10 @@ main {
     content: url('/pictures/banners/top/top-main-banner.png');
 }
 
+.profile-bottom-banner .banner-img {
+    content: url('/pictures/banners/bottom/bottom-main-banner.png');
+}
+
 .profile-picture {
     position: absolute;
     bottom: -75%;
@@ -125,12 +129,11 @@ main {
     background-color: transparent;
     position: relative;
     z-index: 1;
-    margin-top: 20px; /* Adjust as needed to prevent overlap */
+    margin-top: 20px;
 }
 
 .bio {
     margin-top: 50px;
-    word-wrap: break-word;
     border-radius: 10px;
     padding: 10px;
     text-align: left;
@@ -138,22 +141,22 @@ main {
     left: 8.2%;
     bottom: 55%;
     max-width: 80%;
-}
-
-.bio .name {
     display: flex;
     align-items: center;
 }
 
 .name {
     font-size: 24px;
-    margin-left: 0px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .linkedin-img {
-    width: 24px;
+    width: 20px;
     height: auto;
     margin-right: 5px;
+    margin-top: 5px;
 }
 
 #education {
@@ -539,26 +542,25 @@ main.interests-content ul li {
     background-color: #0056b3;
 }
 
-
 .profile-bottom-banner {
-    position: relative; 
-    height: 100px;
+    position: fixed;
+    bottom: 25px; /* Adjust based on the footer height */
     width: 100%;
-    margin-bottom: 60px;
+    height: 100px;
     z-index: 2;
 }
 
 .profile-bottom-banner .banner-img {
-    content: url('/pictures/banners/bottom/bottom-main-banner.png');
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 25px;
     background-color: #333;
     color: white;
     text-align: center;
@@ -619,10 +621,16 @@ main.interests-content ul li {
     main.interests-content {
         margin-top: 200px;
     }
-profile-img
+
+    profile-img
     .form-content {
         margin-top: 150px;
     }
+
+    #education {
+        padding-top: 100px;
+    }
+
 
 }
 
@@ -637,6 +645,11 @@ profile-img
         left: 0%;
         top: 10%;
     }
+
+    #education {
+        padding-top: 100px;
+    }
+
 }
 
 
@@ -647,6 +660,7 @@ profile-img
     }
     
     .profile-picture {
+        padding-bottom: 20px;
         left: 1.0%;
     }
 
@@ -726,27 +740,21 @@ profile-img
         margin: 0 auto;
     }
 
-    .education-item {
+    .bio {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .education-item img.company-logo {
-        margin-bottom: 10px;
-    }
-
-    .education-details {
-        align-items: flex-start;
-    }
-
-    .bio {
         left: 0;
         bottom: 0;
         max-width: 100%;
         margin-top: 20px;
     }
 
+    .name {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
     #education {
-        padding-top: 20px;
+        padding-top: 100px;
     }
 }
