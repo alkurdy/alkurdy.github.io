@@ -123,6 +123,9 @@ main {
     height: 100px;
     border-radius: 50%;
     background-color: transparent;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px; /* Adjust as needed to prevent overlap */
 }
 
 .bio {
@@ -151,6 +154,10 @@ main {
     width: 24px;
     height: auto;
     margin-right: 5px;
+}
+
+#education {
+    padding-top: 80px; /* Adjust based on your header height */
 }
 
 .content {
@@ -378,13 +385,12 @@ body.dark-mode .profile-bottom-banner .banner-img {
 }
 
 .education-title {
-    margin-bottom: 20px; /* Space below the title */
     margin-left: 10px;
+    text-decoration: underline;
 }
 
-.education-table {
+.table.education-table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
 }
 
@@ -574,6 +580,19 @@ main.interests-content ul li {
     border: 0;
 }
 
+.education-item {
+    display: flex;
+    align-items: center;
+}
+
+.education-item img.company-logo {
+    margin-right: 10px;
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+}
 
 @media (max-width: 2100px) {
 
@@ -600,7 +619,7 @@ main.interests-content ul li {
     main.interests-content {
         margin-top: 200px;
     }
-
+profile-img
     .form-content {
         margin-top: 150px;
     }
@@ -707,4 +726,27 @@ main.interests-content ul li {
         margin: 0 auto;
     }
 
+    .education-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .education-item img.company-logo {
+        margin-bottom: 10px;
+    }
+
+    .education-details {
+        align-items: flex-start;
+    }
+
+    .bio {
+        left: 0;
+        bottom: 0;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    #education {
+        padding-top: 20px;
+    }
 }
