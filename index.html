@@ -6,6 +6,7 @@
     <title>Aleksey Kurdyukov - Home</title>
     <link rel="stylesheet" href="./css/styles.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <style>
         /* Bottom banner sizing adjustment */
         .profile-bottom-banner {
@@ -199,17 +200,17 @@
                     </tr>
                     <!-- Database Design and Implementation -->
                     <tr>
-                        <td>Database Design and Implementation (SQL)</td>
-                        <td>March 2024</td>
+                        <td>Database Management and Business Intelligence/Analytics</td>
+                        <td>May 2025</td>
                         <td>In Progress</td>
                         <td>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 40%;"></div>
+                                <div class="progress" style="width: 50%;"></div>
                             </div>
-                            <span class="progress-text">40%</span>
+                            <span class="progress-text">50%</span>
                         </td>
                         <td>
-                            <a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">PostgreSQL Docs</a>
+                            <a href="https://www.coursicle.com/virginia/courses/IT/3400/" target="_blank" rel="noopener noreferrer">UVA Course</a>
                         </td>
                     </tr>
                     <!-- Empty rows for easy adding -->
@@ -225,9 +226,12 @@
                 </tbody>
             </table>
             
-            <div class="learning-archive">
-                <a href="learning-archive.html" class="archive-link">View Learning Archive &rarr;</a>
-                <p class="archive-note">View past learning topics and completed courses</p>
+            <!-- For the Learning Archive -->
+            <div class="archive-link-container">
+                <a href="learning-archive.html" class="archive-link">
+                    <span class="archive-text">View Learning Archive</span>
+                    <span class="archive-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
@@ -238,31 +242,26 @@
         
         <!-- Current Reading -->
         <div class="interest-category">
-            <h3>Currently Reading</h3>
+            <h3>
+            <a href="https://www.goodreads.com/user/show/22192348-aleksey" target="_blank" rel="noopener noreferrer" class="goodreads-link" title="View my Goodreads profile">
+                <img src="./pictures/interests/books/Goodreads.svg" alt="Goodreads icon" class="goodreads-icon">
+            </a>
+            Currently Reading
+            </h3>
             <div class="books-container">
-                <div class="book">
-                    <img src="./pictures/interests/books/book1.jpg" alt="Book cover" class="book-cover">
-                    <div class="book-info">
-                        <h4>The Phoenix Project</h4>
-                        <p>Gene Kim, Kevin Behr, George Spafford</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%;"></div>
-                        </div>
-                        <span class="progress-text">70%</span>
+            <div class="book">
+                <a href="https://www.goodreads.com/book/show/36449535-columbus-day" target="_blank" rel="noopener noreferrer" class="book-link" title="View on Goodreads">
+                    <img src="./pictures/interests/books/columbusday_expforce.png" alt="Book cover - Columbus Day" class="book-cover">
+                </a>
+                <div class="book-info">
+                    <h4>Columbus Day</h4>
+                    <p>Craig Alanson</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 72%;"></div>
                     </div>
+                    <span class="progress-text">72%</span>
                 </div>
-                
-                <div class="book">
-                    <img src="./pictures/interests/books/book2.jpg" alt="Book cover" class="book-cover">
-                    <div class="book-info">
-                        <h4>Clean Architecture</h4>
-                        <p>Robert C. Martin</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 25%;"></div>
-                        </div>
-                        <span class="progress-text">25%</span>
-                    </div>
-                </div>
+            </div>
             </div>
         </div>
         
@@ -270,10 +269,13 @@
         <div class="interest-category">
             <h3>Recently Watched</h3>
             <div class="media-item">
-                <img src="./pictures/interests/movies/movie1.jpg" alt="Movie poster" class="media-cover">
+                <img src="./pictures/interests/tv/eternaut.jpg" alt="TV show poster" class="media-cover">
                 <div class="media-info">
-                    <h4>Dune: Part Two</h4>
-                    <p>An incredible visual experience with excellent world-building and character development.</p>
+                    <h4>The Eternaut</h4>
+                    <p>Starts as a slow burn but when it ramps up, it becomes a thrilling watch that keeps you engaged. The set design and atmosphere are top-notch.</p>
+                    <div class="watch-again">
+                        <a href="https://www.netflix.com/title/80216888" target="_blank" rel="noopener noreferrer" class="watch-again-button">Watch on Netflix</a>
+                    </div>
                     <div class="rating">★★★★☆</div>
                 </div>
             </div>
@@ -284,17 +286,17 @@
             <h3>Favorite Podcasts</h3>
             <div class="podcasts-list">
                 <div class="podcast">
-                    <img src="./pictures/interests/podcasts/podcast1.jpg" alt="Podcast artwork" class="podcast-artwork">
+                    <img src="./pictures/interests/podcasts/insertcredpod.png" alt="Podcast artwork" class="podcast-artwork">
                     <div class="podcast-info">
-                        <h4>Darknet Diaries</h4>
-                        <p>True stories from the dark side of the Internet</p>
+                        <h4><a href="https://insertcredit.com/" target="_blank" rel="noopener noreferrer">insert credit</a></h4>
+                        <p>A panel of video game devs, journalists, and archivists discussing the art and craft of video games. Answering quirky questions and exploring silly topics related to game design, development, and culture.</p>
                     </div>
                 </div>
                 <div class="podcast">
-                    <img src="./pictures/interests/podcasts/podcast2.jpg" alt="Podcast artwork" class="podcast-artwork">
+                    <img src="./pictures/interests/podcasts/intotheaetherpd.png" alt="Podcast artwork" class="podcast-artwork">
                     <div class="podcast-info">
-                        <h4>Command Line Heroes</h4>
-                        <p>Stories about the people who transformed technology</p>
+                        <h4><a href="https://intothecast.online/" target="_blank" rel="noopener noreferrer">Into the Aether</a></h4>
+                        <p>Self described as a low-key video game podcast where hosts discuss playing video games across various platforms and genres.</p>
                     </div>
                 </div>
             </div>
@@ -302,34 +304,35 @@
         
         <!-- Writing Projects -->
         <div class="interest-category">
-            <h3>Writing Projects <a href="writing-projects.html" class="view-all-link">(View All)</a></h3>
+            <h3>Writing Projects 
+                <a href="writing-projects.html" class="archive-link">
+                    <span class="archive-text">View All</span>
+                    <span class="archive-arrow">→</span>
+                </a>
+            </h3>
             <table class="projects-table">
                 <thead>
                     <tr>
                         <th>Project Name</th>
+                        <th>Genre</th>
                         <th>Type</th>
                         <th>Status</th>
                         <th>Started</th>
+                        <th>Word Count</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Currently Untitled</td>
+                        <td>Science Fiction</td>
+                        <td>Novella</td>
+                        <td>In Progress</td>
+                        <td><time datetime="2025-06-14">June 14, 2025</time></td>
+                        <td>4200</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>
