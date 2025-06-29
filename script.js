@@ -29,4 +29,31 @@ document.addEventListener("DOMContentLoaded", () => {
             modeIcon.textContent = "🌙";
         }
     });
+
+    // Add section highlighting in navigation
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-bar a[href^='#']");
+    
+    function highlightNavLink() {
+        const scrollPos = window.scrollY + 100; // Offset to trigger slightly before the section
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute("id");
+            
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === "#" + sectionId) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+    
+    // Initial call and event listener
+    highlightNavLink();
+    window.addEventListener("scroll", highlightNavLink);
 });

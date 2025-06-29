@@ -54,11 +54,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     flex-wrap: wrap;
     gap: 15px;
+    position: sticky; /* This makes it sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px); /* Add a slight blur effect to background */
+    -webkit-backdrop-filter: blur(5px); /* For Safari support */
 }
 
 .nav-bar a {
@@ -243,7 +249,7 @@ body.dark-mode {
 }
 
 body.dark-mode .nav-bar {
-    background-color: #1f1f1f;
+    background: rgba(31, 31, 31, 0.95);
 }
 
 body.dark-mode .nav-bar a {
