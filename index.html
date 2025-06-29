@@ -6,15 +6,36 @@
     <title>Aleksey Kurdyukov - Home</title>
     <link rel="stylesheet" href="./css/styles.css">
     <script src="script.js" defer></script>
+    <style>
+        /* Bottom banner sizing adjustment */
+        .profile-bottom-banner {
+            position: relative;
+            width: 100%;
+            height: 40px; /* Reduced from whatever it was before */
+            overflow: hidden; /* Ensures the image doesn't spill out */
+        }
+
+        .profile-bottom-banner .banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This will crop the image rather than squish it */
+            display: block;
+        }
+
+        /* Make it even smaller on mobile */
+        @media (max-width: 600px) {
+            .profile-bottom-banner {
+                height: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="nav-bar" role="navigation">
         <a href="#work">Work History</a>
         <a href="#education">Education</a>
         <a href="#learning">Learning</a>
-        <a href="#progress">Progress</a>
         <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
         <button id="toggle-dark-mode" class="dark-mode-btn" aria-label="Toggle Dark Mode">
             <span id="mode-icon">🌙</span>
         </button>
@@ -32,9 +53,86 @@
                 </a>
                 Aleksey Kurdyukov
             </h1>
+            <div class="contact-info">
+                <a href="mailto:alek.kurdy@gmail.com" class="email-link">alek.kurdy@gmail.com</a>
+            </div>
         </section>
     </header>
 
+    <!-- Work History Section -->
+    <section id="work">
+        <h2 class="section-title">Work History</h2>
+        <div class="work-content">
+            <!-- Breezeline -->
+            <div class="job">
+                <div class="job-header">
+                    <img src="./pictures/work/breezeline.jpg" alt="Breezeline logo" class="company-logo">
+                    <div class="job-title-container">
+                        <h3>VDI Systems Engineer</h3>
+                        <p class="job-company">Breezeline</p>
+                        <p class="job-duration">Sep 2023 - Present · Remote</p>
+                    </div>
+                </div>
+                <div class="job-description">
+                    <p>Designed and deployed Omnissa Horizon VDI across multiple environments. Implemented Windows 11 image management and versioning while leveraging automation tools to enhance efficiency. Utilized monitoring solutions to minimize downtime and managed Jira workflows for documentation.</p>
+                    <p class="skills"><strong>Key Skills:</strong> Powershell, Windows Configuration, Docker Swarm, Endpoint Security, Ansible, Packer, Office 365</p>
+                </div>
+            </div>
+
+            <!-- US Senate FCU -->
+            <div class="job">
+                <div class="job-header">
+                    <img src="./pictures/work/ussfcu.jpg" alt="US Senate Federal Credit Union logo" class="company-logo">
+                    <div class="job-title-container">
+                        <h3>Senior Systems Engineer</h3>
+                        <p class="job-company">United States Senate Federal Credit Union</p>
+                        <p class="job-duration">Feb 2022 - Sep 2023 · Alexandria, VA</p>
+                    </div>
+                </div>
+                <div class="job-description">
+                    <p>Led IT projects and mentored team members while implementing Kanban practices in Jira. Provided engineering support across security, infrastructure, and banking applications while partnering with leadership to define project scope and timelines.</p>
+                    <p class="skills"><strong>Key Skills:</strong> Powershell, VMware Infrastructure, Azure AD, Windows Server, Endpoint Security</p>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title-container">
+                        <h3>Systems Engineer</h3>
+                        <p class="job-company">United States Senate Federal Credit Union</p>
+                        <p class="job-duration">Oct 2020 - Feb 2022 · On-site</p>
+                    </div>
+                </div>
+                <div class="job-description">
+                    <p>Enabled seamless transition to remote work during the pandemic. Managed data center relocation and implemented mobile device management using Workspace ONE UEM. Created custom imaging solutions for Dell laptops.</p>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title-container">
+                        <h3>Systems Administrator</h3>
+                        <p class="job-company">United States Senate Federal Credit Union</p>
+                        <p class="job-duration">Sep 2016 - Oct 2020</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Previous Experience -->
+            <div class="previous-experience">
+                <h3>Previous Experience</h3>
+                <ul>
+                    <li><strong>Network Engineer</strong> at Network Management, Inc. (May 2015 - Sep 2016)</li>
+                    <li><strong>Network Technician</strong> at The Washington Network, Inc. (Feb 2015 - Apr 2015)</li>
+                    <li><strong>Computer Technician</strong> at DC - Computer Geeks (May 2014 - Feb 2015)</li>
+                    <li><strong>Computer Engineer</strong> at Ease Technologies (Apr 2011 - Jun 2013)</li>
+                    <li><strong>Computer Technician</strong> at Graphinex Computer Geeks (Sep 2009 - Nov 2011)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section (Already exists, but adding complete structure) -->
     <section id="education">
         <h2 class="education-title">Education</h2>
         <table class="table education-table">
@@ -69,12 +167,196 @@
         </table>
     </section>
 
+    <!-- Learning Section -->
+    <section id="learning">
+        <h2 class="section-title">Learning</h2>
+        <div class="learning-content">
+            <table class="learning-table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Started</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                        <th>Resources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Azure Cloud Infrastructure -->
+                    <tr>
+                        <td>Azure Cloud Infrastructure</td>
+                        <td>January 2024</td>
+                        <td>In Progress</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%;"></div>
+                            </div>
+                            <span class="progress-text">50%</span>
+                        </td>
+                        <td>
+                            <a href="https://learn.microsoft.com/azure" target="_blank" rel="noopener noreferrer">Microsoft Learn</a>
+                        </td>
+                    </tr>
+                    <!-- Database Design and Implementation -->
+                    <tr>
+                        <td>Database Design and Implementation (SQL)</td>
+                        <td>March 2024</td>
+                        <td>In Progress</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%;"></div>
+                            </div>
+                            <span class="progress-text">40%</span>
+                        </td>
+                        <td>
+                            <a href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">PostgreSQL Docs</a>
+                        </td>
+                    </tr>
+                    <!-- Empty rows for easy adding -->
+                    <tr class="empty-row">
+                        <td colspan="5">Add new learning topic...</td>
+                    </tr>
+                    <tr class="empty-row">
+                        <td colspan="5">Add new learning topic...</td>
+                    </tr>
+                    <tr class="empty-row">
+                        <td colspan="5">Add new learning topic...</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="learning-archive">
+                <a href="learning-archive.html" class="archive-link">View Learning Archive &rarr;</a>
+                <p class="archive-note">View past learning topics and completed courses</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <h2 class="section-title">Interests</h2>
+        
+        <!-- Current Reading -->
+        <div class="interest-category">
+            <h3>Currently Reading</h3>
+            <div class="books-container">
+                <div class="book">
+                    <img src="./pictures/interests/books/book1.jpg" alt="Book cover" class="book-cover">
+                    <div class="book-info">
+                        <h4>The Phoenix Project</h4>
+                        <p>Gene Kim, Kevin Behr, George Spafford</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                        <span class="progress-text">70%</span>
+                    </div>
+                </div>
+                
+                <div class="book">
+                    <img src="./pictures/interests/books/book2.jpg" alt="Book cover" class="book-cover">
+                    <div class="book-info">
+                        <h4>Clean Architecture</h4>
+                        <p>Robert C. Martin</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 25%;"></div>
+                        </div>
+                        <span class="progress-text">25%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recent Movies -->
+        <div class="interest-category">
+            <h3>Recently Watched</h3>
+            <div class="media-item">
+                <img src="./pictures/interests/movies/movie1.jpg" alt="Movie poster" class="media-cover">
+                <div class="media-info">
+                    <h4>Dune: Part Two</h4>
+                    <p>An incredible visual experience with excellent world-building and character development.</p>
+                    <div class="rating">★★★★☆</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Favorite Podcasts -->
+        <div class="interest-category">
+            <h3>Favorite Podcasts</h3>
+            <div class="podcasts-list">
+                <div class="podcast">
+                    <img src="./pictures/interests/podcasts/podcast1.jpg" alt="Podcast artwork" class="podcast-artwork">
+                    <div class="podcast-info">
+                        <h4>Darknet Diaries</h4>
+                        <p>True stories from the dark side of the Internet</p>
+                    </div>
+                </div>
+                <div class="podcast">
+                    <img src="./pictures/interests/podcasts/podcast2.jpg" alt="Podcast artwork" class="podcast-artwork">
+                    <div class="podcast-info">
+                        <h4>Command Line Heroes</h4>
+                        <p>Stories about the people who transformed technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Writing Projects -->
+        <div class="interest-category">
+            <h3>Writing Projects <a href="writing-projects.html" class="view-all-link">(View All)</a></h3>
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Started</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Digital Frontier</td>
+                        <td>Tech Blog Series</td>
+                        <td>In Progress</td>
+                        <td>February 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Native Applications</td>
+                        <td>Technical Guide</td>
+                        <td>Planning</td>
+                        <td>April 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Cybersecurity Essentials</td>
+                        <td>Tutorial Series</td>
+                        <td>Research</td>
+                        <td>May 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- YouTube Recommendations -->
+        <div class="interest-category">
+            <h3>YouTube Picks</h3>
+            <div class="youtube-container">
+                <div class="youtube-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>Tech Talk: The Future of Cloud Computing</h4>
+                </div>
+                <div class="youtube-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/j5a0jTc9S10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h4>DevOps Explained in 5 Minutes</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="profile-bottom-banner" role="img" aria-label="Bottom banner with ink splatter design">
         <img alt="Bottom banner with ink splatter design" class="banner-img">
     </div>
     
     <footer class="footer" role="contentinfo">
-        <p>&copy; Aleksey Kurdyukov 2024. All rights reserved.</p>
+        <p>&copy; Aleksey Kurdyukov <span id="current-year"></span>. All rights reserved.</p>
     </footer>
 </body>
 </html>
