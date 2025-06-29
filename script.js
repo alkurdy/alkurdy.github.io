@@ -12,23 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if dark mode is enabled in localStorage
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
-        modeIcon.textContent = "🌞";
-    } else {
-        modeIcon.textContent = "🌙";
+        if (darkModeBtn) {
+            darkModeBtn.checked = true;
+        }
     }
 
-    darkModeBtn.addEventListener("click", () => {
-        body.classList.toggle("dark-mode");
-        
-        // Save the user's preference
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("dark-mode", "enabled");
-            modeIcon.textContent = "🌞";
-        } else {
-            localStorage.setItem("dark-mode", "disabled");
-            modeIcon.textContent = "🌙";
-        }
-    });
+    if (darkModeBtn) {
+        darkModeBtn.addEventListener("click", () => {
+            if (body.classList.contains("dark-mode")) {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "disabled");
+                modeIcon.textContent = "🌙";
+            } else {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "enabled");
+                modeIcon.textContent = "☀️";
+            }
+        });
+    }
 
     // Add section highlighting in navigation
     const sections = document.querySelectorAll("section[id]");
@@ -56,4 +57,51 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial call and event listener
     highlightNavLink();
     window.addEventListener("scroll", highlightNavLink);
+
+    // Tab functionality for learning archive page
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    if (tabBtns.length > 0) {
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabId = this.dataset.tab;
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+    
+    // Filter functionality for course page
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    if (filterBtns.length > 0) {
+        const courseRows = document.querySelectorAll('.course-row');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                
+                // Remove active class from all filter buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked filter button
+                this.classList.add('active');
+                
+                // Show/hide courses based on filter
+                courseRows.forEach(row => {
+                    if (filter === 'all' || row.classList.contains(filter)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
 });
