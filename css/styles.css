@@ -126,6 +126,8 @@ main {
     overflow: hidden;
     background-color: transparent;
     border: 0;
+    padding: 3px; /* Space for the gradient border */
+    background: linear-gradient(90deg, #0066cc, #9933cc);
 }
 
 .profile-img {
@@ -135,7 +137,8 @@ main {
     background-color: transparent;
     position: relative;
     z-index: 1;
-    margin-top: 20px;
+    margin: 0; /* Remove top margin */
+    border: 3px solid #fff; /* Add white space between image and gradient */
 }
 
 .bio {
@@ -391,10 +394,52 @@ body.dark-mode .profile-bottom-banner .banner-img {
 
 /* Section Titles */
 .section-title, .education-title {
-    margin-bottom: 15px;
-    text-decoration: underline;
-    font-size: 24px;
-    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    background: linear-gradient(90deg, #0066cc, #9933cc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Section Header Styling with Animation */
+.section-title::after, .education-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #0066cc, #9933cc);
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-out;
+}
+
+section:hover .section-title::after, 
+section:hover .education-title::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Dark mode adjustments for section headers */
+body.dark-mode .section-title,
+body.dark-mode .education-title {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .section-title::after,
+body.dark-mode .education-title::after {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
 }
 
 /* Ensure table content is responsive */
@@ -686,22 +731,6 @@ body.dark-mode .footer {
     background-color: #222;
     color: #f0f0f0;
     box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.05);
-}
-
-/* Responsive adjustments for very small screens */
-@media (max-width: 480px) {
-    .company-logo {
-        width: 40px; /* Slightly smaller on mobile */
-    }
-    
-    .education-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .company-logo {
-        margin-bottom: 10px;
-    }
 }
 
 /* Work History Styles */
@@ -1172,25 +1201,6 @@ body.dark-mode .view-all-link {
     color: #4a9eff;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .youtube-video iframe {
-        height: 240px;
-    }
-    
-    .media-item, .book, .podcast {
-        flex-direction: column;
-    }
-    
-    .media-cover, .book-cover, .podcast-artwork {
-        margin-bottom: 10px;
-    }
-    
-    .media-info, .book-info, .podcast-info {
-        padding-left: 0;
-    }
-}
-
 /* Contact Info Styles */
 .contact-info {
     margin-top: 5px;
@@ -1209,13 +1219,61 @@ body.dark-mode .view-all-link {
     text-decoration: underline;
 }
 
-/* Dark mode styling */
-body.dark-mode .email-link {
-    color: #66b0ff;
+/* Email styling */
+.contact-info {
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-left: 10px;
 }
 
-body.dark-mode .email-link:hover {
-    color: #99ccff;
+.fancy-email {
+    font-family: 'Courier New', monospace;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding-bottom: 2px;
+    background: linear-gradient(90deg, #0066cc, #9933cc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.fancy-email::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #0066cc, #9933cc);
+    transition: width 0.3s ease;
+}
+
+.fancy-email:hover::after {
+    width: 100%;
+}
+
+.fancy-email:hover {
+    transform: translateY(-2px);
+}
+
+/* Dark mode adjustment */
+body.dark-mode .fancy-email {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .fancy-email::after {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
 }
 
 @media (max-width: 600px) {
