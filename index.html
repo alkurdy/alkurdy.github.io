@@ -8,6 +8,14 @@
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <style>
+        /* Visually hidden utility class for accessibility */
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px; width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
         /* Bottom banner sizing adjustment */
         .profile-bottom-banner {
             position: relative;
@@ -363,14 +371,12 @@
             <h3>YouTube Picks</h3>
             <div class="youtube-container">
                 <div class="youtube-video">
-                    <!-- Option 1: Try using YouTube's privacy-enhanced mode -->
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NM9HuC7WEls?si=qKGQ5SLm9YgiN6oX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <h4>These Final Minutes - Cornel Wilczek</h4>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FWmCKhBmFVY?si=N0hZ-wRBP30beZ_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video-fallback"></div>
                 </div>
                 
-                <!-- Option 2: Add a second video as fallback -->
                 <div class="youtube-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/E9udb4C-tSA?si=kIsctgGJQZXHCQJZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/E9udb4C-tSA?si=kIsctgGJQZXHCQJZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <h4>remember when lofi hip-hop actually sounded like this</h4>
                 </div>
             </div>
