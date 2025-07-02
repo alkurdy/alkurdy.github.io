@@ -779,14 +779,45 @@ body.dark-mode .education-title::after {
     object-fit: contain; /* Ensure logo fits within dimensions without distortion */
 }
 
+/* Add hover effects to school/company logos */
+.company-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.company-logo:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Dark mode adjustments for company logos */
+body.dark-mode .company-logo:hover {
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+/* Improve the education item display */
 .education-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
 }
 
-.education-details {
-    flex: 1;
+.education-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+body.dark-mode .education-item:hover {
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 /* Footer styling */
@@ -1109,7 +1140,7 @@ body.dark-mode .archive-link:hover {
     width: 120px;
     height: 180px;
     object-fit: cover;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
 }
 
 .media-info {
@@ -1139,14 +1170,15 @@ body.dark-mode .archive-link:hover {
     width: 100%;
     max-width: 400px;
     margin-bottom: 15px;
+    align-items: flex-start;
 }
 
 .podcast-artwork {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    border-radius: 6px;
 }
 
 .podcast-info {
@@ -1643,4 +1675,63 @@ body.dark-mode .finished-date {
     .reading-section {
         width: 100%;
     }
+}
+
+/* Shared hover effects for media items (books, movies, podcasts) */
+.book-cover,
+.media-cover,
+.podcast-artwork {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover:hover,
+.media-cover:hover,
+.podcast-artwork:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles for media covers */
+.media-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Specific styles for podcast artwork */
+.podcast-artwork {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 6px;
+}
+
+/* Enhance layout for media items */
+.media-item {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.podcast {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .book-cover,
+body.dark-mode .media-cover,
+body.dark-mode .podcast-artwork {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .book-cover:hover,
+body.dark-mode .media-cover:hover,
+body.dark-mode .podcast-artwork:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
 }
