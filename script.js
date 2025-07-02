@@ -2,7 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkModeBtn = document.getElementById("toggle-dark-mode");
     const modeIcon = document.getElementById("mode-icon");
     const body = document.body;
-    
+
+    // Centralized icons for dark and light mode
+    const DARK_MODE_ICON = "🌙";
+    const LIGHT_MODE_ICON = "☀️";
+
     // Set current year in footer
     const currentYearElement = document.getElementById("current-year");
     if (currentYearElement) {
@@ -15,6 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
         if (darkModeBtn) {
             darkModeBtn.checked = true;
         }
+        if (modeIcon) {
+            modeIcon.textContent = LIGHT_MODE_ICON;
+        }
+    } else {
+        if (modeIcon) {
+            modeIcon.textContent = DARK_MODE_ICON;
+        }
     }
 
     if (darkModeBtn) {
@@ -22,11 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
             if (body.classList.contains("dark-mode")) {
                 body.classList.remove("dark-mode");
                 localStorage.setItem("dark-mode", "disabled");
-                modeIcon.textContent = "🌙";
+                if (modeIcon) {
+                    modeIcon.textContent = DARK_MODE_ICON;
+                }
             } else {
                 body.classList.add("dark-mode");
                 localStorage.setItem("dark-mode", "enabled");
-                modeIcon.textContent = "☀️";
+                if (modeIcon) {
+                    modeIcon.textContent = LIGHT_MODE_ICON;
+                }
             }
         });
     }
@@ -34,15 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add section highlighting in navigation
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-bar a[href^='#']");
-    
+
     function highlightNavLink() {
         const scrollPos = window.scrollY + 100; // Offset to trigger slightly before the section
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute("id");
-            
+
             if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
                 navLinks.forEach(link => {
                     link.classList.remove("active");
@@ -53,47 +68,57 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-    
     // Initial call and event listener
     highlightNavLink();
     window.addEventListener("scroll", highlightNavLink);
 
-    // Tab functionality for learning archive page
+    // Tab functionality for learning archive
+
+        // Update current year in footer (handled above)
+
+    // Tab functionality for learning archive
     const tabBtns = document.querySelectorAll('.tab-btn');
     if (tabBtns.length > 0) {
-        const tabContents = document.querySelectorAll('.tab-content');
-        
         tabBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                const tabId = this.dataset.tab;
-                
+                const tabId = this.getAttribute('data-tab');
+                console.log('Tab clicked:', tabId);
+
+                // Get all tab buttons and content
+                const allTabBtns = document.querySelectorAll('.tab-btn');
+                const allTabContents = document.querySelectorAll('.tab-content');
+
                 // Remove active class from all buttons and contents
-                tabBtns.forEach(btn => btn.classList.remove('active'));
-                tabContents.forEach(content => content.classList.remove('active'));
-                
+                allTabBtns.forEach(btn => btn.classList.remove('active'));
+
                 // Add active class to clicked button and corresponding content
                 this.classList.add('active');
-                document.getElementById(tabId).classList.add('active');
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                const tabContent = document.getElementById(tabId);
+                if (tabContent) {
+                    tabContent.classList.add('active');
+                }
             });
         });
     }
-    
-    // Filter functionality for course page
+
+    // Course filter functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
     if (filterBtns.length > 0) {
-        const courseRows = document.querySelectorAll('.course-row');
-        
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                const filter = this.dataset.filter;
-                
+                const filter = this.getAttribute('data-filter');
+                console.log('Filter selected:', filter);
+
                 // Remove active class from all filter buttons
                 filterBtns.forEach(btn => btn.classList.remove('active'));
-                
+
                 // Add active class to clicked filter button
                 this.classList.add('active');
-                
-                // Show/hide courses based on filter
+
+                // Filter course rows
+                const courseRows = document.querySelectorAll('.course-row');
                 courseRows.forEach(row => {
                     if (filter === 'all' || row.classList.contains(filter)) {
                         row.style.display = '';

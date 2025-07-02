@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Archive - Aleksey Kurdyukov</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/learning-archive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -22,18 +24,18 @@
     <main class="main-content">
         <h1 class="page-title">Learning Archive</h1>
         
-        <div class="tabs">
-            <button class="tab-btn active" data-tab="courses">Academic Courses</button>
-            <button class="tab-btn" data-tab="previous-learning">Previous Learning</button>
+        <!-- Replace the tab buttons with section headings -->
+        <h2 class="section-heading">Academic Courses</h2>
+        <div class="course-filters">
+            <button class="filter-btn active" data-filter="all">All Courses</button>
+            <button class="filter-btn" data-filter="uva">UVA</button>
+            <button class="filter-btn" data-filter="nvcc-all">All NVCC</button>
+            <button class="filter-btn" data-filter="nvcc-direct">NVCC Courses</button>
+            <button class="filter-btn" data-filter="nvcc-transfer">NVCC Transfers</button>
         </div>
-        
-        <div id="courses" class="tab-content active">
-            <div class="course-filters">
-                <button class="filter-btn active" data-filter="all">All Courses</button>
-                <button class="filter-btn" data-filter="uva">UVA</button>
-                <button class="filter-btn" data-filter="nvcc">NVCC Transfer</button>
-            </div>
-            
+
+        <!-- Keep the courses table content as is, but remove the tab structure -->
+        <div id="courses" class="content-section">
             <table class="learning-table course-table">
                 <thead>
                     <tr>
@@ -42,6 +44,7 @@
                         <th>Origin</th>
                         <th>Term</th>
                         <th>Grade</th>
+                        <th>Transfer</th>
                         <th>Credits</th>
                     </tr>
                 </thead>
@@ -53,6 +56,7 @@
                         <td>UVA</td>
                         <td>Summer 2025</td>
                         <td>In Progress</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -61,6 +65,7 @@
                         <td>UVA</td>
                         <td>Spring 2025</td>
                         <td>A</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -69,6 +74,7 @@
                         <td>UVA</td>
                         <td>Spring 2025</td>
                         <td>A</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -77,6 +83,7 @@
                         <td>UVA</td>
                         <td>Fall 2024</td>
                         <td>A-</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -85,6 +92,7 @@
                         <td>UVA</td>
                         <td>Fall 2024</td>
                         <td>A</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -93,6 +101,7 @@
                         <td>UVA</td>
                         <td>Summer 2024</td>
                         <td>A+</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -101,6 +110,7 @@
                         <td>UVA</td>
                         <td>Spring 2024</td>
                         <td>A</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -109,6 +119,7 @@
                         <td>UVA</td>
                         <td>Spring 2024</td>
                         <td>A</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -117,6 +128,7 @@
                         <td>UVA</td>
                         <td>Fall 2023</td>
                         <td>A</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     <tr class="course-row uva">
@@ -125,215 +137,389 @@
                         <td>UVA</td>
                         <td>Fall 2023</td>
                         <td>A</td>
+                        <td>-</td>
                         <td>3</td>
                     </tr>
                     
                     <!-- NVCC Transfer Courses -->
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>COMM 1800</td>
                         <td>Foundations of Commerce</td>
                         <td>BUS 100</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>CS 1000T</td>
                         <td>Non-UVa Transfer/Test Credit</td>
                         <td>ITP 100</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>CS 1010</td>
                         <td>Introduction to Information Technology</td>
                         <td>ITE 115</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>CS 1110</td>
                         <td>Introduction to Programming</td>
                         <td>CSC 201</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>4</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>CS 2000T</td>
                         <td>Non-UVa Transfer/Test Credit</td>
                         <td>ITE 221</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>CS 2100</td>
                         <td>Data Structures and Algorithms 1</td>
                         <td>CSC 223</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>4</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>CS 2102</td>
                         <td>Discrete Mathematics</td>
                         <td>MTH 288</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>ENGL 2000T</td>
                         <td>Non-UVa Transfer/Test Credit</td>
                         <td>ENG 236</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>ENSP 1000T</td>
                         <td>Non-UVa Transfer/Test Credit</td>
                         <td>CST 110</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>ENWR 1505</td>
                         <td>Writing & Critical Inquiry Stretch I</td>
                         <td>ENG 111</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>ENWR 1506</td>
                         <td>Writing & Critical Inquiry Stretch II</td>
                         <td>ENG 112</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>HIEU 2001</td>
                         <td>Western Civilization I</td>
                         <td>HIS 101</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>HIEU 2152</td>
                         <td>History of the Russian Empire 1700-1917</td>
                         <td>HIS 241</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>MATH 1310</td>
                         <td>Calculus I</td>
                         <td>MTH 263</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>4</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>MATH 1320</td>
                         <td>Calculus II</td>
                         <td>MTH 264</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>4</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>MATH 3351</td>
                         <td>Elementary Linear Algebra</td>
                         <td>MTH 266</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>PHIL 1730</td>
                         <td>Introduction to Moral and Political Philosophy</td>
                         <td>PHI 220</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>PHYS 1010</td>
                         <td>The Physical Universe</td>
                         <td>PHY 101</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>4</td>
                     </tr>
-                    <tr class="course-row nvcc">
+                    <tr class="course-row nvcc-transfer nvcc-all">
                         <td>PSYC 1010</td>
                         <td>Introductory Psychology</td>
                         <td>PSY 200</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
+                        <td>NVCC</td>
                         <td>3</td>
                     </tr>
+                    
+                    <!-- NVCC Direct Courses -->
+                    <tr class="course-row nvcc-direct nvcc-all">
+                        <td>CSC 223</td>
+                        <td>Data Struct & Analysis of Alg</td>
+                        <td>NVCC</td>
+                        <td>Spring 2023</td>
+                        <td>B</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="course-row nvcc-direct nvcc-all">
+                        <td>MTH 264</td>
+                        <td>Calculus II</td>
+                        <td>NVCC</td>
+                        <td>Fall 2022</td>
+                        <td>A</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="course-row nvcc-direct nvcc-all">
+                        <td>MTH 266</td>
+                        <td>Linear Algebra</td>
+                        <td>NVCC</td>
+                        <td>Summer 2022</td>
+                        <td>B+</td>
+                        <td>-</td>
+                        <td>3</td>
+                    </tr>
+                    <tr class="course-row nvcc-direct nvcc-all">
+                        <td>MTH 263</td>
+                        <td>Calculus I</td>
+                        <td>NVCC</td>
+                        <td>Spring 2022</td>
+                        <td>A</td>
+                        <td>-</td>
+                        <td>4</td>
+                    </tr>
+                    <!-- Add more courses as needed -->
                 </tbody>
             </table>
             
+            <!-- Statistics Container -->
             <div class="stats-container">
-                <div class="stat-box">
-                    <span class="stat-number">76</span>
-                    <span class="stat-label">Total Credits</span>
+                <!-- NVCC Stats with green and gold gradient -->
+                <div class="stats-group nvcc-achievement">
+                    <h3 class="stats-heading">NVCC Achievement</h3>
+                    <div class="stats-row">
+                        <div class="stat-box nvcc-stat">
+                            <span class="stat-number">97</span>
+                            <span class="stat-label">Total Credits</span>
+                        </div>
+                        <div class="stat-box nvcc-stat">
+                            <span class="stat-number">3.29</span>
+                            <span class="stat-label">NVCC GPA</span>
+                        </div>
+                        <div class="stat-box nvcc-stat">
+                            <span class="stat-number">A.S.</span>
+                            <span class="stat-label">Degree Earned</span>
+                        </div>
+                        <div class="stat-box nvcc-stat">
+                            <span class="stat-number">Cum Laude</span>
+                            <span class="stat-label">NVCC Honors</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-box">
-                    <span class="stat-number">3.97</span>
-                    <span class="stat-label">GPA</span>
+                
+                <!-- UVA Stats -->
+                <div class="stats-group">
+                    <h3 class="stats-heading">UVA Progress</h3>
+                    <div class="stats-row">
+                        <div class="stat-box uva-stat">
+                            <span class="stat-number">30</span>
+                            <span class="stat-label">UVA Credits</span>
+                        </div>
+                        <div class="stat-box uva-stat">
+                            <span class="stat-number">3.95</span>
+                            <span class="stat-label">UVA GPA</span>
+                        </div>
+                        <div class="stat-box uva-stat">
+                            <span class="stat-number">50%</span>
+                            <span class="stat-label">Program Complete</span>
+                        </div>
+                        <div class="stat-box uva-stat">
+                            <span class="stat-number">Fall 2027</span>
+                            <span class="stat-label">Expected Graduation</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-box">
-                    <span class="stat-number">59%</span>
-                    <span class="stat-label">Program Complete</span>
+                
+                <!-- Future M.S. Degree -->
+                <div class="stats-group future-degree">
+                    <h3 class="stats-heading">Future Graduate Studies</h3>
+                    <div class="stats-row">
+                        <div class="stat-box future-stat">
+                            <span class="stat-number">M.S.</span>
+                            <span class="stat-label">Future Degree</span>
+                        </div>
+                        <div class="stat-box future-stat">
+                            <span class="stat-number">2028</span>
+                            <span class="stat-label">Target Year</span>
+                        </div>
+                        <div class="stat-box future-stat">
+                            <span class="stat-number"><i class="fas fa-university"></i></span>
+                            <span class="stat-label">Exploring Programs</span>
+                        </div>
+                        <div class="stat-box future-stat">
+                            <span class="stat-number">Data</span>
+                            <span class="stat-label">Focus Area</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div id="previous-learning" class="tab-content">
-            <table class="learning-table archive-table">
+        <h2 class="section-heading">Previous Learning</h2>
+        <div id="previous-learning" class="content-section">
+            <table class="learning-table">
                 <thead>
                     <tr>
-                        <th>Topic</th>
-                        <th>Started</th>
+                        <th>Course/Certificate</th>
+                        <th>Provider</th>
                         <th>Completed</th>
-                        <th>Resources</th>
-                        <th>Notes</th>
+                        <th>Certificate</th>
+                        <th>Skills Gained</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Sample archived item -->
                     <tr>
-                        <td>Python Programming</td>
-                        <td>January 2023</td>
-                        <td>April 2023</td>
+                        <td>Azure Administrator Associate</td>
+                        <td>Microsoft</td>
+                        <td>January 2025</td>
+                        <td><a href="#" target="_blank" rel="noopener noreferrer">View Certificate</a></td>
+                        <td>Cloud infrastructure management, Azure AD, Virtual Networks, Storage solutions</td>
+                    </tr>
+                    <tr>
+                        <td>CompTIA Security+</td>
+                        <td>CompTIA</td>
+                        <td>March 2023</td>
+                        <td><a href="#" target="_blank" rel="noopener noreferrer">View Certificate</a></td>
+                        <td>Network security, threat management, cryptography, security protocols</td>
+                    </tr>
+                    <tr>
+                        <td>VMware Certified Professional</td>
+                        <td>VMware</td>
+                        <td>October 2022</td>
+                        <td><a href="#" target="_blank" rel="noopener noreferrer">View Certificate</a></td>
+                        <td>Virtualization, server administration, disaster recovery, storage optimization</td>
+                    </tr>
+                    <tr>
+                        <td>AWS Cloud Practitioner</td>
+                        <td>Amazon Web Services</td>
+                        <td>July 2022</td>
+                        <td><a href="#" target="_blank" rel="noopener noreferrer">View Certificate</a></td>
+                        <td>Cloud concepts, AWS services, security, architecture, pricing and support</td>
+                    </tr>
+                    <tr>
+                        <td>Machine Learning Fundamentals</td>
                         <td>Coursera</td>
-                        <td>Completed beginner to intermediate learning path</td>
+                        <td>April 2022</td>
+                        <td><a href="#" target="_blank" rel="noopener noreferrer">View Certificate</a></td>
+                        <td>Regression, classification, clustering, neural networks, Python for ML</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development Bootcamp</td>
+                        <td>Udemy</td>
+                        <td>December 2021</td>
+                        <td><a href="#" target="_blank" rel="noopener noreferrer">View Certificate</a></td>
+                        <td>HTML, CSS, JavaScript, React, Node.js, responsive design</td>
                     </tr>
                 </tbody>
             </table>
+
+            <!-- Previous Learning Stats -->
+            <div class="stats-container">
+                <div class="stats-group">
+                    <h3 class="stats-heading">Continuous Learning</h3>
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-number">14</span>
+                            <span class="stat-label">Total Certificates</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Learning</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Platforms Used</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Industry Certs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-            
+        
         <div class="back-link-container">
-            <a href="index.html#learning" class="back-link">&larr; Back to Main</a>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Homepage
+            </a>
         </div>
     </main>
     
-    <div class="profile-bottom-banner" role="img" aria-label="Bottom banner with ink splatter design">
-        <img alt="Bottom banner with ink splatter design" class="banner-img">
-    </div>
-    
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <p>&copy; Aleksey Kurdyukov <span id="current-year"></span>. All rights reserved.</p>
     </footer>
 </body>
