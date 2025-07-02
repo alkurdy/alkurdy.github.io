@@ -198,6 +198,27 @@
     background: linear-gradient(90deg, #006633, #cca300);
 }
 
+/* Certification stats styling */
+.cert-stat {
+    background: linear-gradient(135deg, #0078d4, #5c2d91);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 120, 212, 0.3);
+}
+
+.cert-achievement .stats-heading::after {
+    background: linear-gradient(90deg, #0078d4, #5c2d91);
+}
+
+/* Expired certification styling */
+.learning-table td:nth-child(3):contains('Expired') {
+    color: #888;
+}
+
 /* Section Headings */
 .section-heading {
     margin: 40px 20px 20px;
