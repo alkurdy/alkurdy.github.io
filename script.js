@@ -129,4 +129,70 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Typewriter effect for writer bio
+    document.addEventListener('DOMContentLoaded', function() {
+        const writerBio = document.getElementById('writer-bio');
+        
+        if (writerBio) {
+            const bioText = writerBio.innerHTML;
+            const bioTextPlain = bioText.replace(/<br><br>/g, '\n\n');
+            
+            // Clear the div to start fresh
+            writerBio.innerHTML = '';
+            
+            // Create cursor element
+            const cursor = document.createElement('span');
+            cursor.className = 'typewriter-cursor';
+            writerBio.parentNode.appendChild(cursor);
+            
+            // Start typing after a short delay
+            let charIndex = 0;
+            let htmlContent = '';
+            const typingDelay = 20; // milliseconds per character
+            
+            function typeText() {
+                if (charIndex < bioTextPlain.length) {
+                    // Handle newlines
+                    if (bioTextPlain.charAt(charIndex) === '\n' && bioTextPlain.charAt(charIndex + 1) === '\n') {
+                        htmlContent += '<br><br>';
+                        charIndex += 2;
+                    } else {
+                        htmlContent += bioTextPlain.charAt(charIndex);
+                        charIndex++;
+                    }
+                    
+                    writerBio.innerHTML = htmlContent;
+                    
+                    // Position cursor at the end of text
+                    const bioRect = writerBio.getBoundingClientRect();
+                    cursor.style.position = 'absolute';
+                    cursor.style.top = (window.scrollY + bioRect.bottom - 20) + 'px';
+                    cursor.style.left = (bioRect.right + 2) + 'px';
+                    
+                    // Schedule next character with variable delay
+                    const nextDelay = typingDelay * (bioTextPlain.charAt(charIndex) === '.' ? 5 : 1);
+                    setTimeout(typeText, nextDelay);
+                } else {
+                    // Done typing, continue blinking cursor
+                    cursor.style.position = 'static';
+                    cursor.style.display = 'inline-block';
+                    writerBio.appendChild(cursor);
+                }
+            }
+            
+            // Option to skip animation on second visit
+            const hasVisitedBefore = sessionStorage.getItem('visitedWritingPage');
+            
+            if (hasVisitedBefore) {
+                // Skip animation for returning visitors
+                writerBio.innerHTML = bioText;
+            } else {
+                // Start typing animation after a brief pause
+                setTimeout(typeText, 800);
+                // Mark that user has visited the page
+                sessionStorage.setItem('visitedWritingPage', 'true');
+            }
+        }
+    });
 });

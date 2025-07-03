@@ -1312,10 +1312,6 @@ body.dark-mode .projects-table tr:hover {
     background-color: rgba(255, 255, 255, 0.03);
 }
 
-body.dark-mode .view-all-link {
-    color: #4a9eff;
-}
-
 /* Contact Info Styles */
 .contact-info {
     margin-top: 5px;

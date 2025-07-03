@@ -1,0 +1,225 @@
+/* Writing Projects Styles */
+
+/* Layout */
+.writing-content {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.page-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 32px;
+}
+
+/* Typewriter and Bio Container */
+.writer-bio-container {
+    max-width: 900px;
+    margin: 30px auto 40px;
+    padding: 25px 30px;
+    background-color: rgba(250, 250, 250, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Bio image styling - Update for float layout */
+.bio-flex-container {
+    position: relative;
+    padding: 0 0 20px 0;
+}
+
+.bio-image-container {
+    float: left;
+    margin: 0 30px 10px 0;
+}
+
+.bio-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Typewriter text styling - update for wrap */
+.typewriter-text {
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    overflow: visible;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #333;
+    animation: blink 1s step-end infinite;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Clear the float after the bio container */
+.bio-flex-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Signature styling */
+.author-signature {
+    display: block;
+    font-family: 'Pacifico', cursive, 'Brush Script MT', cursive;
+    font-size: 24px;
+    color: #2573c2;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 30px;
+    font-weight: normal;
+    line-height: 1;
+    transform: rotate(-2deg);
+}
+
+body.dark-mode .author-signature {
+    color: #2971bd;
+}
+
+/* Projects Table */
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.projects-table th {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+}
+
+.projects-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.full-projects {
+    margin-bottom: 30px;
+}
+
+/* Navigation */
+.back-link-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #e0e0e0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .writer-bio-container {
+    background-color: rgba(40, 40, 40, 0.8);
+}
+
+body.dark-mode .typewriter-text {
+    color: #ddd;
+}
+
+body.dark-mode .typewriter-cursor {
+    background-color: #ddd;
+}
+
+body.dark-mode .bio-image {
+    border-color: #333;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .bio-image:hover {
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .projects-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .projects-table td {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .projects-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+body.dark-mode .back-link {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .back-link:hover {
+    background-color: #444;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .bio-flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bio-image-container {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    
+    .bio-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .writer-bio-container {
+        padding: 20px;
+    }
+    
+    .projects-table {
+        font-size: 14px;
+    }
+    
+    .author-signature {
+        text-align: center;
+        padding-right: 0;
+    }
+}
