@@ -1218,86 +1218,66 @@ body.dark-mode .archive-link:hover {
     background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* YouTube container */
-.youtube-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.youtube-video {
-    width: 100%;
-    max-width: 560px;
-    margin-bottom: 15px;
-}
-
-.youtube-video iframe {
-    width: 100%;
-    height: 315px;
-}
-
-.youtube-video h4 {
-    margin: 10px 0 0 0;
-}
-
-/* Writing Projects Page */
-.writing-content {
-    max-width: 90%;
-    margin: 30px auto;
-    padding: 0 15px;
-}
-
-.page-title {
-    text-align: center;
-    margin: 40px 0 20px;
-    font-size: 32px;
-}
-
-.full-projects {
-    margin-bottom: 30px;
-}
-
-.back-link-container {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.back-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #333;
+/* Writing Projects Progress Bar in index.html */
+.word-count {
     font-weight: bold;
-    transition: background-color 0.3s;
+    margin-bottom: 3px;
 }
 
-.back-link:hover {
-    background-color: #e0e0e0;
+.word-progress-container {
+    height: 6px;
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3px;
 }
 
-body.dark-mode .back-link {
-    background-color: #333;
-    color: #f0f0f0;
+.word-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #4a86e8, #9cc3ff);
+    border-radius: 4px;
 }
 
-body.dark-mode .back-link:hover {
-    background-color: #444;
+.word-target {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Status colors */
+.status-complete {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.status-progress {
+    color: #1565c0;
+    font-weight: 500;
+}
+
+.status-planning {
+    color: #ed6c02;
+    font-weight: 500;
 }
 
 /* Dark mode adjustments */
-body.dark-mode .interest-category {
-    background-color: rgba(255, 255, 255, 0.05);
+body.dark-mode .word-progress-container {
+    background-color: #444;
 }
 
-body.dark-mode .interest-category h3 {
-    border-bottom: 2px solid #444;
-}
-
-body.dark-mode .book-info p,
-body.dark-mode .podcast-info p {
+body.dark-mode .word-target {
     color: #aaa;
+}
+
+body.dark-mode .status-complete {
+    color: #81c784;
+}
+
+body.dark-mode .status-progress {
+    color: #64b5f6;
+}
+
+body.dark-mode .status-planning {
+    color: #ffb74d;
 }
 
 body.dark-mode .projects-table th {

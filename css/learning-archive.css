@@ -356,3 +356,109 @@ body.dark-mode .stat-box {
         margin-bottom: 8px;
     }
 }
+
+/* Learning Archive Table - Specific Styles */
+.learning-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.learning-table th {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.learning-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.learning-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);
+    transition: background-color 0.3s ease;
+}
+
+.learning-table tr:hover {
+    background-color: rgba(0, 102, 204, 0.08);
+    transition: background-color 0.3s ease;
+}
+
+/* Learning Progress Specific Styles */
+.status-progress {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(90deg, #28a745, #218838);
+}
+
+.status-complete {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(90deg, #007bff, #0069d9);
+}
+
+.status-planning {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(90deg, #ffc107, #e0a800);
+}
+
+/* Word Progress Bar Styles */
+.word-progress-container {
+    background: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 8px;
+    margin: 5px 0;
+}
+
+.word-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #0069d9);
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+.word-count {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.word-target {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Specific Table Row Styles */
+.learning-table tr:nth-child(1) td {
+    font-weight: 600;
+    background: rgba(0, 102, 204, 0.1);
+}
+
+.learning-table tr:nth-child(2) td {
+    font-weight: 600;
+    background: rgba(0, 123, 255, 0.1);
+}
+
+.learning-table tr:nth-child(3) td {
+    font-weight: 600;
+    background: rgba(255, 193, 7, 0.1);
+}

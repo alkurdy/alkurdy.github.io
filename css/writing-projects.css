@@ -148,6 +148,66 @@ body.dark-mode .author-signature {
     background-color: #e0e0e0;
 }
 
+/* Word Count Progress Bar */
+.word-count {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.word-progress-container {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+
+.word-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #4a86e8, #9cc3ff);
+    border-radius: 4px;
+}
+
+.word-target {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .word-progress-container {
+    background-color: #444;
+}
+
+body.dark-mode .word-target {
+    color: #aaa;
+}
+
+/* Add styles for status colors */
+.status-complete {
+    color: #2e7d32;
+}
+
+.status-progress {
+    color: #1565c0;
+}
+
+.status-planning {
+    color: #ed6c02;
+}
+
+/* Dark mode status colors */
+body.dark-mode .status-complete {
+    color: #81c784;
+}
+
+body.dark-mode .status-progress {
+    color: #64b5f6;
+}
+
+body.dark-mode .status-planning {
+    color: #ffb74d;
+}
+
 /* Dark Mode Styles */
 body.dark-mode .writer-bio-container {
     background-color: rgba(40, 40, 40, 0.8);
