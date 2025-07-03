@@ -129,7 +129,7 @@ body.dark-mode .author-signature {
 
 /* Navigation */
 .back-link-container {
-    margin-top: 40px;
+    margin: 40px 0 20px;
     text-align: center;
 }
 
@@ -146,6 +146,42 @@ body.dark-mode .author-signature {
 
 .back-link:hover {
     background-color: #e0e0e0;
+}
+
+body.dark-mode .back-link {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .back-link:hover {
+    background-color: #444;
+}
+
+/* Back button styling */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+.back-btn:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Word Count Progress Bar */
@@ -375,3 +411,6 @@ body.dark-mode .status-planning {
         font-size: 10px;
     }
 }
+
+/* Import Font Awesome CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');

@@ -306,6 +306,50 @@ body.dark-mode .stat-box {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Back button styling */
+.back-link-container {
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+.back-btn:hover {
+    background-color: #0052a3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode adjustments */
+body.dark-mode .back-btn {
+    background-color: #3a86ff;
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .back-btn:hover {
+    background-color: #2a75f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .stats-container {
