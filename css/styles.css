@@ -1196,6 +1196,23 @@ body.dark-mode .archive-link:hover {
     color: #666;
 }
 
+/* Podcast icon link styles */
+.podcast-icon-link {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.podcast-icon-link:hover .podcast-artwork,
+.podcast-icon-link:focus .podcast-artwork {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .podcast-icon-link:hover .podcast-artwork,
+body.dark-mode .podcast-icon-link:focus .podcast-artwork {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+}
+
 /* Projects Table */
 .projects-table {
     width: 100%;

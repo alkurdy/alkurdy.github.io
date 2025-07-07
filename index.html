@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Visually hidden utility class for accessibility */
         .visually-hidden {
@@ -309,19 +310,23 @@
             </div>
         </div>
         
-        <!-- Podcasts -->
+        <!-- Podcasts with clickable icons -->
         <div class="interest-category">
             <h3>Podcasts</h3>
             <div class="podcasts-list">
                 <div class="podcast">
-                    <img src="./pictures/interests/podcasts/insertcredpod.png" alt="Podcast artwork" class="podcast-artwork">
+                    <a href="https://insertcredit.com/" target="_blank" rel="noopener noreferrer" class="podcast-icon-link">
+                        <img src="./pictures/interests/podcasts/insertcredpod.png" alt="Insert Credit podcast artwork" class="podcast-artwork">
+                    </a>
                     <div class="podcast-info">
-                        <h4><a href="https://insertcredit.com/" target="_blank" rel="noopener noreferrer">insert credit</a></h4>
+                        <h4><a href="https://insertcredit.com/" target="_blank" rel="noopener noreferrer">Insert Credit</a></h4>
                         <p>A panel of video game devs, journalists, and archivists discussing the art and craft of video games. Answering quirky questions and exploring silly topics related to game design, development, and culture.</p>
                     </div>
                 </div>
                 <div class="podcast">
-                    <img src="./pictures/interests/podcasts/intotheaetherpd.png" alt="Podcast artwork" class="podcast-artwork">
+                    <a href="https://intothecast.online/" target="_blank" rel="noopener noreferrer" class="podcast-icon-link">
+                        <img src="./pictures/interests/podcasts/intotheaetherpd.png" alt="Into the Aether podcast artwork" class="podcast-artwork">
+                    </a>
                     <div class="podcast-info">
                         <h4><a href="https://intothecast.online/" target="_blank" rel="noopener noreferrer">Into the Aether</a></h4>
                         <p>Self described as a low-key video game podcast where hosts discuss playing video games across various platforms and genres.</p>
@@ -338,16 +343,17 @@
                     <span class="archive-arrow">→</span>
                 </a>
             </h3>
-            <table class="projects-table">
+            <table class="projects-table full-projects">
                 <thead>
                     <tr>
-                        <th>Project</th>
-                        <th>Title</th>
+                        <th>Cover</th>
+                        <th>Project Name</th>
                         <th>Genre</th>
                         <th>Type</th>
                         <th>Status</th>
                         <th>Started</th>
                         <th>Word Count</th>
+                        <th>Published On</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -357,38 +363,25 @@
                                 <img src="./pictures/interests/writing/The-Third-Barb.png" alt="Cover for The Third Barb" class="project-cover">
                             </div>
                         </td>
-                        <td>The Third Barb - Prelude</td>
+                        <td>The Third Barb - Chapter 1</td>
                         <td>Science Fiction</td>
-                        <td>Serialized Novella</td>
+                        <td>Novella</td>
                         <td><span class="status-progress">In Progress</span></td>
                         <td><time datetime="2025-06-14">June 14, 2025</time></td>
                         <td>
-                            <div class="word-count">4,200</div>
+                            <div class="word-count">5000</div>
                             <div class="word-progress-container">
-                                <div class="word-progress" style="width: 90%"></div>
+                                <div class="word-progress" style="width: 15%"></div>
                             </div>
-                            <div class="word-target">Target: 5,000</div>
+                            <div class="word-target">Target: 900</div>
+                        </td>
+                        <td class="publishing-platforms">
+                            <a href="https://reamstories.com/" target="_blank" rel="noopener noreferrer" class="platform-link" title="Read on Ream Stories">
+                                <i class="fas fa-book"></i> Ream Stories
+                            </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <div class="project-cover-container">
-                                <img src="./pictures/interests/writing/The-Third-Barb.png" alt="Cover for The Edge of Memory" class="project-cover">
-                            </div>
-                        </td>
-                        <td>The Third Barb - Chapter 1</td>
-                        <td>Speculative Fiction</td>
-                        <td>Serialized Novella</td>
-                        <td><span class="status-complete">Backlog</span></td>
-                        <td><time datetime="2025-03-22">March 22, 2025</time></td>
-                        <td>
-                            <div class="word-count">0</div>
-                            <div class="word-progress-container">
-                                <div class="word-progress" style="width: 0%"></div>
-                            </div>
-                            <div class="word-target">Target: 7,500</div>
-                        </td>
-                    </tr>
+                    <!-- Additional projects follow the same pattern -->
                 </tbody>
             </table>
         </div>

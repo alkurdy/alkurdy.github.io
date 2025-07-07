@@ -356,6 +356,89 @@ body.dark-mode .status-planning {
     color: #ffb74d;
 }
 
+/* Publishing Platform Links */
+.publishing-platforms {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.platform-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.platform-link i {
+    font-size: 18px;
+}
+
+/* Platform-specific colors on hover */
+.platform-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.platform-link[title*="Medium"]:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.platform-link[title*="Wattpad"]:hover {
+    background-color: #FF6600;
+    color: #ffffff;
+}
+
+.platform-link[title*="Royal Road"]:hover {
+    background-color: #6699CC;
+    color: #ffffff;
+}
+
+.platform-link[title*="Substack"]:hover {
+    background-color: #FF6719;
+    color: #ffffff;
+}
+
+.platform-link[title*="Ream"]:hover {
+    background-color: #2a9d8f;
+    color: #ffffff;
+}
+
+.platform-link[title*="AO3"]:hover, 
+.platform-link[title*="Archive"]:hover {
+    background-color: #990000;
+    color: #ffffff;
+}
+
+.not-published {
+    color: #999;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .platform-link {
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .platform-link:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .not-published {
+    color: #777;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .bio-flex-container {
