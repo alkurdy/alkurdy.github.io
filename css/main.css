@@ -1,0 +1,13 @@
+/* main.css */
+@import url('global.css');
+@import url('layout.css');
+@import url('header.css');
+@import url('sections/work.css');
+@import url('sections/education.css');
+@import url('sections/interests.css');
+@import url('sections/writing.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/tables.css');
+@import url('components/media.css');
+@import url('dark-mode.css');

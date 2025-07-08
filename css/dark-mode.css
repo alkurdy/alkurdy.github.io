@@ -1,0 +1,334 @@
+/* ==========================================================================
+   Dark Mode Styles
+   ========================================================================== */
+
+body.dark-mode {
+    background-color: #000000; /* Changed from #121212 to pure black */
+    color: #f0f0f0;
+}
+
+/* Navigation */
+body.dark-mode .nav-bar {
+    background: rgba(31, 31, 31, 0.95);
+}
+
+body.dark-mode .nav-bar a {
+    color: #ffffff;
+    border-right: 1px solid #666;
+}
+
+body.dark-mode .nav-bar a:hover {
+    background-color: #333333;
+}
+
+/* Tables */
+body.dark-mode .responsive-table th {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .responsive-table td {
+    border-bottom: 1px solid #444444;
+}
+
+body.dark-mode .table td {
+    border-bottom: 1px solid #444;
+}
+
+/* Footer */
+body.dark-mode .footer {
+    background-color: #222;
+    color: #f0f0f0;
+    box-shadow: 0 -2px 5px rgba(255, 255, 255, 0.05);
+}
+
+/* Content Areas */
+body.dark-mode .content {
+    background: #444;
+}
+
+/* Progress Content */
+body.dark-mode main.progress-content th {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode main.progress-content td {
+    border-bottom: 1px solid #444444;
+}
+
+body.dark-mode main.progress-content tr:nth-child(even) {
+    background-color: #333333;
+}
+
+body.dark-mode main.progress-content .progress-bar-container {
+    background-color: #444444;
+}
+
+body.dark-mode main.progress-content .progress-bar {
+    background-color: #76c7c0;
+}
+
+/* Learning Content */
+body.dark-mode main.learning-content th {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+body.dark-mode main.learning-content td {
+    border-bottom: 1px solid #444444;
+}
+
+body.dark-mode main.learning-content tr:nth-child(even) {
+    background-color: #333333;
+}
+
+body.dark-mode main.interests-content {
+    background-color: #333;
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode main.interests-content ul li {
+    color: #e0e0e0;
+}
+
+/* Form Content */
+body.dark-mode .form-content h3 {
+    color: #ddd;
+}
+
+body.dark-mode .form-content p {
+    color: #bbb;
+}
+
+body.dark-mode .contact-form {
+    border: 1px solid #666;
+    background-color: #333;
+}
+
+body.dark-mode .contact-form label {
+    color: #ddd;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    border: 1px solid #666;
+    background-color: #444;
+    color: #ddd;
+}
+
+body.dark-mode .contact-form button {
+    background-color: #0056b3;
+    color: white;
+}
+
+body.dark-mode .contact-form button:hover {
+    background-color: #004494;
+}
+
+/* Banners */
+body.dark-mode .profile-banner {
+    background-color: #222;
+}
+
+body.dark-mode .profile-banner .banner-img {
+    content: url('/pictures/banners/top/top-dark-banner.png');
+}
+
+body.dark-mode .profile-bottom-banner .banner-img {
+    content: url('/pictures/banners/bottom/bottom-dark-banner.png');
+}
+
+/* Section Headers */
+body.dark-mode .section-title,
+body.dark-mode .education-title {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .section-title::after,
+body.dark-mode .education-title::after {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+}
+
+/* Bio section */
+body.dark-mode .bio {
+    background-color: rgba(40, 40, 40, 0.8);
+}
+
+/* Education & Job Items */
+body.dark-mode .education-item:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+body.dark-mode .company-logo:hover {
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    background-color: rgba(50, 50, 50, 0.9);
+}
+
+/* Archive Links */
+body.dark-mode .archive-link {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .archive-link:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Email Styling */
+body.dark-mode .fancy-email {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-mode .fancy-email::after {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+}
+
+/* Tab Buttons */
+body.dark-mode .tab-btn {
+    background: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .tab-btn.active {
+    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+}
+
+body.dark-mode .filter-btn {
+    background: #333;
+    color: #f0f0f0;
+}
+
+body.dark-mode .filter-btn.active {
+    background: #66b0ff;
+}
+
+/* Course Tables */
+body.dark-mode .course-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 2px solid #444;
+}
+
+body.dark-mode .course-table td {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .course-row:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+body.dark-mode .course-row:hover {
+    background-color: rgba(102, 176, 255, 0.1);
+}
+
+/* Reading Section */
+body.dark-mode .reading-heading {
+    color: #66b0ff;
+    border-bottom-color: #444;
+}
+
+body.dark-mode .finished-date {
+    color: #aaa;
+}
+
+/* Media items */
+body.dark-mode .book-cover,
+body.dark-mode .media-cover,
+body.dark-mode .podcast-artwork {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .book-cover:hover,
+body.dark-mode .media-cover:hover,
+body.dark-mode .podcast-artwork:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .media-cover-link:hover .media-cover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+}
+
+/* Podcast links */
+body.dark-mode .podcast-icon-link:hover .podcast-artwork,
+body.dark-mode .podcast-icon-link:focus .podcast-artwork {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+}
+
+/* Project tables */
+body.dark-mode .projects-table th {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .projects-table td {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .projects-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Writing projects */
+body.dark-mode .word-progress-container {
+    background-color: #444;
+}
+
+body.dark-mode .word-target {
+    color: #aaa;
+}
+
+body.dark-mode .status-complete {
+    color: #81c784;
+}
+
+body.dark-mode .status-progress {
+    color: #64b5f6;
+}
+
+body.dark-mode .status-planning {
+    color: #ffb74d;
+}
+
+body.dark-mode .project-cover-container {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .project-cover-container:hover {
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.15);
+}
+
+/* Platform links */
+body.dark-mode .platform-link {
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .platform-link:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .not-published {
+    color: #777;
+}
+
+/* Back button */
+body.dark-mode .back-btn {
+    background-color: #3a86ff;
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .back-btn:hover {
+    background-color: #2a75f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}

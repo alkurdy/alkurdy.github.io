@@ -1807,3 +1807,21 @@ body.dark-mode .project-cover-container:hover {
     text-align: center;
     font-size: 15px;
 }
+
+/* Make media covers clickable */
+.media-cover-link {
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-cover-link:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+.media-cover-link:hover .media-cover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .media-cover-link:hover .media-cover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+}
