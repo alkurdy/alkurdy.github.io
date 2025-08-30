@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/learning-archive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="script.js" defer></script>
-</head>
+    <!-- Handles general site-wide JavaScript functionality -->
+    <script src="js/script.js" defer></script>
+    <!-- Calculates and displays learning statistics on this page -->
+    <script src="js/learning-stats.js" defer></script>
 <body>
     <nav class="nav-bar" role="navigation">
         <a href="index.html">Home</a>
@@ -260,7 +262,7 @@
                     </tr>
                     <tr class="course-row nvcc-transfer nvcc-all">
                         <td>HIEU 2001</td>
-                        <td>Western Civilization I</td>
+                        <td>Western Civilization Pre-1600 CE</td>
                         <td>HIS 101</td>
                         <td>Transfer Fall 2023</td>
                         <td>Transfer</td>
@@ -334,7 +336,7 @@
                     <!-- NVCC Direct Courses -->
                     <tr class="course-row nvcc-direct nvcc-all">
                         <td>CSC 223</td>
-                        <td>Data Struct & Analysis of Alg</td>
+                        <td>Data Structures & Analysis of Algorithms</td>
                         <td>NVCC</td>
                         <td>Spring 2023</td>
                         <td>B</td>
@@ -380,7 +382,7 @@
                     </tr>
                     <tr class="course-row nvcc-direct nvcc-all">
                         <td>HIS 101</td>
-                        <td>Hist of West Civ I</td>
+                        <td>History of Western Civilization I</td>
                         <td>NVCC</td>
                         <td>Spring 2018</td>
                         <td>A</td>
@@ -398,7 +400,7 @@
                     </tr>
                     <tr class="course-row nvcc-direct nvcc-all">
                         <td>PHI 220</td>
-                        <td>Ethics</td>
+                        <td>Ethics and Society</td>
                         <td>NVCC</td>
                         <td>Summer 2018</td>
                         <td>A</td>
@@ -425,7 +427,7 @@
                     </tr>
                     <tr class="course-row nvcc-direct nvcc-all">
                         <td>PSY 200</td>
-                        <td>Prin. of PSY</td>
+                        <td>Principles of Psychology</td>
                         <td>NVCC</td>
                         <td>Spring 2019</td>
                         <td>A</td>
@@ -434,7 +436,7 @@
                     </tr>
                     <tr class="course-row nvcc-direct nvcc-all">
                         <td>ITE 115</td>
-                        <td>Intro Computer Appl/Concepts</td>
+                        <td>Intro Computer Application/Concepts</td>
                         <td>NVCC</td>
                         <td>Summer 2019</td>
                         <td>A</td>
@@ -452,7 +454,7 @@
                     </tr>
                     <tr class="course-row nvcc-direct nvcc-all">
                         <td>ITE 170</td>
-                        <td>Multimedia Sftwr</td>
+                        <td>Multimedia Software</td>
                         <td>NVCC</td>
                         <td>Fall 2019</td>
                         <td>A</td>
@@ -470,7 +472,7 @@
                     </tr>
                     <tr class="course-row nvcc-direct nvcc-all">
                         <td>ITE 221</td>
-                        <td>PC Hdware & O/S Arch</td>
+                        <td>PC Hardware & O/S Architecture</td>
                         <td>NVCC</td>
                         <td>Spring 2020</td>
                         <td>A</td>
@@ -563,24 +565,24 @@
             
             <!-- Statistics Container -->
             <div class="stats-container">
-                <!-- NVCC Stats with green and gold gradient -->
+                <!-- NVCC Stats -->
                 <div class="stats-group nvcc-achievement">
                     <h3 class="stats-heading">NVCC Achievement</h3>
                     <div class="stats-row">
                         <div class="stat-box nvcc-stat">
-                            <span class="stat-number">97</span>
+                            <span class="stat-number" id="nvcc-total-credits">97</span>
                             <span class="stat-label">Total Credits</span>
                         </div>
                         <div class="stat-box nvcc-stat">
-                            <span class="stat-number">3.29</span>
+                            <span class="stat-number" id="nvcc-gpa">3.29</span>
                             <span class="stat-label">NVCC GPA</span>
                         </div>
                         <div class="stat-box nvcc-stat">
-                            <span class="stat-number">A.S.</span>
+                            <span class="stat-number" id="nvcc-degree">A.S.</span>
                             <span class="stat-label">Degree Earned</span>
                         </div>
                         <div class="stat-box nvcc-stat">
-                            <span class="stat-number">Cum Laude</span>
+                            <span class="stat-number" id="nvcc-honors">Cum Laude</span>
                             <span class="stat-label">NVCC Honors</span>
                         </div>
                     </div>
@@ -591,33 +593,33 @@
                     <h3 class="stats-heading">UVA Progress</h3>
                     <div class="stats-row">
                         <div class="stat-box uva-stat">
-                            <span class="stat-number">30</span>
+                            <span class="stat-number" id="uva-direct-credits">30</span>
                             <span class="stat-label">UVA Direct Credits</span>
                         </div>
                         <div class="stat-box uva-stat">
-                            <span class="stat-number">66</span>
+                            <span class="stat-number" id="uva-transfer-credits">66</span>
                             <span class="stat-label">Transfer Credits</span>
                         </div>
                         <div class="stat-box uva-stat">
-                            <span class="stat-number">96</span>
+                            <span class="stat-number" id="uva-total-credits">96</span>
                             <span class="stat-label">Total Credits</span>
                         </div>
                         <div class="stat-box uva-stat">
-                            <span class="stat-number">3.95</span>
+                            <span class="stat-number" id="uva-gpa">3.95</span>
                             <span class="stat-label">UVA GPA</span>
                         </div>
                     </div>
                     <div class="stats-row">
                         <div class="stat-box uva-stat">
-                            <span class="stat-number">50%</span>
+                            <span class="stat-number" id="uva-program-complete">50%</span>
                             <span class="stat-label">Program Complete</span>
                         </div>
                         <div class="stat-box uva-stat">
-                            <span class="stat-number">Fall 2027</span>
+                            <span class="stat-number" id="uva-graduation-date">Fall 2027</span>
                             <span class="stat-label">Expected Graduation</span>
                         </div>
                         <div class="stat-box uva-stat">
-                            <span class="stat-number">B.I.S.</span>
+                            <span class="stat-number" id="uva-degree">B.I.S.</span>
                             <span class="stat-label">Degree Program</span>
                         </div>
                         <div class="stat-box uva-stat">
@@ -626,31 +628,31 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Future M.S. Degree -->
-                <div class="stats-group future-degree">
-                    <h3 class="stats-heading">Future Graduate Studies</h3>
-                    <div class="stats-row">
-                        <div class="stat-box future-stat">
-                            <span class="stat-number">M.S.</span>
-                            <span class="stat-label">Future Degree</span>
-                        </div>
-                        <div class="stat-box future-stat">
-                            <span class="stat-number">2028</span>
-                            <span class="stat-label">Target Year</span>
-                        </div>
-                        <div class="stat-box future-stat">
-                            <span class="stat-number"><i class="fas fa-university"></i></span>
-                            <span class="stat-label">Exploring Programs</span>
-                        </div>
-                        <div class="stat-box future-stat">
-                            <span class="stat-number">Data</span>
-                            <span class="stat-label">Focus Area</span>
+                    
+                    <!-- Future M.S. Degree -->
+                    <div class="stats-group future-degree">
+                        <h3 class="stats-heading">Future Graduate Studies</h3>
+                        <div class="stats-row">
+                            <div class="stat-box future-stat">
+                                <span class="stat-number">M.S.</span>
+                                <span class="stat-label">Future Degree</span>
+                            </div>
+                            <div class="stat-box future-stat">
+                                <span class="stat-number">2028</span>
+                                <span class="stat-label">Target Year</span>
+                            </div>
+                            <div class="stat-box future-stat">
+                                <span class="stat-number"><i class="fas fa-university"></i></span>
+                                <span class="stat-label">Exploring Programs</span>
+                            </div>
+                            <div class="stat-box future-stat">
+                                <span class="stat-number">Data</span>
+                                <span class="stat-label">Focus Area</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         
         <h2 class="section-heading">Professional Certifications</h2>
         <div id="previous-learning" class="content-section">
