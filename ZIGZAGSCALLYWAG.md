@@ -7,50 +7,45 @@
 
 ## Summary
 
-**10+ years designing enterprise IT infrastructure | VDI & GPU deployment expert | Azure/VMware automation leader | MDM and endpoint management specialist**
+**Agile-focused End User Computing (EUC) Specialist | 11+ years of virtualization expertise | VDI & Mobile Device Management leader | Cross-functional automation architect**
+
+Enterprise virtualization expert specializing in End User Computing solutions, mobile device management, and user OS optimization. Proven track record of applying Agile methodologies (Kanban, user stories) to deliver user-centric solutions across multidisciplinary teams. Expert in automation through Ansible, Packer, and PowerShell, with extensive experience mentoring teams using collaborative tools like Jira and Confluence. Passionate about continuous learning and driving digital workplace transformation through innovative EUC strategies.
 ---
 
 ## Professional Experience
 
-### VDI Systems Engineer
+### End User Computing (EUC) Systems Engineer
 **Breezeline** | *September 2023 – Present*
-- Designed and deployed VDI solutions for 1500+ users across North America post-acquisition
-- Led the design and implementation of VDI infrastructure in Canada and US, integrating Omnissa Horizon, App Volumes, DEM, and FSLogix
-- Architected multi-environment VDI solutions (production, staging, development) using Dell PowerEdge servers, NetApp FAS, HPE Primera, and HPE Synergy, reducing configuration errors by 80%
-- Enhanced monitoring with VMware Aria Operations, Zabbix, ControlUp, Grafana, Fluentd, Prometheus, Graylog, Splunk and automated PowerShell scripts
-- Automated VDI image and Windows Server deployments with HashiCorp Packer, PowerShell, and Ansible
-- Built powerful custom PowerShell modules for automated provisioning, compliance reporting, and infrastructure management
-- Managed 10ZiG thin client deployment across US and Canada locations
-- Deployed GPU-backed VMs for graphics-intensive applications and AI-driven computing
-- Improved security and performance through automated remediation and best practices
-- Standardized application delivery using Chocolatey and automated user profile management with FSLogix
-- Implemented Omnissa DEM for personalized settings, integrated Google Workspace SSO, and managed endpoint provisioning with KACE and ManageEngine MDM
-- Automated Tier 3 support tasks with PowerShell to consistently meet SLA targets
+- **EUC Leadership**: Architected and deployed comprehensive VDI/EUC solutions for 1500+ users across North America, integrating Omnissa Horizon, App Volumes, DEM, and FSLogix for optimal user experience
+- **Agile Implementation**: Applied Kanban methodology and user story development to deliver multi-environment VDI solutions (production, staging, development), reducing configuration errors by 80% through iterative deployment
+- **Mobile Device Management**: Orchestrated endpoint provisioning strategy using KACE and ManageEngine MDM, ensuring seamless user OS management across diverse hardware platforms including 10ZiG thin clients
+- **Automation Excellence**: Engineered infrastructure-as-code solutions using HashiCorp Packer, Ansible, and PowerShell to automate VDI image builds, Windows Server deployments, and compliance reporting
+- **Cross-functional Collaboration**: Led multidisciplinary teams across IT, Security, and Operations to deliver GPU-backed VMs for graphics-intensive applications and AI-driven computing initiatives
+- **User-Centric Solutions**: Implemented Omnissa DEM for personalized user settings and integrated Google Workspace SSO, focusing on user experience optimization and workflow efficiency
+- **Continuous Improvement**: Established monitoring frameworks using VMware Aria Operations, ControlUp, and custom PowerShell modules to proactively identify and resolve user experience issues
+- **Mentoring & Knowledge Transfer**: Developed training materials and automated Tier 3 support processes, consistently meeting SLA targets while building team capabilities
 ### Senior Systems Engineer & Systems Engineer
 **United States Senate Federal Credit Union** | *March 2020 – September 2023*
-- Managed data center migrations and disaster recovery using vSphere SRM, reducing operational costs
-- Spearheaded VDI and remote workforce solutions by deploying and administrating Workspace UEM and SSO for 150+ remote employees
-- Optimized Windows 10/11 provisioning with custom factory images and Autopilot
-- Configured Hybrid Azure AD and Exchange environments and implemented a zero-trust architecture
-- Enhanced and consolidated network configuration and security with VeloCloud SD-WAN
-- Automated processes using PowerShell and Bash; maintained a centralized script repository with Git and Azure DevOps
-- Supported Linux/Unix systems deployment, configuration, and troubleshooting
-- Mentored technical teams and implemented Agile practices
-- Successfully migrated 120+ employees to Microsoft Teams with Direct Routing
+- **Agile Leadership**: Implemented Agile practices including Kanban, backlogs, and retrospectives to improve transparency and increase productivity across engineering teams
+- **VDI & Mobile Workforce Solutions**: Spearheaded EUC transformation by deploying Workspace UEM, SSO, and VDI infrastructure for 150+ remote employees during COVID-19 mobilization
+- **User OS Management**: Optimized Windows 10/11 provisioning with custom factory images, Autopilot, and Configuration Manager, ensuring consistent user experience across diverse endpoints
+- **Cross-functional Collaboration**: Led multidisciplinary teams including SecOps, networking, and executives to plan, design, and upgrade production systems while maintaining 99.9% uptime
+- **Automation & Infrastructure-as-Code**: Developed PowerShell and Bash automation scripts; maintained centralized repositories using Git and Azure DevOps for streamlined deployments
+- **Mentoring & Training**: Created department-wide training materials, authored system playbooks, and mentored System Engineers, Administrators, and Specialists on core systems and Agile methodologies
+- **Enterprise Mobility**: Configured Hybrid Azure AD and Exchange environments, implemented zero-trust architecture, and deployed VeloCloud SD-WAN for enhanced mobile connectivity
+- **Collaboration Tools Management**: Successfully migrated and administered Jira and Confluence from on-premises to cloud services, supporting Agile workflows and knowledge management
+- **User-Centric Solutions**: Facilitated user feedback collection and workflow optimization to improve SLA performance and enhance end-user experience
 ### Systems Administrator
 **United States Senate Federal Credit Union** | *September 2016 – March 2020*
-- Provided Tier 1-2 support, leading troubleshooting and resolution for technical issues
-- Supported Palo Alto Networks GlobalProtect VPN, then assisted in transitioning to VDI with a zero-trust security model
-- Helped transition from GFI LanGuard to Microsoft Configuration Manager with WSUS integration for internal server patching
-- Maintained 99.9% uptime for the Windows Enterprise Domain serving 120 employees
-- Engineered product upgrades and built redundant data center infrastructure to mitigate downtime
-- Assisted in the transition and deployment of Microsoft SQL Server Always On Availability Groups (AoAGs) for high availability
-- Supported multi-platform environments (Windows, Linux, Mac, iOS, Android) for seamless interoperability
-- Administered Linux/Unix servers and managed Microsoft Exchange, ensuring reliable email services
-- Deployed and supported Skype for Business, handling user provisioning and configuration
-- Managed on-premise Jira and Confluence, later migrating them to the cloud with minimal disruption
-- Developed PowerShell scripts for automated issue detection and remediation
-- Wrote troubleshooting guides and training materials to reduce escalations
+- **End User Computing Foundation**: Administered VMware Workspace One SSO, Horizon VDI, and MDM components, building foundational EUC infrastructure for 120+ employees
+- **Multi-Platform Management**: Supported comprehensive endpoint ecosystem (Windows, Linux, Mac, iOS, Android) ensuring seamless interoperability and consistent user experience
+- **VDI Implementation**: Assisted in transitioning from Palo Alto Networks GlobalProtect VPN to VDI infrastructure with zero-trust security model, improving user mobility and security
+- **User OS Optimization**: Managed Windows Enterprise Domain with 99.9% uptime, implementing Configuration Manager with WSUS integration for automated patch management and user OS consistency
+- **Collaboration Tools**: Deployed and administered on-premise Jira and Confluence, later orchestrating cloud migration with minimal disruption to support Agile workflows
+- **Automation Development**: Engineered PowerShell and Python automation scripts for issue detection, remediation, and system efficiency improvements
+- **Infrastructure Virtualization**: Utilized vSphere/multi-vCenter environment to create and administer virtual servers and workstations, supporting scalable EUC infrastructure
+- **Training & Documentation**: Created comprehensive troubleshooting guides and training materials to reduce escalations and improve team knowledge transfer
+- **Business System Integration**: Administered core Unix-based systems and executed major business line product upgrades while maintaining operational continuity
 ### Earlier Experience
 **Technical Support & Network Technician Roles** | Various Employers | *2009 – 2016*
 
@@ -59,25 +54,25 @@
 
 ---
 
-## Skills & Abilities
+## Core Competencies
 
-### Infrastructure & Systems Administration
-Active Directory, Group Policy, Microsoft Azure, Entra ID, Intune, Microsoft Configuration Manager (formerly SCCM), WSUS, FSLogix; VMware vSphere, vSAN, NSX, Tanzu, Omnissa Horizon (formerly VMware Horizon), App Volumes, Dynamic Environment Manager (DEM); VDI design, deployment, and endpoint management; Microsoft SQL Server Always On Availability Groups (AoAGs); Microsoft Teams administration; Jira and Confluence (on-prem/cloud)
+### End User Computing (EUC) & Virtualization
+VMware Omnissa Horizon (formerly Horizon), App Volumes, Dynamic Environment Manager (DEM), FSLogix, VMware vSphere, vSAN, NSX, Tanzu; VDI architecture and deployment, GPU-backed virtual desktops, thin client management (10ZiG), virtual application delivery, user profile optimization
 
-### Automation & Scripting
-PowerShell (including automation for detection/remediation), Python, Ansible, REST and SOAP API integrations
+### Mobile Device Management & Endpoint Security
+KACE, ManageEngine MDM, VMware Workspace UEM, Microsoft Intune, Configuration Manager (SCCM), Autopilot; Multi-platform endpoint management (Windows, Linux, macOS, iOS, Android), zero-trust architecture, endpoint provisioning and compliance
 
-### Security & Compliance
-Zero Trust architecture (with VDI integration), endpoint security, identity & access management, role-based access controls, multi-factor authentication (MFA), VPN support and hardening
+### User OS Management & Automation
+Windows 10/11 optimization, custom image creation, HashiCorp Packer, Ansible, PowerShell automation, Python scripting; Infrastructure-as-code, automated provisioning, compliance reporting, user experience optimization
 
-### Cloud & Virtualization
-Azure resource management, Azure AD integration, Docker containerization, VMware virtualization stack, cloud migrations (Jira/Confluence), cloud-based collaboration tools
+### Agile Methodologies & Cross-Functional Leadership
+Kanban implementation, user story development, backlog management, retrospectives; Cross-functional team leadership, stakeholder engagement, continuous improvement practices, technical mentoring and training
 
-### Agile Practices & Project Management
-Agile methodologies (Kanban, Scrum), technical leadership, documentation and SOP development, process automation, cross-functional team collaboration
+### Collaboration Tools & Knowledge Management
+Jira and Confluence administration (on-premise/cloud), Azure DevOps, Git version control, SharePoint; Agile workflow facilitation, documentation management, team collaboration optimization
 
-### Collaboration & Support
-Tier 1-2 support, incident and problem management, user training, stakeholder communication, environment uptime optimization (99.9%+), multi-platform support (Windows, Linux, macOS, iOS, Android)
+### Cloud & Infrastructure Virtualization  
+Microsoft Azure (Entra ID, resource management), hybrid cloud architectures, Docker containerization, Dell PowerEdge/HCI, NetApp/HPE storage solutions, network virtualization (SD-WAN, NSX)
 
 ---
 
@@ -87,14 +82,27 @@ Tier 1-2 support, incident and problem management, user training, stakeholder co
 University of Virginia, Charlottesville, VA | *Expected June 2027*
 
 **Associate of Science in Information Technology**  
-Northern Virginia Community College, Annandale, VA | *June 2020*
+Northern Virginia Community College, Annandale, VA | *June 2020*  
+*3.5 GPA | Cum Laude Graduate | Additional 27 credits in Computer Science coursework*
+
+---
+
+## Professional Development & Continuous Learning
+
+- **VMware NSX SDN Ninja Training** - Advanced network virtualization and micro-segmentation
+- **Kubernetes & Container Orchestration** - vSphere with Tanzu implementation and management  
+- **Azure Cloud Architecture** - Hybrid cloud solutions and migration strategies
+- **Agile Leadership Training** - Continuous improvement in team dynamics and user-centric development
+- **Modern EUC Technologies** - GPU virtualization, AI-driven computing, and next-generation endpoint management
 
 ---
 
 ## Certifications
 
-- **Microsoft Azure Administrator** | Microsoft | 2023
-- **VMware Certified Professional DCV** | VMware | 2020  
-- **VMware Certified Professional NV** | VMware | 2022
+- **ICAgile Certified Professional (ICP)** | ICAgile | 2022
+- **Microsoft Azure Administrator (AZ-104)** | Microsoft | 2023
+- **Microsoft Azure Fundamentals (AZ-900)** | Microsoft | 2023
+- **VMware Certified Professional - Network Virtualization (VCP-NV)** | VMware | 2022
+- **VMware Certified Professional - Data Center Virtualization (VCP-DCV)** | VMware | 2020
 - **MCSA Server 2016** | Microsoft | 2019
 
