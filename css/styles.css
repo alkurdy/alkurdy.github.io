@@ -523,6 +523,42 @@ body.dark-mode .education-title::after {
     .section-title, .education-title {
         font-size: 18px;
     }
+    
+    /* Ultra-compact navigation for small phones */
+    .nav-bar {
+        padding: 3px;
+    }
+    
+    .nav-bar a {
+        font-size: 11px;
+        padding: 4px 2px;
+        font-weight: normal;
+    }
+    
+    .dark-mode-btn {
+        font-size: 14px;
+        padding: 4px;
+        min-width: 30px;
+    }
+}
+
+/* Ultra-compact navigation for very small phones */
+@media (max-width: 360px) {
+    .nav-bar {
+        padding: 2px;
+    }
+    
+    .nav-bar a {
+        font-size: 10px;
+        padding: 3px 1px;
+        font-weight: normal;
+    }
+    
+    .dark-mode-btn {
+        font-size: 12px;
+        padding: 3px;
+        min-width: 25px;
+    }
 }
 
 @media (max-width: 2100px) {
@@ -580,6 +616,18 @@ body.dark-mode .education-title::after {
 
 }
 
+/* Tablet optimization */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 8px 5px;
+        gap: 10px;
+    }
+    
+    .nav-bar a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
 
 @media (max-width: 600px) {
 
@@ -592,22 +640,39 @@ body.dark-mode .education-title::after {
         left: 1.0%;
     }
 
+    /* Compact horizontal navigation for mobile */
     .nav-bar {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 5px;
+        gap: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        min-height: auto;
     }
 
     .nav-bar a {
-        font-weight: bolder;
-        width: 100%;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 6px 4px;
+        flex: 1;
         text-align: center;
-        border-bottom: 1px solid #333;
+        border-bottom: none;
+        border-right: 1px solid #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 0;
+    }
+    
+    .nav-bar a:last-child {
         border-right: none;
     }
 
     .dark-mode-btn {
-        width: 100%;
-        text-align: center;
+        font-size: 16px;
+        padding: 6px;
+        flex: 0 0 auto;
+        min-width: 35px;
     }
 
     .home-content {
