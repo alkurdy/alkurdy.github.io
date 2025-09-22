@@ -75,6 +75,41 @@ main {
     color: #333;
     transition: transform 0.2s;
     border-right: 1px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-icon {
+    font-size: 14px;
+    display: none; /* Hidden by default, shown on mobile */
+}
+
+.nav-text {
+    display: inline; /* Shown by default, hidden on mobile */
+}
+
+/* Tooltip for mobile icons */
+@media (max-width: 600px) {
+    .nav-bar a {
+        position: relative;
+    }
+    
+    .nav-bar a:hover::after {
+        content: attr(aria-label);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+        white-space: nowrap;
+        z-index: 1001;
+        pointer-events: none;
+    }
 }
 
 .nav-bar a:last-child {
@@ -531,8 +566,12 @@ body.dark-mode .education-title::after {
     
     .nav-bar a {
         font-size: 11px;
-        padding: 4px 2px;
+        padding: 6px 2px;
         font-weight: normal;
+    }
+    
+    .nav-icon {
+        font-size: 14px !important;
     }
     
     .dark-mode-btn {
@@ -550,8 +589,12 @@ body.dark-mode .education-title::after {
     
     .nav-bar a {
         font-size: 10px;
-        padding: 3px 1px;
+        padding: 5px 1px;
         font-weight: normal;
+    }
+    
+    .nav-icon {
+        font-size: 12px !important;
     }
     
     .dark-mode-btn {
@@ -653,15 +696,23 @@ body.dark-mode .education-title::after {
     .nav-bar a {
         font-weight: bold;
         font-size: 12px;
-        padding: 6px 4px;
+        padding: 8px 4px;
         flex: 1;
         text-align: center;
         border-bottom: none;
         border-right: 1px solid #333;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        justify-content: center;
         min-width: 0;
+    }
+    
+    /* Show icons, hide text on mobile */
+    .nav-icon {
+        display: inline !important;
+        font-size: 16px;
+    }
+    
+    .nav-text {
+        display: none !important;
     }
     
     .nav-bar a:last-child {
