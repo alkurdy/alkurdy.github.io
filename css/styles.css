@@ -179,9 +179,9 @@ main {
 }
 
 #work {
-    margin-top: 50px; /* Reduced from 80px to move it up further under profile pictures */
+    margin-top: 0px; /* Tighter gap with summary section */
     clear: both; /* Ensures it starts on a new line */
-    padding-top: 20px;
+    padding-top: 5px; /* Further reduced padding */
     width: 100%; /* Take up full width */
 }
 
@@ -392,10 +392,10 @@ body.dark-mode .profile-bottom-banner .banner-img {
 
 /* Common Section Styles */
 #work, #education, #learning, #progress, #interests, #contact {
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
     padding-top: 80px;
-    width: calc(100% - 20px); /* Full width minus margins */
+    width: calc(100% - 30px); /* Full width minus updated margins */
 }
 
 /* Section Titles */
@@ -469,9 +469,9 @@ body.dark-mode .education-title::after {
 /* Improve responsive behavior for all sections */
 @media (max-width: 768px) {
     #work, #education, #learning, #progress, #interests, #contact {
-        margin-left: 5px;
+        margin-left: 10px;
         margin-right: 5px;
-        width: calc(100% - 10px);
+        width: calc(100% - 15px);
     }
     
     .section-title, .education-title {
@@ -515,9 +515,9 @@ body.dark-mode .education-title::after {
 /* Further adjustments for very small screens */
 @media (max-width: 480px) {
     #work, #education, #learning, #progress, #interests, #contact {
-        margin-left: 2px;
+        margin-left: 5px;
         margin-right: 2px;
-        width: calc(100% - 4px);
+        width: calc(100% - 7px);
     }
     
     .section-title, .education-title {
@@ -748,8 +748,8 @@ body.dark-mode .education-title::after {
     
     /* Add more space for work section */
     #work {
-        margin-top: 20px;
-        padding-top: 30px;
+        margin-top: 10px;
+        padding-top: 15px;
     }
 }
 
@@ -879,6 +879,27 @@ body.dark-mode .footer {
     font-size: 16px; /* Added font size */
 }
 
+/* Intermediate breakpoint for smoother transitions */
+@media (max-width: 1024px) {
+    .job-title-container h3 {
+        font-size: 19px;
+    }
+    
+    .job-company {
+        font-size: 15.5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .job-title-container h3 {
+        font-size: 18px;
+    }
+    
+    .job-company {
+        font-size: 15px;
+    }
+}
+
 .job-duration {
     font-style: italic;
     color: #666;
@@ -936,7 +957,8 @@ body.dark-mode .footer {
     }
     
     #work {
-        margin-top: 80px; /* Adjusted for small screens */
+        margin-top: 60px; /* Adjusted for small screens */
+        padding-top: 5px;
     }
 }
 
@@ -1824,4 +1846,321 @@ body.dark-mode .project-cover-container:hover {
 
 body.dark-mode .media-cover-link:hover .media-cover {
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   Professional Summary Section (Standalone)
+   ========================================================================== */
+
+#summary {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 120px;
+    margin-bottom: 5px;
+}
+
+.summary-content {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid #2c5aa0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.professional-tagline {
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #2c5aa0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.professional-summary {
+    margin: 0;
+}
+
+.professional-summary p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin: 0;
+    color: #444;
+}
+
+.location-info {
+    margin-left: 20px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Dark mode overrides for summary section */
+body.dark-mode #summary .summary-content {
+    background: rgba(97, 165, 255, 0.1);
+    border-left-color: #61a5ff;
+}
+
+body.dark-mode .professional-tagline {
+    color: #61a5ff;
+}
+
+body.dark-mode .professional-summary p {
+    color: #ccc;
+}
+
+body.dark-mode .location-info {
+    color: #bbb;
+}
+
+/* Responsive design for summary */
+@media (max-width: 1200px) {
+    .professional-tagline {
+        font-size: 1.25em;
+    }
+    
+    .professional-summary p {
+        font-size: 1.08em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .summary-content {
+        padding: 25px;
+    }
+    
+    .professional-tagline {
+        font-size: 1.2em;
+    }
+    
+    .professional-summary p {
+        font-size: 1.05em;
+    }
+}
+
+@media (max-width: 768px) {
+    #summary {
+        padding: 20px 15px;
+        margin-left: 10px;
+        margin-top: 100px;
+        margin-bottom: 5px;
+    }
+    
+    .summary-content {
+        padding: 20px;
+    }
+    
+    .professional-tagline {
+        font-size: 1.1em;
+        line-height: 1.3;
+    }
+    
+    .professional-summary p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 600px) {
+    .professional-tagline {
+        font-size: 1.05em;
+    }
+    
+    .professional-summary p {
+        font-size: 0.98em;
+    }
+    
+    .job-title-container h3 {
+        font-size: 17px;
+    }
+    
+    .job-company {
+        font-size: 14.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    #summary {
+        margin-left: 5px;
+        margin-top: 80px;
+        margin-bottom: 3px;
+    }
+    
+    .summary-content {
+        padding: 15px;
+    }
+    
+    .professional-tagline {
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+    
+    .professional-summary p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 360px) {
+    .professional-tagline {
+        font-size: 0.95em;
+    }
+    
+    .professional-summary p {
+        font-size: 0.9em;
+    }
+    
+    .job-title-container h3 {
+        font-size: 16px;
+    }
+    
+    .job-company {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================================================
+   Core Competencies Section
+   ========================================================================== */
+
+#competencies {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.competencies-content {
+    margin-top: 15px;
+}
+
+.competency-category {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #2c5aa0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competency-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.competency-category h3 {
+    color: #2c5aa0;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.competency-category p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Dark mode for competencies */
+body.dark-mode .competency-category {
+    background: rgba(97, 165, 255, 0.1);
+    border-left-color: #61a5ff;
+}
+
+body.dark-mode .competency-category h3 {
+    color: #61a5ff;
+}
+
+body.dark-mode .competency-category p {
+    color: #ccc;
+}
+
+/* ==========================================================================
+   Certifications Section
+   ========================================================================== */
+
+#certifications {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.certifications-content {
+    margin-top: 15px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.certification {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #2c5aa0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cert-icon {
+    font-size: 2em;
+    margin-right: 15px;
+    min-width: 50px;
+}
+
+.cert-details h4 {
+    color: #2c5aa0;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.cert-details p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Dark mode for certifications */
+body.dark-mode .certification {
+    background: rgba(97, 165, 255, 0.1);
+    border-left-color: #61a5ff;
+}
+
+body.dark-mode .cert-details h4 {
+    color: #61a5ff;
+}
+
+body.dark-mode .cert-details p {
+    color: #bbb;
+}
+
+
+
+/* ==========================================================================
+   Responsive Design for New Sections
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .competency-category,
+    .certification {
+        padding: 15px;
+    }
+    
+    #competencies,
+    #certifications {
+        margin-left: 10px;
+        padding: 30px 15px;
+    }
 }
