@@ -440,7 +440,7 @@ body.dark-mode .profile-bottom-banner .banner-img {
     position: relative;
     display: inline-block;
     padding-bottom: 5px;
-    background: linear-gradient(90deg, #0066cc, #9933cc);
+    background: linear-gradient(90deg, #0a7373, #1e4a7a);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -457,7 +457,7 @@ body.dark-mode .profile-bottom-banner .banner-img {
     height: 3px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, #0066cc, #9933cc);
+    background: linear-gradient(90deg, #0a7373, #1e4a7a);
     transform-origin: right;
     transform: scaleX(0);
     transition: transform 0.5s ease-out;
@@ -472,7 +472,7 @@ section:hover .education-title::after {
 /* Dark mode adjustments for section headers */
 body.dark-mode .section-title,
 body.dark-mode .education-title {
-    background: linear-gradient(90deg, #66b0ff, #cc99ff);
+    background: linear-gradient(90deg, #20b2aa, #4a90e2);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1981,14 +1981,14 @@ body.dark-mode .media-cover-link:hover .media-cover {
     background: #f8f9fa;
     padding: 30px;
     border-radius: 12px;
-    border-left: 5px solid #2c5aa0;
+    border-left: 5px solid #0a7373;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .professional-tagline {
     margin-bottom: 20px;
     font-size: 1.3em;
-    color: #2c5aa0;
+    color: #0a7373;
     line-height: 1.4;
     text-align: left;
 }
@@ -2012,12 +2012,12 @@ body.dark-mode .media-cover-link:hover .media-cover {
 
 /* Dark mode overrides for summary section */
 body.dark-mode #summary .summary-content {
-    background: rgba(97, 165, 255, 0.1);
-    border-left-color: #61a5ff;
+    background: rgba(32, 178, 170, 0.1);
+    border-left-color: #20b2aa;
 }
 
 body.dark-mode .professional-tagline {
-    color: #61a5ff;
+    color: #20b2aa;
 }
 
 body.dark-mode .professional-summary p {
@@ -2153,7 +2153,7 @@ body.dark-mode .location-info {
     padding: 20px;
     background: #f8f9fa;
     border-radius: 10px;
-    border-left: 4px solid #2c5aa0;
+    border-left: 4px solid #0a7373;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2163,7 +2163,7 @@ body.dark-mode .location-info {
 }
 
 .competency-category h3 {
-    color: #2c5aa0;
+    color: #0a7373;
     font-size: 1.2em;
     margin-bottom: 12px;
     font-weight: 600;
@@ -2177,12 +2177,12 @@ body.dark-mode .location-info {
 
 /* Dark mode for competencies */
 body.dark-mode .competency-category {
-    background: rgba(97, 165, 255, 0.1);
-    border-left-color: #61a5ff;
+    background: rgba(32, 178, 170, 0.1);
+    border-left-color: #20b2aa;
 }
 
 body.dark-mode .competency-category h3 {
-    color: #61a5ff;
+    color: #20b2aa;
 }
 
 body.dark-mode .competency-category p {
@@ -2216,7 +2216,7 @@ body.dark-mode .competency-category p {
     padding: 20px;
     background: #f8f9fa;
     border-radius: 10px;
-    border-left: 4px solid #2c5aa0;
+    border-left: 4px solid #0a7373;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -2232,7 +2232,7 @@ body.dark-mode .competency-category p {
 }
 
 .cert-details h4 {
-    color: #2c5aa0;
+    color: #0a7373;
     font-size: 1.1em;
     margin-bottom: 5px;
     font-weight: 600;
@@ -2246,12 +2246,12 @@ body.dark-mode .competency-category p {
 
 /* Dark mode for certifications */
 body.dark-mode .certification {
-    background: rgba(97, 165, 255, 0.1);
-    border-left-color: #61a5ff;
+    background: rgba(32, 178, 170, 0.1);
+    border-left-color: #20b2aa;
 }
 
 body.dark-mode .cert-details h4 {
-    color: #61a5ff;
+    color: #20b2aa;
 }
 
 body.dark-mode .cert-details p {

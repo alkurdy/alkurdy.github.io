@@ -14,15 +14,22 @@ Enterprise virtualization expert specializing in End User Computing solutions, m
 
 ## Professional Experience
 
-### End User Computing (EUC) Systems Engineer
-**Breezeline** | *September 2023 – Present*
-- **EUC Leadership**: Architected and deployed comprehensive VDI/EUC solutions for 1500+ users across North America, integrating Omnissa Horizon, App Volumes, DEM, and FSLogix for optimal user experience
+### Senior Specialist, Virtual Desktop Infrastructure
+**Breezeline** | *October 2024 – Present*
+- **VDI Architecture & Automation**: Lead enterprise VDI infrastructure supporting 1500+ users, leveraging Ansible automation for VDI desktop deployments, Linux-based pool provisioning, and infrastructure-as-code management across multi-environment landscapes
+- **Advanced Ansible Automation**: Developed comprehensive Ansible playbooks and roles for automated VDI desktop provisioning, Linux virtual desktop deployments, golden image updates, and orchestrated rollouts reducing deployment time by 75%
+- **Linux VDI Expertise**: Architected and deployed Linux-based virtual desktop pools using Omnissa Horizon, implementing automated provisioning workflows with Ansible for developer and engineering workstations
+- **Infrastructure-as-Code Excellence**: Engineered end-to-end automation pipelines using Ansible, HashiCorp Packer, and PowerShell for VDI image builds, configuration management, and compliance enforcement across Windows and Linux environments
+- **EUC Leadership**: Designed and deployed comprehensive End User Computing solutions integrating Omnissa Horizon, App Volumes, DEM, and FSLogix with automated deployment workflows for optimal user experience
+- **Cross-functional Collaboration**: Led multidisciplinary teams across IT, Security, and Operations to deliver GPU-backed VMs and implement AI-driven computing initiatives using automated provisioning frameworks
+- **Continuous Improvement**: Established monitoring and remediation frameworks using VMware Aria Operations, ControlUp, and Ansible Tower for proactive issue resolution and automated healing processes
+
+### VDI Systems Engineer
+**Breezeline** | *September 2023 – October 2024*
 - **Agile Implementation**: Applied Kanban methodology and user story development to deliver multi-environment VDI solutions (production, staging, development), reducing configuration errors by 80% through iterative deployment
 - **Mobile Device Management**: Orchestrated endpoint provisioning strategy using KACE and ManageEngine MDM, ensuring seamless user OS management across diverse hardware platforms including 10ZiG thin clients
 - **Automation Excellence**: Engineered infrastructure-as-code solutions using HashiCorp Packer, Ansible, and PowerShell to automate VDI image builds, Windows Server deployments, and compliance reporting
-- **Cross-functional Collaboration**: Led multidisciplinary teams across IT, Security, and Operations to deliver GPU-backed VMs for graphics-intensive applications and AI-driven computing initiatives
 - **User-Centric Solutions**: Implemented Omnissa DEM for personalized user settings and integrated Google Workspace SSO, focusing on user experience optimization and workflow efficiency
-- **Continuous Improvement**: Established monitoring frameworks using VMware Aria Operations, ControlUp, and custom PowerShell modules to proactively identify and resolve user experience issues
 - **Mentoring & Knowledge Transfer**: Developed training materials and automated Tier 3 support processes, consistently meeting SLA targets while building team capabilities
 ### Senior Systems Engineer & Systems Engineer
 **United States Senate Federal Credit Union** | *March 2020 – September 2023*
@@ -63,7 +70,7 @@ VMware Omnissa Horizon (formerly Horizon), App Volumes, Dynamic Environment Mana
 KACE, ManageEngine MDM, VMware Workspace UEM, Microsoft Intune, Configuration Manager (SCCM), Autopilot; Multi-platform endpoint management (Windows, Linux, macOS, iOS, Android), zero-trust architecture, endpoint provisioning and compliance
 
 ### User OS Management & Automation
-Windows 10/11 optimization, custom image creation, HashiCorp Packer, Ansible, PowerShell automation, Python scripting; Infrastructure-as-code, automated provisioning, compliance reporting, user experience optimization
+Windows 10/11 optimization, Linux desktop environments (Ubuntu, RHEL, Rocky Linux), custom image creation, HashiCorp Packer, **Ansible** (playbooks, roles, Tower), PowerShell automation, Python scripting, Bash scripting; Infrastructure-as-code, automated VDI provisioning, Linux pool deployments, configuration management, compliance reporting, user experience optimization
 
 ### Agile Methodologies & Cross-Functional Leadership
 Kanban implementation, user story development, backlog management, retrospectives; Cross-functional team leadership, stakeholder engagement, continuous improvement practices, technical mentoring and training
