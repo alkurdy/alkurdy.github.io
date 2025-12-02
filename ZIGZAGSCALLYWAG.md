@@ -15,22 +15,26 @@ Enterprise virtualization expert specializing in End User Computing solutions, m
 ## Professional Experience
 
 ### Senior Specialist, Virtual Desktop Infrastructure
-**Breezeline** | *October 2024 – Present*
-- **VDI Architecture & Automation**: Lead enterprise VDI infrastructure supporting 1500+ users, leveraging Ansible automation for VDI desktop deployments, Linux-based pool provisioning, and infrastructure-as-code management across multi-environment landscapes
-- **Advanced Ansible Automation**: Developed comprehensive Ansible playbooks and roles for automated VDI desktop provisioning, Linux virtual desktop deployments, golden image updates, and orchestrated rollouts reducing deployment time by 75%
-- **Linux VDI Expertise**: Architected and deployed Linux-based virtual desktop pools using Omnissa Horizon, implementing automated provisioning workflows with Ansible for developer and engineering workstations
-- **Infrastructure-as-Code Excellence**: Engineered end-to-end automation pipelines using Ansible, HashiCorp Packer, and PowerShell for VDI image builds, configuration management, and compliance enforcement across Windows and Linux environments
-- **EUC Leadership**: Designed and deployed comprehensive End User Computing solutions integrating Omnissa Horizon, App Volumes, DEM, and FSLogix with automated deployment workflows for optimal user experience
-- **Cross-functional Collaboration**: Led multidisciplinary teams across IT, Security, and Operations to deliver GPU-backed VMs and implement AI-driven computing initiatives using automated provisioning frameworks
-- **Continuous Improvement**: Established monitoring and remediation frameworks using VMware Aria Operations, ControlUp, and Ansible Tower for proactive issue resolution and automated healing processes
+**Breezeline** | *October 2025 – Present*
+- **Promotion & Leadership**: Promoted to Senior Specialist (Oct 2025) to lead strategic EUC initiatives and represent the VDI practice in architecture reviews and leadership planning; positioning for Senior EUC roles when engaging hiring managers
+- **VDI Architecture & Automation**: Own the enterprise VDI platform supporting 1500+ users, driving automation-first approaches for VDI desktop deployments, Linux-based pool provisioning, and self-service onboarding
+- **Ansible-First Automation**: Expanded Ansible automation to include Linux image pipelines, AppVolumes orchestration, and API-driven Windows 11 image builds—integrating Ansible, PowerShell, and vendor APIs to automate image lifecycle and application delivery
+- **PowerShell Platform & Modules**: Led development of PowerShell administration modules and reusable automation libraries to standardize image builds, maintenance tasks, reporting, and tiered support workflows
+- **Endpoint & Thin Client Management**: Advanced thin client strategy and management for 10ZiG devices, integrating device provisioning, configuration drift detection, and lifecycle automation into centralized tooling
+- **Identity & Access Integration**: Deployed Workspace ONE Access and Google Workspace SSO integrations for streamlined authentication and single-sign on across DaaS and VDI environments
+- **Backup & DR Operations**: Operationalized Veeam backup workflows for management and infrastructure servers supporting VDI operations; developed DR runbooks and recovery validation procedures for critical management services
+- **Onboarding & DaaS User Bring-up**: Designed and implemented repeatable onboarding processes for cloud DaaS users—standardized provisioning, entitlements, application mapping, and first-touch support to accelerate time-to-productivity
+- **Observability & Remediation**: Implemented automated monitoring and remediation playbooks using ControlUp and Semaphore (CI/CD) to detect, alert, and heal common user experience issues
 
 ### VDI Systems Engineer
-**Breezeline** | *September 2023 – October 2024*
+**Breezeline** | *September 2023 – October 2025*
 - **Agile Implementation**: Applied Kanban methodology and user story development to deliver multi-environment VDI solutions (production, staging, development), reducing configuration errors by 80% through iterative deployment
-- **Mobile Device Management**: Orchestrated endpoint provisioning strategy using KACE and ManageEngine MDM, ensuring seamless user OS management across diverse hardware platforms including 10ZiG thin clients
-- **Automation Excellence**: Engineered infrastructure-as-code solutions using HashiCorp Packer, Ansible, and PowerShell to automate VDI image builds, Windows Server deployments, and compliance reporting
-- **User-Centric Solutions**: Implemented Omnissa DEM for personalized user settings and integrated Google Workspace SSO, focusing on user experience optimization and workflow efficiency
-- **Mentoring & Knowledge Transfer**: Developed training materials and automated Tier 3 support processes, consistently meeting SLA targets while building team capabilities
+- **Thin Client & Endpoint Management**: Managed 10ZiG thin client deployments and lifecycle, including imaging, firmware updates, and integration with workspace management tooling
+- **Automation & Image Pipelines**: Built infrastructure-as-code and automation pipelines using HashiCorp Packer, Ansible, PowerShell, and vendor APIs to automate VDI image builds, Windows 11 builds, and App Volumes application packaging and deployment
+- **Identity & SSO**: Implemented Workspace ONE Access and Google Workspace SSO for secure access to VDI and published apps, improving authentication reliability and user experience
+- **Backup & Recovery**: Implemented Veeam-based backup and recovery processes for management and infrastructure servers and golden images, including scheduled snapshots and DR validation.
+- **User Experience & DEM**: Implemented Omnissa DEM and App Volumes to deliver personalized user settings and application layering, improving logon times and reducing profile corruption incidents
+- **Mentoring & Knowledge Transfer**: Developed training materials, runbooks, and automated Tier 3 support processes to improve team efficiency and knowledge retention
 ### Senior Systems Engineer & Systems Engineer
 **United States Senate Federal Credit Union** | *March 2020 – September 2023*
 - **Agile Leadership**: Implemented Agile practices including Kanban, backlogs, and retrospectives to improve transparency and increase productivity across engineering teams
@@ -64,13 +68,13 @@ Enterprise virtualization expert specializing in End User Computing solutions, m
 ## Core Competencies
 
 ### End User Computing (EUC) & Virtualization
-VMware Omnissa Horizon (formerly Horizon), App Volumes, Dynamic Environment Manager (DEM), FSLogix, VMware vSphere, vSAN, NSX, Tanzu; VDI architecture and deployment, GPU-backed virtual desktops, thin client management (10ZiG), virtual application delivery, user profile optimization
+VMware Omnissa Horizon (formerly Horizon), App Volumes (incl. automated packaging/deployment), Dynamic Environment Manager (DEM), FSLogix, Workspace ONE Access, VMware vSphere, vSAN, NSX, Tanzu; VDI architecture and deployment, GPU-backed virtual desktops, thin client management (10ZiG), virtual application delivery, user profile optimization, Veeam backup and DR for management and infrastructure servers
 
 ### Mobile Device Management & Endpoint Security
 KACE, ManageEngine MDM, VMware Workspace UEM, Microsoft Intune, Configuration Manager (SCCM), Autopilot; Multi-platform endpoint management (Windows, Linux, macOS, iOS, Android), zero-trust architecture, endpoint provisioning and compliance
 
 ### User OS Management & Automation
-Windows 10/11 optimization, Linux desktop environments (Ubuntu, RHEL, Rocky Linux), custom image creation, HashiCorp Packer, **Ansible** (playbooks, roles, Tower), PowerShell automation, Python scripting, Bash scripting; Infrastructure-as-code, automated VDI provisioning, Linux pool deployments, configuration management, compliance reporting, user experience optimization
+Windows 10/11 and Windows 11 optimization and automated image pipelines; Linux desktop environments (Ubuntu, RHEL, Rocky Linux) with Ansible-driven image builds and lifecycle management; custom image creation using HashiCorp Packer; **Ansible** (playbooks, roles, Semaphore) for Linux/VDI automation and AppVolumes orchestration; PowerShell automation including reusable administration modules and libraries; Python and Bash scripting; Infrastructure-as-code, automated VDI provisioning, Linux pool deployments, AppVolumes packaging and API-driven Windows image builds, configuration management, Veeam backup orchestration, compliance reporting, and user experience optimization
 
 ### Agile Methodologies & Cross-Functional Leadership
 Kanban implementation, user story development, backlog management, retrospectives; Cross-functional team leadership, stakeholder engagement, continuous improvement practices, technical mentoring and training
