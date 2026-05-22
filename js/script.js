@@ -120,13 +120,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Filter course rows
                 const courseRows = document.querySelectorAll('.course-row');
                 courseRows.forEach(row => {
-                    if (filter === 'all' || row.classList.contains(filter)) {
+                    if (filter === 'all') {
+                        // "All Courses" hides transfer courses — they weren't directly taken
+                        row.style.display = row.classList.contains('nvcc-transfer') ? 'none' : '';
+                    } else if (row.classList.contains(filter)) {
                         row.style.display = '';
                     } else {
                         row.style.display = 'none';
                     }
                 });
             });
+        });
+
+        // Hide transfer courses on initial page load (they show only via the "NVCC Transfers" filter)
+        document.querySelectorAll('.course-row.nvcc-transfer').forEach(row => {
+            row.style.display = 'none';
         });
     }
 
