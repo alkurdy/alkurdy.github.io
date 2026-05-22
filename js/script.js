@@ -126,6 +126,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         row.style.display = 'none';
                     }
                 });
+                
+                // Hide empty category sections
+                document.querySelectorAll('.category-section').forEach(section => {
+                    const hasVisibleRows = Array.from(section.querySelectorAll('.course-row')).some(row => row.style.display !== 'none');
+                    section.style.display = hasVisibleRows ? '' : 'none';
+                });
             });
         });
     }
