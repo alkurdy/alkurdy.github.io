@@ -491,18 +491,4 @@ body.dark-mode .back-btn:hover {
     margin-top: 2px;
 }
 
-/* Specific Table Row Styles */
-.learning-table tr:nth-child(1) td {
-    font-weight: 600;
-    background: rgba(0, 102, 204, 0.1);
-}
-
-.learning-table tr:nth-child(2) td {
-    font-weight: 600;
-    background: rgba(0, 123, 255, 0.1);
-}
-
-.learning-table tr:nth-child(3) td {
-    font-weight: 600;
-    background: rgba(255, 193, 7, 0.1);
-}
+/* Specific Table Row Styles removed as courses are archived */
