@@ -492,3 +492,30 @@ body.dark-mode .back-btn:hover {
 }
 
 /* Specific Table Row Styles removed as courses are archived */
+/* Course Category Tags */
+.course-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.tag-it { background: #e3f2fd; color: #0056b3; }
+.tag-hum { background: #f3e5f5; color: #6a1b9a; }
+.tag-soc { background: #e8f5e9; color: #2e7d32; }
+.tag-math { background: #fff8e1; color: #d84315; }
+.tag-eng { background: #fff3e0; color: #e65100; }
+.tag-gen { background: #eceff1; color: #37474f; }
+.tag-sci { background: #e0f7fa; color: #006064; }
+
+body.dark-mode .tag-it { background: rgba(13, 71, 161, 0.3); color: #90caf9; }
+body.dark-mode .tag-hum { background: rgba(74, 20, 140, 0.3); color: #ce93d8; }
+body.dark-mode .tag-soc { background: rgba(27, 94, 32, 0.3); color: #a5d6a7; }
+body.dark-mode .tag-math { background: rgba(245, 127, 23, 0.3); color: #ffe082; }
+body.dark-mode .tag-eng { background: rgba(230, 81, 0, 0.3); color: #ffcc80; }
+body.dark-mode .tag-gen { background: rgba(55, 71, 79, 0.4); color: #b0bec5; }
+body.dark-mode .tag-sci { background: rgba(0, 96, 100, 0.3); color: #80deea; }
