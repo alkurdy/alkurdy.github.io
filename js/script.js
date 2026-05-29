@@ -117,15 +117,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Add active class to clicked filter button
                 this.classList.add('active');
 
-                // Filter course rows
-                const courseRows = document.querySelectorAll('.course-row');
-                courseRows.forEach(row => {
-                    if (filter === 'all' || row.classList.contains(filter)) {
-                        row.style.display = '';
+                  // Filter course rows
+                  const courseRows = document.querySelectorAll('.course-row');
+                  courseRows.forEach(row => {
+                    if (filter === 'all') {
+                        // Default view: hide transfer rows, show everything else
+                        if (row.classList.contains('nvcc-transfer')) {
+                            row.style.display = 'none';
+                        } else {
+                            row.style.display = '';
+                        }
+                    } else if (filter === 'nvcc-transfer') {
+                        // Transfers filter: show only transfer rows
+                        row.style.display = row.classList.contains('nvcc-transfer') ? '' : 'none';
                     } else {
-                        row.style.display = 'none';
+                        // Specific filters (uva, nvcc-direct, etc.)
+                        row.style.display = row.classList.contains(filter) ? '' : 'none';
                     }
-                });
+                  });
                 
                 // Hide empty category sections
                 document.querySelectorAll('.category-section').forEach(section => {
