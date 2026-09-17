@@ -1,470 +1,907 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleksey Kurdyukov - Home</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="js\script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Visually hidden utility class for accessibility */
-        .visually-hidden {
-            position: absolute !important;
-            height: 1px; width: 1px;
-            overflow: hidden;
-            clip: rect(1px, 1px, 1px, 1px);
-            white-space: nowrap;
-        }
-        /* Bottom banner sizing adjustment */
-        .profile-bottom-banner {
-            position: relative;
-            width: 100%;
-            height: 40px; /* Reduced from whatever it was before */
-            overflow: hidden; /* Ensures the image doesn't spill out */
-        }
-
-        .profile-bottom-banner .banner-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* This will crop the image rather than squish it */
-            display: block;
-        }
-
-        /* Make it even smaller on mobile */
-        @media (max-width: 600px) {
-            .profile-bottom-banner {
-                height: 30px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav class="nav-bar" role="navigation">
-        <a href="#summary" aria-label="Professional Summary">
-            <i class="fas fa-user-tie nav-icon"></i>
-            <span class="nav-text">Summary</span>
-        </a>
-        <a href="#work" aria-label="Work Experience">
-            <i class="fas fa-briefcase nav-icon"></i>
-            <span class="nav-text">Experience</span>
-        </a>
-        <a href="#competencies" aria-label="Skills and Competencies">
-            <i class="fas fa-cogs nav-icon"></i>
-            <span class="nav-text">Skills</span>
-        </a>
-        <a href="#certifications" aria-label="Professional Certifications">
-            <i class="fas fa-certificate nav-icon"></i>
-            <span class="nav-text">Certifications</span>
-        </a>
-        <a href="#education" aria-label="Educational Background">
-            <i class="fas fa-graduation-cap nav-icon"></i>
-            <span class="nav-text">Education</span>
-        </a>
-        <a href="#learning" aria-label="Learning Progress">
-            <i class="fas fa-book-open nav-icon"></i>
-            <span class="nav-text">Learning</span>
-        </a>
-        <a href="#interests" aria-label="Personal Interests">
-            <i class="fas fa-heart nav-icon"></i>
-            <span class="nav-text">Interests</span>
-        </a>
-        <button id="toggle-dark-mode" class="dark-mode-btn" aria-label="Toggle Dark Mode">
-            <span id="mode-icon">Dark</span>
-        </button>
-    </nav>    
-
-    <header class="profile-banner" role="banner">
-        <img alt="Top banner with ink splatter design" class="banner-img">
-        <div class="profile-picture">
-            <img src="./pictures/shared/ak.png" alt="Portrait of Aleksey Kurdyukov" class="profile-img">
-        </div>
-        <section class="bio">
-            <h1 class="name">
-                <a href="https://www.linkedin.com/in/alekseykva/" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
-                    <img src="./pictures/home/LinkedIn_icon.jpg" alt="LinkedIn icon linking to profile" class="linkedin-img">
-                </a>
-                Aleksey Kurdyukov
-            </h1>
-            <div class="contact-info">
-                <a href="mailto:alek.kurdy@gmail.com" class="email-link fancy-email">alek.kurdy@gmail.com</a>
-            </div>
-        </section>
-    </header>
-
-    <!-- Professional Summary Section -->
-    <section id="summary">
-        <h2 class="section-title">Professional Summary</h2>
-        <div class="summary-content">
-            <div class="professional-tagline">
-                <strong>Platform &amp; Automation Engineer | 12+ years infrastructure | VDI / EUC | Azure Specialist (AZ-140) | Team Lead</strong>
-            </div>
-            <div class="professional-summary">
-                <p>I'm an infrastructure engineer who thinks in systems, not tools. Over 12 years I've learned that the technology matters less than understanding what the business actually needs - and then building something sustainable that delivers it.</p>
-                <p>Most of my career has been in End User Computing: making sure people can get to their desktops, apps, and data reliably, whether that's VDI, physical endpoints, or cloud workspaces. I've worked in regulated environments where downtime wasn't an option, and I've inherited broken platforms that needed to be rebuilt from the ground up. I'm most useful when something needs to go from "barely working" to "actually reliable."</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work History Section -->
-    <section id="work">
-        <h2 class="section-title">Work History</h2>
-        <div class="work-content">
-            <!-- Breezeline -->
-            <div class="job">
-                <div class="job-header">
-                    <img src="./pictures/work/breezelineLogo.png" alt="Breezeline logo" class="company-logo">
-                    <div class="job-title-container">
-                        <h3>Senior Specialist - EUC / VDI Engineering (Team Lead)</h3>
-                        <p class="job-company">Breezeline (a Cogeco Company)</p>
-                        <p class="job-duration">Oct 2025 - Present &middot; Remote</p>
-                    </div>
-                </div>
-                <div class="job-description">
-                    <p><strong>Promotion &amp; Leadership:</strong> Promoted to Senior Specialist and Team Lead (Oct 2025) to own EUC strategy, architecture decisions, and cross-functional platform initiatives. Primary point of contact for all virtual desktop operations across 1,500+ users.</p>
-                    <p><strong>Automation &amp; Image Pipelines:</strong> Ansible and PowerShell automation for image builds across Windows 11, Windows Server 2025, and Linux (Ubuntu). What used to take half a day now takes ~45 minutes and is fully repeatable - same-day image, App Volumes push, and production deployment.</p>
-                    <p><strong>PowerShell Platform:</strong> Built PowerShell administration modules and reusable libraries to standardize image builds, reporting, and operational tasks across VDI environments.</p>
-                    <p><strong>Endpoint &amp; Thin Client Management:</strong> Automated 10ZiG thin client lifecycle - provisioning, firmware updates, drift detection - reducing device-related support calls.</p>
-                    <p><strong>Identity &amp; Backup:</strong> SSO integration between Workspace ONE Access and Google Workspace for unified VDI/DaaS/SaaS login. Veeam backup and DR for all Horizon management components, with quarterly recovery tests.</p>
-                    <p><strong>Security &amp; Monitoring:</strong> CrowdStrike Falcon deployment and VDI optimization - agent tuning for non-persistent desktops, exclusion policies to prevent image bloat, App Volumes integration for security baseline. ControlUp monitoring with automated remediation for login storms, stuck profiles, and high-CPU processes.</p>
-                    <p><strong>Communication &amp; Acquisition:</strong> Zoom VDI media offloading for remote call center operations. Led domain consolidation during Cogeco acquisition of Breezeline - cross-domain trust configuration, infrastructure migration, AD/DNS/GPO/certificate service cutover. Extended VDI platform to Cogeco's Burlington, ON headquarters.</p>
-                    <p><strong>Expanded Scope:</strong> Implemented internal PAM (Privileged Access Management) for securing administrative access. Advised on Data Center VDI architecture for offshore vendor onboarding. Built AI agent pipelines to accelerate script creation, automation development, and documentation - not just prompting, but structured flows producing consistent, reviewable output.</p>
-                    <p class="skills"><strong>Key Technologies:</strong> Omnissa Horizon, App Volumes, DEM, FSLogix, Workspace ONE Access, CrowdStrike Falcon, Zoom (VDI offloading), Ansible, Semaphore, PowerShell, Packer, Chocolatey, ControlUp, Zabbix, Prometheus, Grafana, Veeam, 10ZiG, PAM, AI/LLM tooling</p>
-                </div>
-            </div>
-
-            <!-- Breezeline - Previous Role -->
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title-container">
-                        <h3>VDI Systems Engineer</h3>
-                        <p class="job-company">Breezeline</p>
-                        <p class="job-duration">Sep 2023 - Oct 2025 &middot; Remote</p>
-                    </div>
-                </div>
-                <div class="job-description">
-                    <p><strong>Agile Implementation:</strong> Applied Kanban methodology and user story development to deliver multi-environment VDI solutions, reducing configuration errors by 80% through iterative deployment.</p>
-                    <p><strong>Thin Client & Workspace Management:</strong> Managed 10ZiG thin client deployments, firmware updates, and integration with Workspace ONE and ManageEngine for fleet management.</p>
-                    <p><strong>Automation:</strong> Built image and application pipelines using Packer, Ansible, PowerShell, and APIs to automate Windows 11 builds, AppVolumes packaging, and golden image rollouts.</p>
-                    <p class="skills"><strong>Key Technologies:</strong> Omnissa Horizon, App Volumes, DEM, FSLogix, KACE, ManageEngine MDM, Ansible, PowerShell, Veeam</p>
-                </div>
-            </div>
-
-            <!-- US Senate FCU -->
-            <div class="job">
-                <div class="job-header">
-                    <img src="./pictures/work/ussfcu-logo.png" alt="US Senate Federal Credit Union logo" class="company-logo">
-                    <div class="job-title-container">
-                        <h3>Senior Systems Engineer</h3>
-                        <p class="job-company">United States Senate Federal Credit Union</p>
-                        <p class="job-duration">Mar 2020 - Sep 2023 &middot; Alexandria, VA</p>
-                    </div>
-                </div>
-                <div class="job-description">
-                    <p><strong>Agile Leadership:</strong> Implemented Agile practices including Kanban, backlogs, and retrospectives to improve transparency and increase productivity across engineering teams.</p>
-                    <p><strong>VDI & Mobile Workforce Solutions:</strong> Spearheaded EUC transformation by deploying Workspace UEM, SSO, and VDI infrastructure for 150+ remote employees during COVID-19 mobilization.</p>
-                    <p><strong>Cross-functional Collaboration:</strong> Led multidisciplinary teams including SecOps, networking, and executives to plan, design, and upgrade production systems while maintaining 99.9% uptime.</p>
-                    <p><strong>Mentoring & Training:</strong> Created department-wide training materials, authored system playbooks, and mentored System Engineers, Administrators, and Specialists on core systems.</p>
-                    <p class="skills"><strong>Key Technologies:</strong> VMware vSphere, Workspace UEM, Hybrid Azure AD, VeloCloud SD-WAN, PowerShell, Jira, Confluence, Zero-trust Architecture</p>
-                </div>
-            </div>
-
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title-container">
-                        <h3>Systems Administrator</h3>
-                        <p class="job-company">United States Senate Federal Credit Union</p>
-                        <p class="job-duration">Sep 2016 - Mar 2020 &middot; Alexandria, VA</p>
-                    </div>
-                </div>
-                <div class="job-description">
-                    <p><strong>End User Computing Foundation:</strong> Administered VMware Workspace One SSO, Horizon VDI, and MDM components, building foundational EUC infrastructure for 120+ employees.</p>
-                    <p><strong>Multi-Platform Management:</strong> Supported comprehensive endpoint ecosystem (Windows, Linux, Mac, iOS, Android) ensuring seamless interoperability and consistent user experience.</p>
-                    <p><strong>Automation Development:</strong> Engineered PowerShell and Python automation scripts for issue detection, remediation, and system efficiency improvements.</p>
-                    <p class="skills"><strong>Key Technologies:</strong> VMware Workspace One, Horizon VDI, Windows Enterprise Domain, Configuration Manager, PowerShell, Python, Jira, Confluence</p>
-                </div>
-            </div>
-
-            <!-- Previous Experience -->
-            <div class="previous-experience">
-                <h3>Previous Experience</h3>
-                <ul>
-                    <li>Network Engineer at Network Management, Inc. (May 2015 - Sep 2016)</li>
-                    <li>Network Technician at The Washington Network, Inc. (Feb 2015 - Apr 2015)</li>
-                    <li>Computer Technician at DC - Computer Geeks (May 2014 - Feb 2015)</li>
-                    <li>Computer Engineer at Ease Technologies (Apr 2011 - Jun 2013)</li>
-                    <li>Computer Technician at Graphinex Computer Geeks (Sep 2009 - Nov 2011)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Competencies Section -->
-    <section id="competencies">
-        <h2 class="section-title">Core Competencies</h2>
-        <div class="competencies-content">
-            <div class="competency-category">
-                <h3>End User Computing (EUC) & Virtualization</h3>
-                <p>VMware Omnissa Horizon (formerly Horizon), App Volumes, Dynamic Environment Manager (DEM), FSLogix, VMware vSphere, vSAN, NSX, Tanzu; VDI architecture and deployment, GPU-backed virtual desktops, thin client management (10ZiG), virtual application delivery, user profile optimization</p>
-            </div>
-            
-            <div class="competency-category">
-                <h3>Mobile Device Management & Endpoint Security</h3>
-                <p>KACE, ManageEngine MDM, VMware Workspace UEM, Microsoft Intune, Configuration Manager (SCCM), Autopilot; Multi-platform endpoint management (Windows, Linux, macOS, iOS, Android), zero-trust architecture, endpoint provisioning and compliance</p>
-            </div>
-            
-            <div class="competency-category">
-                <h3>User OS Management & Automation</h3>
-                <p>Windows 10/11 optimization, custom image creation, HashiCorp Packer, Ansible, PowerShell automation, Python scripting; Infrastructure-as-code, automated provisioning, compliance reporting, user experience optimization</p>
-            </div>
-            
-            <div class="competency-category">
-                <h3>Agile Methodologies & Cross-Functional Leadership</h3>
-                <p>Kanban implementation, user story development, backlog management, retrospectives; Cross-functional team leadership, stakeholder engagement, continuous improvement practices, technical mentoring and training</p>
-            </div>
-            
-            <div class="competency-category">
-                <h3>Collaboration Tools & Knowledge Management</h3>
-                <p>Jira and Confluence administration (on-premise/cloud), Azure DevOps, Git version control, SharePoint; Agile workflow facilitation, documentation management, team collaboration optimization</p>
-            </div>
-            
-            <div class="competency-category">
-                <h3>Cloud & Infrastructure Virtualization</h3>
-                <p>Microsoft Azure (Entra ID, resource management), hybrid cloud architectures, Docker containerization, Dell PowerEdge/HCI, NetApp/HPE storage solutions, network virtualization (SD-WAN, NSX)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <h2 class="section-title">Certifications</h2>
-        <div class="certifications-content">
-            <div class="cert-grid">
-                <div class="certification">
-                    <div class="cert-icon"></div>
-                    <div class="cert-details">
-                        <h4>Microsoft Azure Virtual Desktop Specialty (AZ-140)</h4>
-                        <p>Microsoft | 2026</p>
-                    </div>
-                </div>
-
-                <div class="certification">
-                    <div class="cert-icon"></div>
-                    <div class="cert-details">
-                        <h4>ICAgile Certified Professional (ICP)</h4>
-                        <p>ICAgile | 2022</p>
-                    </div>
-                </div>
-                
-                <div class="certification">
-                    <div class="cert-icon"></div>
-                    <div class="cert-details">
-                        <h4>Microsoft Azure Administrator (AZ-104)</h4>
-                        <p>Microsoft | 2023</p>
-                    </div>
-                </div>
-                
-                <div class="certification">
-                    <div class="cert-icon"></div>
-                    <div class="cert-details">
-                        <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
-                        <p>Microsoft | 2023</p>
-                    </div>
-                </div>
-                
-                <div class="certification">
-                    <div class="cert-icon"></div>
-                    <div class="cert-details">
-                        <h4>VMware Certified Professional - NV (VCP-NV)</h4>
-                        <p>VMware | 2022</p>
-                    </div>
-                </div>
-                
-                <div class="certification">
-                    <div class="cert-icon"></div>
-                    <div class="cert-details">
-                        <h4>VMware Certified Professional - DCV (VCP-DCV)</h4>
-                        <p>VMware | 2020</p>
-                    </div>
-                </div>
-                
-                <div class="certification">
-                    <div class="cert-icon"></div>
-                    <div class="cert-details">
-                        <h4>MCSA Server 2016</h4>
-                        <p>Microsoft | 2019</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section (Already exists, but adding complete structure) -->
-    <section id="education">
-        <h2 class="education-title">Education</h2>
-        <table class="table education-table">
-            <tr>
-                <td>
-                    <div class="education-item">
-                        <img src="./pictures/edu/uva.jpg" alt="University of Virginia logo" class="company-logo">
-                        <div class="education-details">
-                            <strong>University of Virginia: School of Continuing and Professional Studies</strong>
-                            <br>
-                            Bachelor of Interdisciplinary Studies (BIS), Information Technology
-                            <br>
-                            2023 - 2027
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="education-item">
-                        <img src="./pictures/edu/nvcc.jpg" alt="Northern Virginia Community College logo" class="company-logo">
-                        <div class="education-details">
-                            <strong>Northern Virginia Community College</strong>
-                            <br>
-                            Associate of Science (AS), Information Technology
-                            <br>
-                            2018 - 2020
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </section>
-
-    <!-- Learning Section -->
-    <section id="learning">
-        <h2 class="section-title">Learning</h2>
-        <div class="learning-content">
-            <table class="learning-table">
-                <thead>
-                    <tr>
-                        <th>Topic</th>
-                        <th>Started</th>
-                        <th>Status</th>
-                        <th>Progress</th>
-                        <th>Resources</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Securing the Cyber World (UVA BIS)</td>
-                        <td>Aug 2026</td>
-                        <td>In Progress</td>
-                        <td>Active</td>
-                        <td>UVA SCPS</td>
-                    </tr>
-                    <tr>
-                        <td>GitHub Actions / CI-CD Pipelines</td>
-                        <td>Aug 2026</td>
-                        <td>In Progress</td>
-                        <td>Active</td>
-                        <td>GitHub Docs, hands-on lab</td>
-                    </tr>
-                    <tr>
-                        <td>Terraform (IaC)</td>
-                        <td>Sep 2026</td>
-                        <td>Starting</td>
-                        <td>Early</td>
-                        <td>HashiCorp Learn, lab environment</td>
-                    </tr>
-                    <tr>
-                        <td>Python - OOP &amp; API scripting</td>
-                        <td>Jul 2026</td>
-                        <td>In Progress</td>
-                        <td>Active</td>
-                        <td>Projects + UVA coursework</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <!-- For the Learning Archive -->
-            <div class="archive-link-container">
-                <a href="learning-archive.html" class="archive-link">
-                    <span class="archive-text">View Learning Archive</span>
-                    <span class="archive-arrow">&rarr;</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interests Section -->
-    <section id="interests">
-        <h2 class="section-title">Interests</h2>
-        
-        <!-- Current Reading -->
-        <div class="interest-category">
-            <h3>
-                <a href="https://www.goodreads.com/user/show/22192348-aleksey" target="_blank" rel="noopener noreferrer" class="goodreads-link" title="View my Goodreads profile">
-                    <img src="./pictures/interests/books/Goodreads.svg" alt="Goodreads icon" class="goodreads-icon">
-                </a>
-                Reading Activity
-            </h3>
-            <div class="books-container">
-                <!-- Currently Reading -->
-                <div class="reading-section">
-                    <h4 class="reading-heading">Currently Reading</h4>
-                    <div class="book">
-                        <a href="https://www.goodreads.com/book/show/36449535-columbus-day" target="_blank" rel="noopener noreferrer" class="book-link" title="View on Goodreads">
-                            <img src="./pictures/interests/books/columbusday_expforce.png" alt="Book cover - Columbus Day" class="book-cover">
-                        </a>
-                        <div class="book-info">
-                            <h4>Columbus Day</h4>
-                            <p>Craig Alanson</p>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 72%;"></div>
-                            </div>
-                            <span class="progress-text">72%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Last Read -->
-                <div class="reading-section">
-                    <h4 class="reading-heading">Last Finished</h4>
-                    <div class="book">
-                        <a href="https://www.goodreads.com/book/show/25499718-the-core" target="_blank" rel="noopener noreferrer" class="book-link" title="View on Goodreads">
-                            <img src="./pictures/interests/books/dkaeotown_.png" alt="Book cover - The Core" class="book-cover">
-                        </a>
-                        <div class="book-info">
-                            <h4>Darkness on the Edge of Town</h4>
-                            <p>Brian Keene</p>
-                            <div class="rating">2/5</div>
-                            <span class="finished-date">Finished June 2025</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Recent Movies -->
-        <div class="interest-category">
-            <h3>Recently Watched</h3>
-            <div class="media-item">
-                <a href="https://www.netflix.com/title/80216888" target="_blank" rel="noopener noreferrer" class="media-cover-link">
-                    <img src="./pictures/interests/tv/eternaut.jpg" alt="TV show poster - The Eternaut" class="media-cover">
-                </a>
-                <div class="media-info">
-                    <h4>The Eternaut</h4>
-                    <p>Starts as a slow burn but when it ramps up, it becomes a thrilling watch that keeps you engaged. The set design and atmosphere are top-notch.</p>
-                    <div class="watch-again">
-                        <a href="https://www.netflix.com/title/80216888" target="_blank" rel="noopener noreferrer" class="watch-again-button">Watch on Netflix</a>
-                    </div>
-                    <div class="rating">4/5</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="profile-bottom-banner" role="img" aria-label="Bottom banner with ink splatter design">
-        <img alt="Bottom banner with ink splatter design" class="banner-img">
-    </div>
-    
-    <footer class="footer" role="contentinfo">
-        <p>&copy; Aleksey Kurdyukov <span id="current-year"></span>. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aleksey Kurdyukov - Home</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script src="js\script.js" defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+
+        /* Visually hidden utility class for accessibility */
+
+        .visually-hidden {
+
+            position: absolute !important;
+
+            height: 1px; width: 1px;
+
+            overflow: hidden;
+
+            clip: rect(1px, 1px, 1px, 1px);
+
+            white-space: nowrap;
+
+        }
+
+        /* Bottom banner sizing adjustment */
+
+        .profile-bottom-banner {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 40px; /* Reduced from whatever it was before */
+
+            overflow: hidden; /* Ensures the image doesn't spill out */
+
+        }
+
+
+
+        .profile-bottom-banner .banner-img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover; /* This will crop the image rather than squish it */
+
+            display: block;
+
+        }
+
+
+
+        /* Make it even smaller on mobile */
+
+        @media (max-width: 600px) {
+
+            .profile-bottom-banner {
+
+                height: 30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="nav-bar" role="navigation">
+
+        <a href="#summary" aria-label="Professional Summary">
+
+            <i class="fas fa-user-tie nav-icon"></i>
+
+            <span class="nav-text">Summary</span>
+
+        </a>
+
+        <a href="#work" aria-label="Work Experience">
+
+            <i class="fas fa-briefcase nav-icon"></i>
+
+            <span class="nav-text">Experience</span>
+
+        </a>
+
+        <a href="#competencies" aria-label="Skills and Competencies">
+
+            <i class="fas fa-cogs nav-icon"></i>
+
+            <span class="nav-text">Skills</span>
+
+        </a>
+
+        <a href="#certifications" aria-label="Professional Certifications">
+
+            <i class="fas fa-certificate nav-icon"></i>
+
+            <span class="nav-text">Certifications</span>
+
+        </a>
+
+        <a href="#education" aria-label="Educational Background">
+
+            <i class="fas fa-graduation-cap nav-icon"></i>
+
+            <span class="nav-text">Education</span>
+
+        </a>
+
+        <a href="#learning" aria-label="Learning Progress">
+
+            <i class="fas fa-book-open nav-icon"></i>
+
+            <span class="nav-text">Learning</span>
+
+        </a>
+
+        <a href="#interests" aria-label="Personal Interests">
+
+            <i class="fas fa-heart nav-icon"></i>
+
+            <span class="nav-text">Interests</span>
+
+        </a>
+
+        <button id="toggle-dark-mode" class="dark-mode-btn" aria-label="Toggle Dark Mode">
+
+            <span id="mode-icon">Dark</span>
+
+        </button>
+
+    </nav>    
+
+
+
+    <header class="profile-banner" role="banner">
+
+        <img alt="Top banner with ink splatter design" class="banner-img">
+
+        <div class="profile-picture">
+
+            <img src="./pictures/shared/ak.png" alt="Portrait of Aleksey Kurdyukov" class="profile-img">
+
+        </div>
+
+        <section class="bio">
+
+            <h1 class="name">
+
+                <a href="https://www.linkedin.com/in/alekseykva/" class="linkedin-icon" target="_blank" rel="noopener noreferrer">
+
+                    <img src="./pictures/home/LinkedIn_icon.jpg" alt="LinkedIn icon linking to profile" class="linkedin-img">
+
+                </a>
+
+                Aleksey Kurdyukov
+
+            </h1>
+
+            <div class="contact-info">
+
+                <a href="mailto:alek.kurdy@gmail.com" class="email-link fancy-email">alek.kurdy@gmail.com</a>
+
+            </div>
+
+        </section>
+
+    </header>
+
+
+
+    <!-- Professional Summary Section -->
+
+    <section id="summary">
+
+        <h2 class="section-title">Professional Summary</h2>
+
+        <div class="summary-content">
+
+            <div class="professional-tagline">
+
+                <strong>Platform &amp; Automation Engineer | 12+ years infrastructure | VDI / EUC | Azure Specialist (AZ-140) | Team Lead</strong>
+
+            </div>
+
+            <div class="professional-summary">
+
+                <p>I'm an infrastructure engineer who thinks in systems, not tools. Over 12 years I've learned that the technology matters less than understanding what the business actually needs - and then building something sustainable that delivers it.</p>
+
+                <p>Most of my career has been in End User Computing: making sure people can get to their desktops, apps, and data reliably, whether that's VDI, physical endpoints, or cloud workspaces. I've worked in regulated environments where downtime wasn't an option, and I've inherited broken platforms that needed to be rebuilt from the ground up. I'm most useful when something needs to go from "barely working" to "actually reliable."</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Work History Section -->
+
+    <section id="work">
+
+        <h2 class="section-title">Work History</h2>
+
+        <div class="work-content">
+
+            <!-- Breezeline -->
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <img src="./pictures/work/breezelineLogo.png" alt="Breezeline logo" class="company-logo">
+
+                    <div class="job-title-container">
+
+                        <h3>Senior Specialist - EUC / VDI Engineering (Team Lead)</h3>
+
+                        <p class="job-company">Breezeline (a Cogeco Company)</p>
+
+                        <p class="job-duration">Oct 2025 - Present &middot; Remote</p>
+
+                    </div>
+
+                </div>
+
+                <div class="job-description">
+
+                    <p><strong>Promotion &amp; Leadership:</strong> Promoted to Senior Specialist and Team Lead (Oct 2025) to own EUC strategy, architecture decisions, and cross-functional platform initiatives. Primary point of contact for all virtual desktop operations across 1,500+ users.</p>
+
+                    <p><strong>Automation &amp; Image Pipelines:</strong> Ansible and PowerShell automation for image builds across Windows 11, Windows Server 2025, and Linux (Ubuntu). What used to take half a day now takes ~45 minutes and is fully repeatable - same-day image, App Volumes push, and production deployment.</p>
+
+                    <p><strong>PowerShell Platform:</strong> Built PowerShell administration modules and reusable libraries to standardize image builds, reporting, and operational tasks across VDI environments.</p>
+
+                    <p><strong>Endpoint &amp; Thin Client Management:</strong> Automated 10ZiG thin client lifecycle - provisioning, firmware updates, drift detection - reducing device-related support calls.</p>
+
+                    <p><strong>Identity &amp; Backup:</strong> SSO integration between Workspace ONE Access and Google Workspace for unified VDI/DaaS/SaaS login. Veeam backup and DR for all Horizon management components, with quarterly recovery tests.</p>
+
+                    <p><strong>Security &amp; Monitoring:</strong> CrowdStrike Falcon deployment and VDI optimization - agent tuning for non-persistent desktops, exclusion policies to prevent image bloat, App Volumes integration for security baseline. ControlUp monitoring with automated remediation for login storms, stuck profiles, and high-CPU processes.</p>
+
+                    <p><strong>Communication &amp; Acquisition:</strong> Zoom VDI media offloading for remote call center operations. Led domain consolidation during Cogeco acquisition of Breezeline - cross-domain trust configuration, infrastructure migration, AD/DNS/GPO/certificate service cutover. Extended VDI platform to Cogeco's Burlington, ON headquarters.</p>
+
+                    <p><strong>Expanded Scope:</strong> Implemented internal PAM (Privileged Access Management) for securing administrative access. Advised on Data Center VDI architecture for offshore vendor onboarding. Built AI agent pipelines to accelerate script creation, automation development, and documentation - not just prompting, but structured flows producing consistent, reviewable output.</p>
+
+                    <p class="skills"><strong>Key Technologies:</strong> Omnissa Horizon, App Volumes, DEM, FSLogix, Workspace ONE Access, CrowdStrike Falcon, Zoom (VDI offloading), Ansible, Semaphore, PowerShell, Packer, Chocolatey, ControlUp, Zabbix, Prometheus, Grafana, Veeam, 10ZiG, PAM, AI/LLM tooling</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Breezeline - Previous Role -->
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <div class="job-title-container">
+
+                        <h3>VDI Systems Engineer</h3>
+
+                        <p class="job-company">Breezeline</p>
+
+                        <p class="job-duration">Sep 2023 - Oct 2025 &middot; Remote</p>
+
+                    </div>
+
+                </div>
+
+                <div class="job-description">
+
+                    <p><strong>Agile Implementation:</strong> Applied Kanban methodology and user story development to deliver multi-environment VDI solutions, reducing configuration errors by 80% through iterative deployment.</p>
+
+                    <p><strong>Thin Client & Workspace Management:</strong> Managed 10ZiG thin client deployments, firmware updates, and integration with Workspace ONE and ManageEngine for fleet management.</p>
+
+                    <p><strong>Automation:</strong> Built image and application pipelines using Packer, Ansible, PowerShell, and APIs to automate Windows 11 builds, AppVolumes packaging, and golden image rollouts.</p>
+
+                    <p class="skills"><strong>Key Technologies:</strong> Omnissa Horizon, App Volumes, DEM, FSLogix, KACE, ManageEngine MDM, Ansible, PowerShell, Veeam</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- US Senate FCU -->
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <img src="./pictures/work/ussfcu-logo.png" alt="US Senate Federal Credit Union logo" class="company-logo">
+
+                    <div class="job-title-container">
+
+                        <h3>Senior Systems Engineer</h3>
+
+                        <p class="job-company">United States Senate Federal Credit Union</p>
+
+                        <p class="job-duration">Mar 2020 - Sep 2023 &middot; Alexandria, VA</p>
+
+                    </div>
+
+                </div>
+
+                <div class="job-description">
+
+                    <p><strong>Agile Leadership:</strong> Implemented Agile practices including Kanban, backlogs, and retrospectives to improve transparency and increase productivity across engineering teams.</p>
+
+                    <p><strong>VDI & Mobile Workforce Solutions:</strong> Spearheaded EUC transformation by deploying Workspace UEM, SSO, and VDI infrastructure for 150+ remote employees during COVID-19 mobilization.</p>
+
+                    <p><strong>Cross-functional Collaboration:</strong> Led multidisciplinary teams including SecOps, networking, and executives to plan, design, and upgrade production systems while maintaining 99.9% uptime.</p>
+
+                    <p><strong>Mentoring & Training:</strong> Created department-wide training materials, authored system playbooks, and mentored System Engineers, Administrators, and Specialists on core systems.</p>
+
+                    <p class="skills"><strong>Key Technologies:</strong> VMware vSphere, Workspace UEM, Hybrid Azure AD, VeloCloud SD-WAN, PowerShell, Jira, Confluence, Zero-trust Architecture</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <div class="job-title-container">
+
+                        <h3>Systems Administrator</h3>
+
+                        <p class="job-company">United States Senate Federal Credit Union</p>
+
+                        <p class="job-duration">Sep 2016 - Mar 2020 &middot; Alexandria, VA</p>
+
+                    </div>
+
+                </div>
+
+                <div class="job-description">
+
+                    <p><strong>End User Computing Foundation:</strong> Administered VMware Workspace One SSO, Horizon VDI, and MDM components, building foundational EUC infrastructure for 120+ employees.</p>
+
+                    <p><strong>Multi-Platform Management:</strong> Supported comprehensive endpoint ecosystem (Windows, Linux, Mac, iOS, Android) ensuring seamless interoperability and consistent user experience.</p>
+
+                    <p><strong>Automation Development:</strong> Engineered PowerShell and Python automation scripts for issue detection, remediation, and system efficiency improvements.</p>
+
+                    <p class="skills"><strong>Key Technologies:</strong> VMware Workspace One, Horizon VDI, Windows Enterprise Domain, Configuration Manager, PowerShell, Python, Jira, Confluence</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Previous Experience -->
+
+            <div class="previous-experience">
+
+                <h3>Previous Experience</h3>
+
+                <ul>
+
+                    <li>Network Engineer at Network Management, Inc. (May 2015 - Sep 2016)</li>
+
+                    <li>Network Technician at The Washington Network, Inc. (Feb 2015 - Apr 2015)</li>
+
+                    <li>Computer Technician at DC - Computer Geeks (May 2014 - Feb 2015)</li>
+
+                    <li>Computer Engineer at Ease Technologies (Apr 2011 - Jun 2013)</li>
+
+                    <li>Computer Technician at Graphinex Computer Geeks (Sep 2009 - Nov 2011)</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Core Competencies Section -->
+
+    <section id="competencies">
+
+        <h2 class="section-title">Core Competencies</h2>
+
+        <div class="competencies-content">
+
+            <div class="competency-category">
+
+                <h3>End User Computing (EUC) & Virtualization</h3>
+
+                <p>VMware Omnissa Horizon (formerly Horizon), App Volumes, Dynamic Environment Manager (DEM), FSLogix, VMware vSphere, vSAN, NSX, Tanzu; VDI architecture and deployment, GPU-backed virtual desktops, thin client management (10ZiG), virtual application delivery, user profile optimization</p>
+
+            </div>
+
+            
+
+            <div class="competency-category">
+
+                <h3>Mobile Device Management & Endpoint Security</h3>
+
+                <p>KACE, ManageEngine MDM, VMware Workspace UEM, Microsoft Intune, Configuration Manager (SCCM), Autopilot; Multi-platform endpoint management (Windows, Linux, macOS, iOS, Android), zero-trust architecture, endpoint provisioning and compliance</p>
+
+            </div>
+
+            
+
+            <div class="competency-category">
+
+                <h3>User OS Management & Automation</h3>
+
+                <p>Windows 10/11 optimization, custom image creation, HashiCorp Packer, Ansible, PowerShell automation, Python scripting; Infrastructure-as-code, automated provisioning, compliance reporting, user experience optimization</p>
+
+            </div>
+
+            
+
+            <div class="competency-category">
+
+                <h3>Agile Methodologies & Cross-Functional Leadership</h3>
+
+                <p>Kanban implementation, user story development, backlog management, retrospectives; Cross-functional team leadership, stakeholder engagement, continuous improvement practices, technical mentoring and training</p>
+
+            </div>
+
+            
+
+            <div class="competency-category">
+
+                <h3>Collaboration Tools & Knowledge Management</h3>
+
+                <p>Jira and Confluence administration (on-premise/cloud), Azure DevOps, Git version control, SharePoint; Agile workflow facilitation, documentation management, team collaboration optimization</p>
+
+            </div>
+
+            
+
+            <div class="competency-category">
+
+                <h3>Cloud & Infrastructure Virtualization</h3>
+
+                <p>Microsoft Azure (Entra ID, resource management), hybrid cloud architectures, Docker containerization, Dell PowerEdge/HCI, NetApp/HPE storage solutions, network virtualization (SD-WAN, NSX)</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Certifications Section -->
+
+    <section id="certifications">
+
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="certifications-content">
+
+            <div class="cert-grid">
+
+                <div class="certification">
+
+                    <div class="cert-icon"></div>
+
+                    <div class="cert-details">
+
+                        <h4>Microsoft Azure Virtual Desktop Specialty (AZ-140)</h4>
+
+                        <p>Microsoft | 2026</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="certification">
+
+                    <div class="cert-icon"></div>
+
+                    <div class="cert-details">
+
+                        <h4>ICAgile Certified Professional (ICP)</h4>
+
+                        <p>ICAgile | 2022</p>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="certification">
+
+                    <div class="cert-icon"></div>
+
+                    <div class="cert-details">
+
+                        <h4>Microsoft Azure Administrator (AZ-104)</h4>
+
+                        <p>Microsoft | 2023</p>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="certification">
+
+                    <div class="cert-icon"></div>
+
+                    <div class="cert-details">
+
+                        <h4>Microsoft Azure Fundamentals (AZ-900)</h4>
+
+                        <p>Microsoft | 2023</p>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="certification">
+
+                    <div class="cert-icon"></div>
+
+                    <div class="cert-details">
+
+                        <h4>VMware Certified Professional - NV (VCP-NV)</h4>
+
+                        <p>VMware | 2022</p>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="certification">
+
+                    <div class="cert-icon"></div>
+
+                    <div class="cert-details">
+
+                        <h4>VMware Certified Professional - DCV (VCP-DCV)</h4>
+
+                        <p>VMware | 2020</p>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="certification">
+
+                    <div class="cert-icon"></div>
+
+                    <div class="cert-details">
+
+                        <h4>MCSA Server 2016</h4>
+
+                        <p>Microsoft | 2019</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Education Section (Already exists, but adding complete structure) -->
+
+    <section id="education">
+
+        <h2 class="education-title">Education</h2>
+
+        <table class="table education-table">
+
+            <tr>
+
+                <td>
+
+                    <div class="education-item">
+
+                        <img src="./pictures/edu/uva.jpg" alt="University of Virginia logo" class="company-logo">
+
+                        <div class="education-details">
+
+                            <strong>University of Virginia: School of Continuing and Professional Studies</strong>
+
+                            <br>
+
+                            Bachelor of Interdisciplinary Studies (BIS), Information Technology
+
+                            <br>
+
+                            2023 - 2027
+
+                        </div>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <div class="education-item">
+
+                        <img src="./pictures/edu/nvcc.jpg" alt="Northern Virginia Community College logo" class="company-logo">
+
+                        <div class="education-details">
+
+                            <strong>Northern Virginia Community College</strong>
+
+                            <br>
+
+                            Associate of Science (AS), Information Technology
+
+                            <br>
+
+                            2018 - 2020
+
+                        </div>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+
+
+    <!-- Learning Section -->
+
+    <section id="learning">
+
+        <h2 class="section-title">Learning</h2>
+
+        <div class="learning-content">
+
+                        <table class="learning-table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Started</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                        <th>Resources</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Securing the Cyber World (UVA BIS)</td>
+                        <td>Aug 2026</td>
+                        <td>In Progress</td>
+                        <td>Active</td>
+                        <td>UVA SCPS</td>
+                    </tr>
+                    <tr>
+                        <td>DevSecOps (UVA BIS)</td>
+                        <td>Aug 2026</td>
+                        <td>In Progress</td>
+                        <td>Active</td>
+                        <td>UVA SCPS</td>
+                    </tr>
+                    <tr>
+                        <td>GitHub Actions / CI-CD Pipelines</td>
+                        <td>Aug 2026</td>
+                        <td>In Progress</td>
+                        <td>Active</td>
+                        <td>GitHub Docs, hands-on lab</td>
+                    </tr>
+                    <tr>
+                        <td>Terraform (IaC)</td>
+                        <td>Sep 2026</td>
+                        <td>Starting</td>
+                        <td>Early</td>
+                        <td>HashiCorp Learn, lab environment</td>
+                    </tr>
+                    <tr>
+                        <td>Python - OOP &amp; API scripting</td>
+                        <td>Jul 2026</td>
+                        <td>In Progress</td>
+                        <td>Active</td>
+                        <td>Projects + UVA coursework</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+
+            <!-- For the Learning Archive -->
+
+            <div class="archive-link-container">
+
+                <a href="learning-archive.html" class="archive-link">
+
+                    <span class="archive-text">View Learning Archive</span>
+
+                    <span class="archive-arrow">&rarr;</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Interests Section -->
+
+    <section id="interests">
+
+        <h2 class="section-title">Interests</h2>
+
+        
+
+        <!-- Current Reading -->
+
+        <div class="interest-category">
+
+            <h3>
+
+                <a href="https://www.goodreads.com/user/show/22192348-aleksey" target="_blank" rel="noopener noreferrer" class="goodreads-link" title="View my Goodreads profile">
+
+                    <img src="./pictures/interests/books/Goodreads.svg" alt="Goodreads icon" class="goodreads-icon">
+
+                </a>
+
+                Reading Activity
+
+            </h3>
+
+            <div class="books-container">
+
+                <!-- Currently Reading -->
+
+                <div class="reading-section">
+
+                    <h4 class="reading-heading">Currently Reading</h4>
+
+                    <div class="book">
+
+                        <a href="https://www.goodreads.com/book/show/36449535-columbus-day" target="_blank" rel="noopener noreferrer" class="book-link" title="View on Goodreads">
+
+                            <img src="./pictures/interests/books/columbusday_expforce.png" alt="Book cover - Columbus Day" class="book-cover">
+
+                        </a>
+
+                        <div class="book-info">
+
+                            <h4>Columbus Day</h4>
+
+                            <p>Craig Alanson</p>
+
+                            <div class="progress-bar">
+
+                                <div class="progress" style="width: 72%;"></div>
+
+                            </div>
+
+                            <span class="progress-text">72%</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <!-- Last Read -->
+
+                <div class="reading-section">
+
+                    <h4 class="reading-heading">Last Finished</h4>
+
+                    <div class="book">
+
+                        <a href="https://www.goodreads.com/book/show/25499718-the-core" target="_blank" rel="noopener noreferrer" class="book-link" title="View on Goodreads">
+
+                            <img src="./pictures/interests/books/dkaeotown_.png" alt="Book cover - The Core" class="book-cover">
+
+                        </a>
+
+                        <div class="book-info">
+
+                            <h4>Darkness on the Edge of Town</h4>
+
+                            <p>Brian Keene</p>
+
+                            <div class="rating">2/5</div>
+
+                            <span class="finished-date">Finished June 2025</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <!-- Recent Movies -->
+
+        <div class="interest-category">
+
+            <h3>Recently Watched</h3>
+
+            <div class="media-item">
+
+                <a href="https://www.netflix.com/title/80216888" target="_blank" rel="noopener noreferrer" class="media-cover-link">
+
+                    <img src="./pictures/interests/tv/eternaut.jpg" alt="TV show poster - The Eternaut" class="media-cover">
+
+                </a>
+
+                <div class="media-info">
+
+                    <h4>The Eternaut</h4>
+
+                    <p>Starts as a slow burn but when it ramps up, it becomes a thrilling watch that keeps you engaged. The set design and atmosphere are top-notch.</p>
+
+                    <div class="watch-again">
+
+                        <a href="https://www.netflix.com/title/80216888" target="_blank" rel="noopener noreferrer" class="watch-again-button">Watch on Netflix</a>
+
+                    </div>
+
+                    <div class="rating">4/5</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="profile-bottom-banner" role="img" aria-label="Bottom banner with ink splatter design">
+
+        <img alt="Bottom banner with ink splatter design" class="banner-img">
+
+    </div>
+
+    
+
+    <footer class="footer" role="contentinfo">
+
+        <p>&copy; Aleksey Kurdyukov <span id="current-year"></span>. All rights reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
+
