@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const modeIcon = document.getElementById("mode-icon");
     const body = document.body;
 
-    // Centralized icons for dark and light mode
-    const DARK_MODE_ICON = "🌙";
-    const LIGHT_MODE_ICON = "☀️";
+    // Retro terminal labels for dark/light mode
+    const DARK_LABEL  = 'DARK';   // shown in light mode  → click to go dark
+    const LIGHT_LABEL = 'LIGHT';  // shown in dark mode   → click to go light
 
     // Set current year in footer
     const currentYearElement = document.getElementById("current-year");
@@ -13,19 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
-    // Check if dark mode is enabled in localStorage
+    // Apply saved preference on load
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
-        if (darkModeBtn) {
-            darkModeBtn.checked = true;
-        }
-        if (modeIcon) {
-            modeIcon.textContent = LIGHT_MODE_ICON;
-        }
+        if (modeIcon) modeIcon.textContent = LIGHT_LABEL;
     } else {
-        if (modeIcon) {
-            modeIcon.textContent = DARK_MODE_ICON;
-        }
+        if (modeIcon) modeIcon.textContent = DARK_LABEL;
     }
 
     if (darkModeBtn) {
@@ -33,15 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (body.classList.contains("dark-mode")) {
                 body.classList.remove("dark-mode");
                 localStorage.setItem("dark-mode", "disabled");
-                if (modeIcon) {
-                    modeIcon.textContent = DARK_MODE_ICON;
-                }
+                if (modeIcon) modeIcon.textContent = DARK_LABEL;
             } else {
                 body.classList.add("dark-mode");
                 localStorage.setItem("dark-mode", "enabled");
-                if (modeIcon) {
-                    modeIcon.textContent = LIGHT_MODE_ICON;
-                }
+                if (modeIcon) modeIcon.textContent = LIGHT_LABEL;
             }
         });
     }

@@ -42,17 +42,12 @@
     border-right: none;
 }
 
+/* Dark mode toggle — full styles in styles.css */
 .dark-mode-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    color: #333;
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
-.dark-mode-btn:hover {
-    transform: scale(1.1);
-}
 
 /* Banner and Profile Styles */
 .profile-banner {
