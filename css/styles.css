@@ -2226,9 +2226,7 @@ body.dark-mode .competency-category p {
 }
 
 .cert-icon {
-    font-size: 2em;
-    margin-right: 15px;
-    min-width: 50px;
+    display: none;
 }
 
 .cert-details h4 {
